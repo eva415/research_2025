@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String
+from std_msgs.msg import Int32, Float32MultiArray
 import serial
 import re  # For extracting sensor data
 
@@ -10,8 +10,8 @@ class FlexSensorControl(Node):
         super().__init__("flex_sensor_node")
 
         # Create publisher for sensor data
-        self.publisher_flex = self.create_publisher(String, 'flex_sensor_data', 50)
-        self.publisher_tof = self.create_publisher(String, 'tof_sensor_data', 50)
+        self.publisher_flex = self.create_publisher(Float32MultiArray, 'flex_sensor_data', 50)
+        self.publisher_tof = self.create_publisher(Int32, 'tof_sensor_data', 50)
 
         # Initialize serial connection
         try:
@@ -22,8 +22,9 @@ class FlexSensorControl(Node):
             return
 
         # Dictionaries to store sensor data
-        self.bend_values = {}        # Stores bend values per sensor
-        self.resistance_values = {}  # Stores resistance values per sensor
+        self.flex_sensor_values = [0.0] * 4  # For sensors 1 to 4
+        # self.resistance_values = {}  # Stores resistance values per sensor
+        self.tof_value = None        # Stores ToF sensor data
 
         # Timer to read serial data (every 0.05 sec)
         self.timer = self.create_timer(0.05, self.read_serial_data)
@@ -47,27 +48,23 @@ class FlexSensorControl(Node):
             sensor_id = int(match.group(1))  # Extract sensor number
             data_type = match.group(2)       # "Resistance" or "Bend"
             value = float(match.group(3))    # Extract value
-
-            if data_type == "Resistance":
-                self.resistance_values[sensor_id] = value
-            elif data_type == "Bend":
-                self.bend_values[sensor_id] = value
-
-            # Publish flex sensor data
-            msg = String()
-            msg.data = f"Sensor {sensor_id} {data_type}: {value}"
-            self.publisher_flex.publish(msg)
-            return
-
+            if data_type == "Bend":
+                self.flex_sensor_values[sensor_id - 1] = value  # Update index 0–3
+                # Publish all flex sensor values
+                msg = Float32MultiArray()
+                msg.data = self.flex_sensor_values
+                self.publisher_flex.publish(msg)
+                return
+        
         # Match ToF Sensor data: "ToF: 82 mm"
         tof_match = re.match(r"ToF: ([\d.]+) mm", data)
         if tof_match:
-            tof_value = float(tof_match.group(1))
+            tof_value = int(float(tof_match.group(1)))  # Convert to integer (you can cast to int directly)
 
-            # Publish ToF data
-            msg = String()
-            msg.data = f"ToF: {tof_value} mm"
-            self.publisher_tof.publish(msg)
+            # Publish ToF data as an Int32
+            msg = Int32()  # Create an Int32 message
+            msg.data = tof_value  # Assign the integer value to the data field of the message
+            self.publisher_tof.publish(msg)  # Publish the message
             return
 
 
