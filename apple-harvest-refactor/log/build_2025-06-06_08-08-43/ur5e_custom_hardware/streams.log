@@ -1,0 +1,32 @@
+[0.554s] Invoking command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware': PYTHONPATH=/home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware/build --no-deps symlink_data
+[0.785s] running develop
+[0.959s] running egg_info
+[0.959s] creating ur5e_custom_hardware.egg-info
+[0.959s] writing ur5e_custom_hardware.egg-info/PKG-INFO
+[0.959s] writing dependency_links to ur5e_custom_hardware.egg-info/dependency_links.txt
+[0.959s] writing entry points to ur5e_custom_hardware.egg-info/entry_points.txt
+[0.959s] writing requirements to ur5e_custom_hardware.egg-info/requires.txt
+[0.959s] writing top-level names to ur5e_custom_hardware.egg-info/top_level.txt
+[0.959s] writing manifest file 'ur5e_custom_hardware.egg-info/SOURCES.txt'
+[0.961s] reading manifest file 'ur5e_custom_hardware.egg-info/SOURCES.txt'
+[0.962s] writing manifest file 'ur5e_custom_hardware.egg-info/SOURCES.txt'
+[0.963s] running build_ext
+[0.963s] Creating /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/lib/python3.10/site-packages/ur5e-custom-hardware.egg-link (link to .)
+[0.964s] Installing gripper_palm_camera script to /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/lib/ur5e_custom_hardware
+[0.964s] 
+[0.964s] Installed /home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware
+[0.964s] running symlink_data
+[0.964s] creating /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ament_index
+[0.964s] creating /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ament_index/resource_index
+[0.964s] creating /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ament_index/resource_index/packages
+[0.964s] symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware/resource/ur5e_custom_hardware -> /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ament_index/resource_index/packages
+[0.964s] symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware/package.xml -> /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ur5e_custom_hardware
+[0.964s] creating /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ur5e_custom_hardware/launch
+[0.965s] creating /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ur5e_custom_hardware/urdf
+[0.965s] symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware/urdf/gripper.urdf.xacro -> /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ur5e_custom_hardware/urdf
+[0.965s] symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware/urdf/ur_gripper.urdf.xacro -> /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ur5e_custom_hardware/urdf
+[0.965s] creating /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ur5e_custom_hardware/meshes
+[0.965s] symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware/meshes/03_mk3_full_assembly.STL -> /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ur5e_custom_hardware/meshes
+[0.965s] symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware/meshes/03_mk3_full_assembly_coarse.STL -> /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ur5e_custom_hardware/meshes
+[0.965s] symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware/meshes/03_mk3_full_assembly_(simplified_for_RVIZ).STL -> /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ur5e_custom_hardware/meshes
+[1.020s] Invoked command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware' returned '0': PYTHONPATH=/home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware/build --no-deps symlink_data

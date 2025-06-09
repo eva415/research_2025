@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/imml/git/research_2025/apple-harvest-refactor/build/ur_calibration/calibration_correction" "TARGETS" "calibration_correction" "RUNTIME_DESTINATION" "lib/ur_calibration")

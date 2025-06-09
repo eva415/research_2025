@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from harvest_interfaces/srv/RecordTopics.srv
+// generated code does not contain a copyright notice
+
+
+module harvest_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "RecordTopics.srv")
+    struct RecordTopics_Request {
+      sequence<string> topics;
+
+      string file_name_prefix;
+    };
+    struct RecordTopics_Response {
+      boolean success;
+    };
+  };
+};

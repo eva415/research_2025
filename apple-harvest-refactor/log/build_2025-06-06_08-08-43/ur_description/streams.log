@@ -1,0 +1,199 @@
+[0.016s] Invoking command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/imml/git/research_2025/apple-harvest/install/ur5e_custom_hardware:/home/imml/git/research_2025/apple-harvest/install/harvest_vision:/opt/ros/humble /usr/bin/cmake /home/imml/git/research_2025/apple-harvest-refactor/harvest_hardware/Universal_Robots_ROS2_Description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description
+[0.062s] -- The C compiler identification is GNU 11.4.0
+[0.106s] -- The CXX compiler identification is GNU 11.4.0
+[0.112s] -- Detecting C compiler ABI info
+[0.172s] -- Detecting C compiler ABI info - done
+[0.177s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.178s] -- Detecting C compile features
+[0.178s] -- Detecting C compile features - done
+[0.180s] -- Detecting CXX compiler ABI info
+[0.250s] -- Detecting CXX compiler ABI info - done
+[0.256s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.257s] -- Detecting CXX compile features
+[0.257s] -- Detecting CXX compile features - done
+[0.259s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.383s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.441s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.466s] -- Found ament_cmake_pytest: 1.3.11 (/opt/ros/humble/share/ament_cmake_pytest/cmake)
+[2.701s] -- Configuring done
+[2.704s] -- Generating done
+[2.706s] -- Build files have been written to: /home/imml/git/research_2025/apple-harvest-refactor/build/ur_description
+[2.710s] Invoked command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/imml/git/research_2025/apple-harvest/install/ur5e_custom_hardware:/home/imml/git/research_2025/apple-harvest/install/harvest_vision:/opt/ros/humble /usr/bin/cmake /home/imml/git/research_2025/apple-harvest-refactor/harvest_hardware/Universal_Robots_ROS2_Description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description
+[2.712s] Invoking command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/imml/git/research_2025/apple-harvest/install/ur5e_custom_hardware:/home/imml/git/research_2025/apple-harvest/install/harvest_vision:/opt/ros/humble /usr/bin/cmake --build /home/imml/git/research_2025/apple-harvest-refactor/build/ur_description -- -j16 -l16
+[2.762s] Invoked command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/imml/git/research_2025/apple-harvest/install/ur5e_custom_hardware:/home/imml/git/research_2025/apple-harvest/install/harvest_vision:/opt/ros/humble /usr/bin/cmake --build /home/imml/git/research_2025/apple-harvest-refactor/build/ur_description -- -j16 -l16
+[2.776s] Invoking command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/imml/git/research_2025/apple-harvest/install/ur5e_custom_hardware:/home/imml/git/research_2025/apple-harvest/install/harvest_vision:/opt/ros/humble /usr/bin/cmake --install /home/imml/git/research_2025/apple-harvest-refactor/build/ur_description
+[2.784s] -- Install configuration: ""
+[2.786s] -- Execute custom install script
+[2.786s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/initial_positions.yaml
+[2.807s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/initial_positions_marcus.yaml
+[2.819s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur10/default_kinematics.yaml
+[2.837s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur10/joint_limits.yaml
+[2.868s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur10/physical_parameters.yaml
+[2.897s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur10/visual_parameters.yaml
+[2.932s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur10e/default_kinematics.yaml
+[2.985s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur10e/joint_limits.yaml
+[3.020s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur10e/physical_parameters.yaml
+[3.066s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur10e/visual_parameters.yaml
+[3.109s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur16e/default_kinematics.yaml
+[3.147s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur16e/joint_limits.yaml
+[3.180s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur16e/physical_parameters.yaml
+[3.224s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur16e/visual_parameters.yaml
+[3.277s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur20/default_kinematics.yaml
+[3.314s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur20/joint_limits.yaml
+[3.353s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur20/physical_parameters.yaml
+[3.426s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur20/visual_parameters.yaml
+[3.476s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur3/default_kinematics.yaml
+[3.512s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur3/joint_limits.yaml
+[3.546s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur3/physical_parameters.yaml
+[3.572s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur3/visual_parameters.yaml
+[3.616s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur30/default_kinematics.yaml
+[3.649s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur30/joint_limits.yaml
+[3.676s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur30/physical_parameters.yaml
+[3.713s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur30/visual_parameters.yaml
+[3.755s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur3e/default_kinematics.yaml
+[3.786s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur3e/joint_limits.yaml
+[3.825s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur3e/physical_parameters.yaml
+[3.877s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur3e/visual_parameters.yaml
+[3.920s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur5/default_kinematics.yaml
+[3.945s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur5/joint_limits.yaml
+[3.998s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur5/physical_parameters.yaml
+[4.032s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur5/visual_parameters.yaml
+[4.062s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur5e/default_kinematics.yaml
+[4.093s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur5e/joint_limits.yaml
+[4.109s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur5e/physical_parameters.yaml
+[4.134s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/config/ur5e/visual_parameters.yaml
+[4.154s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/launch/view_ur.launch.py
+[4.179s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10/collision/base.stl
+[4.197s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10/collision/forearm.stl
+[4.217s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10/collision/shoulder.stl
+[4.239s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10/collision/upperarm.stl
+[4.263s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10/collision/wrist1.stl
+[4.288s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10/collision/wrist2.stl
+[4.304s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10/collision/wrist3.stl
+[4.325s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10/visual/base.dae
+[4.341s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10/visual/forearm.dae
+[4.360s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10/visual/shoulder.dae
+[4.376s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10/visual/upperarm.dae
+[4.390s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10/visual/wrist1.dae
+[4.405s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10/visual/wrist2.dae
+[4.421s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10/visual/wrist3.dae
+[4.434s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10e/collision/base.stl
+[4.450s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10e/collision/forearm.stl
+[4.465s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10e/collision/shoulder.stl
+[4.479s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10e/collision/upperarm.stl
+[4.490s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10e/collision/wrist1.stl
+[4.503s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10e/collision/wrist2.stl
+[4.518s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10e/collision/wrist3.stl
+[4.533s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10e/visual/base.dae
+[4.552s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10e/visual/forearm.dae
+[4.566s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10e/visual/shoulder.dae
+[4.579s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10e/visual/upperarm.dae
+[4.594s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10e/visual/wrist1.dae
+[4.607s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10e/visual/wrist2.dae
+[4.619s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur10e/visual/wrist3.dae
+[4.629s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur16e/collision/forearm.stl
+[4.638s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur16e/collision/upperarm.stl
+[4.648s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur16e/visual/forearm.dae
+[4.659s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur16e/visual/upperarm.dae
+[4.668s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur20/LICENSE.txt
+[4.680s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur20/collision/base.stl
+[4.692s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur20/collision/forearm.stl
+[4.704s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur20/collision/shoulder.stl
+[4.716s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur20/collision/upperarm.stl
+[4.730s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur20/collision/wrist1.stl
+[4.744s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur20/collision/wrist2.stl
+[4.758s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur20/collision/wrist3.stl
+[4.771s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur20/visual/UR20_DIFF_8bit_2K.png
+[4.785s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur20/visual/base.dae
+[4.802s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur20/visual/forearm.dae
+[4.821s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur20/visual/shoulder.dae
+[4.839s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur20/visual/upperarm.dae
+[4.854s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur20/visual/wrist1.dae
+[4.877s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur20/visual/wrist2.dae
+[4.909s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur20/visual/wrist3.dae
+[4.946s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3/collision/base.stl
+[4.972s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3/collision/forearm.stl
+[4.994s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3/collision/shoulder.stl
+[5.023s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3/collision/upperarm.stl
+[5.055s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3/collision/wrist1.stl
+[5.091s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3/collision/wrist2.stl
+[5.125s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3/collision/wrist3.stl
+[5.192s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3/visual/base.dae
+[5.224s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3/visual/forearm.dae
+[5.246s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3/visual/shoulder.dae
+[5.275s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3/visual/upperarm.dae
+[5.304s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3/visual/wrist1.dae
+[5.375s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3/visual/wrist2.dae
+[5.424s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3/visual/wrist3.dae
+[5.462s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur30/LICENSE.txt
+[5.490s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur30/collision/forearm.stl
+[5.525s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur30/collision/upperarm.stl
+[5.570s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur30/visual/UR30_DIFF_8bit_2K.png
+[5.608s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur30/visual/forearm.dae
+[5.643s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur30/visual/upperarm.dae
+[5.675s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3e/collision/base.stl
+[5.707s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3e/collision/forearm.stl
+[5.734s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3e/collision/shoulder.stl
+[5.747s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3e/collision/upperarm.stl
+[5.779s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3e/collision/wrist1.stl
+[5.819s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3e/collision/wrist2.stl
+[5.856s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3e/collision/wrist3.stl
+[5.888s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3e/visual/base.dae
+[5.921s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3e/visual/forearm.dae
+[5.949s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3e/visual/shoulder.dae
+[5.986s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3e/visual/upperarm.dae
+[6.014s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3e/visual/wrist1.dae
+[6.031s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3e/visual/wrist2.dae
+[6.049s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur3e/visual/wrist3.dae
+[6.067s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5/collision/base.stl
+[6.085s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5/collision/forearm.stl
+[6.127s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5/collision/shoulder.stl
+[6.165s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5/collision/upperarm.stl
+[6.200s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5/collision/wrist1.stl
+[6.234s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5/collision/wrist2.stl
+[6.285s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5/collision/wrist3.stl
+[6.321s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5/visual/base.dae
+[6.355s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5/visual/forearm.dae
+[6.392s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5/visual/shoulder.dae
+[6.427s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5/visual/upperarm.dae
+[6.469s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5/visual/wrist1.dae
+[6.508s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5/visual/wrist2.dae
+[6.539s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5/visual/wrist3.dae
+[6.564s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5e/collision/base.stl
+[6.602s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5e/collision/forearm.stl
+[6.648s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5e/collision/shoulder.stl
+[6.702s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5e/collision/upperarm.stl
+[6.730s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5e/collision/wrist1.stl
+[6.763s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5e/collision/wrist2.stl
+[6.809s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5e/collision/wrist3.stl
+[6.843s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5e/visual/base.dae
+[6.896s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5e/visual/forearm.dae
+[6.939s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5e/visual/shoulder.dae
+[6.975s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5e/visual/upperarm.dae
+[7.022s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5e/visual/wrist1.dae
+[7.073s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5e/visual/wrist2.dae
+[7.163s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/meshes/ur5e/visual/wrist3.dae
+[7.212s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/rviz/view_robot.rviz
+[7.286s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/urdf/inc/ur_common.xacro
+[7.328s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/urdf/inc/ur_transmissions.xacro
+[7.382s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/urdf/ur.ros2_control.xacro
+[7.444s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/urdf/ur.urdf.xacro
+[7.485s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/urdf/ur_macro.xacro
+[7.545s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/test/test_ur_urdf_xacro.py
+[7.580s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/test/test_view_ur_launch.py
+[7.633s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ament_index/resource_index/package_run_dependencies/ur_description
+[7.690s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ament_index/resource_index/parent_prefix_path/ur_description
+[7.737s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/environment/ament_prefix_path.sh
+[7.793s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/environment/ament_prefix_path.dsv
+[7.839s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/environment/path.sh
+[7.874s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/environment/path.dsv
+[7.944s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/local_setup.bash
+[7.995s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/local_setup.sh
+[8.023s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/local_setup.zsh
+[8.075s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/local_setup.dsv
+[8.136s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/package.dsv
+[8.179s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ament_index/resource_index/packages/ur_description
+[8.238s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/cmake/ur_descriptionConfig.cmake
+[8.301s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/cmake/ur_descriptionConfig-version.cmake
+[8.360s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/package.xml
+[8.460s] Invoked command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/imml/git/research_2025/apple-harvest/install/ur5e_custom_hardware:/home/imml/git/research_2025/apple-harvest/install/harvest_vision:/opt/ros/humble /usr/bin/cmake --install /home/imml/git/research_2025/apple-harvest-refactor/build/ur_description

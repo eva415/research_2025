@@ -1,0 +1,30 @@
+running develop
+running egg_info
+creating ur5e_custom_hardware.egg-info
+writing ur5e_custom_hardware.egg-info/PKG-INFO
+writing dependency_links to ur5e_custom_hardware.egg-info/dependency_links.txt
+writing entry points to ur5e_custom_hardware.egg-info/entry_points.txt
+writing requirements to ur5e_custom_hardware.egg-info/requires.txt
+writing top-level names to ur5e_custom_hardware.egg-info/top_level.txt
+writing manifest file 'ur5e_custom_hardware.egg-info/SOURCES.txt'
+reading manifest file 'ur5e_custom_hardware.egg-info/SOURCES.txt'
+writing manifest file 'ur5e_custom_hardware.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/lib/python3.10/site-packages/ur5e-custom-hardware.egg-link (link to .)
+Installing gripper_palm_camera script to /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/lib/ur5e_custom_hardware
+
+Installed /home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware
+running symlink_data
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ament_index
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ament_index/resource_index
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ament_index/resource_index/packages
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware/resource/ur5e_custom_hardware -> /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ament_index/resource_index/packages
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware/package.xml -> /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ur5e_custom_hardware
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ur5e_custom_hardware/launch
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ur5e_custom_hardware/urdf
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware/urdf/gripper.urdf.xacro -> /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ur5e_custom_hardware/urdf
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware/urdf/ur_gripper.urdf.xacro -> /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ur5e_custom_hardware/urdf
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ur5e_custom_hardware/meshes
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware/meshes/03_mk3_full_assembly.STL -> /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ur5e_custom_hardware/meshes
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware/meshes/03_mk3_full_assembly_coarse.STL -> /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ur5e_custom_hardware/meshes
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/ur5e_custom_hardware/meshes/03_mk3_full_assembly_(simplified_for_RVIZ).STL -> /home/imml/git/research_2025/apple-harvest-refactor/install/ur5e_custom_hardware/share/ur5e_custom_hardware/meshes

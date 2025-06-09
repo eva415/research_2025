@@ -1,0 +1,1 @@
+/home/imml/git/research_2025/apple-harvest-refactor/build/harvest/ament_cmake_python/harvest/harvest.egg-info/SOURCES.txt

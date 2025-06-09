@@ -1,0 +1,121 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found rclpy: 3.3.15 (/opt/ros/humble/share/rclpy/cmake)
+-- Found moveit_servo: 2.5.8 (/opt/ros/humble/share/moveit_servo/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem 
+-- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono 
+-- Found moveit: 2.5.8 (/opt/ros/humble/share/moveit/cmake)
+-- Found moveit_ros_planning_interface: 2.5.8 (/opt/ros/humble/share/moveit_ros_planning_interface/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem program_options system thread 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread 
+-- Found controller_manager_msgs: 2.48.0 (/opt/ros/humble/share/controller_manager_msgs/cmake)
+-- Found harvest_interfaces: 0.0.0 (/home/imml/git/research_2025/apple-harvest-refactor/install/harvest_interfaces/share/harvest_interfaces/cmake)
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/imml/git/research_2025/apple-harvest-refactor/harvest_control/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_control
+[ 50%] [32mBuilding CXX object CMakeFiles/move_arm.dir/src/move_arm.cpp.o[0m
+[ 50%] Built target ament_cmake_python_symlink_harvest_control
+running egg_info
+creating harvest_control.egg-info
+writing harvest_control.egg-info/PKG-INFO
+writing dependency_links to harvest_control.egg-info/dependency_links.txt
+writing top-level names to harvest_control.egg-info/top_level.txt
+writing manifest file 'harvest_control.egg-info/SOURCES.txt'
+reading manifest file 'harvest_control.egg-info/SOURCES.txt'
+writing manifest file 'harvest_control.egg-info/SOURCES.txt'
+[ 50%] Built target ament_cmake_python_build_harvest_control_egg
+[100%] [32m[1mLinking CXX executable move_arm[0m
+[100%] Built target move_arm
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/environment/pythonpath.sh
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/environment/pythonpath.dsv
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/local/lib/python3.10/dist-packages/harvest_control-0.0.0-py3.10.egg-info/PKG-INFO
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/local/lib/python3.10/dist-packages/harvest_control-0.0.0-py3.10.egg-info/SOURCES.txt
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/local/lib/python3.10/dist-packages/harvest_control-0.0.0-py3.10.egg-info/dependency_links.txt
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/local/lib/python3.10/dist-packages/harvest_control-0.0.0-py3.10.egg-info/top_level.txt
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/local/lib/python3.10/dist-packages/harvest_control/__init__.py
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/lib/harvest_control/coordinate_to_trajectory.py
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/lib/harvest_control/event_detector.py
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/lib/harvest_control/force_filter.py
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/lib/harvest_control/get_manual_apple_locations.py
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/lib/harvest_control/heuristic_controller.py
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/lib/harvest_control/linear_controller.py
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/lib/harvest_control/pose_listener.py
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/lib/harvest_control/pressure_averager.py
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/lib/harvest_control/pull_twist_controller.py
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/lib/harvest_control/visual_servo.py
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/lib/harvest_control/move_arm
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/launch/arm_control.launch.py
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/launch/arm_control_templating.launch.py
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/resource/harvest_control
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/resource/reachable_paths.npy
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/resource/reachable_paths_fine.npy
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/resource/reachable_voxel_centers.csv
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/resource/reachable_voxel_centers_fine.csv
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/resource/tree_wire_mask.json
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/resource/urdf/v_trellis_template.urdf
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/resource/urdf/v_trellis_template.xacro
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/resource/voxel_ik_data.csv
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/resource/voxel_ik_data_fine.csv
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/ament_index/resource_index/package_run_dependencies/harvest_control
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/ament_index/resource_index/parent_prefix_path/harvest_control
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/environment/ament_prefix_path.sh
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/environment/ament_prefix_path.dsv
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/environment/path.sh
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/environment/path.dsv
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/local_setup.bash
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/local_setup.sh
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/local_setup.zsh
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/local_setup.dsv
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/package.dsv
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/ament_index/resource_index/packages/harvest_control
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/cmake/harvest_controlConfig.cmake
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/cmake/harvest_controlConfig-version.cmake
+-- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/share/harvest_control/package.xml
+Listing '/home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/local/lib/python3.10/dist-packages/harvest_control'...
+Compiling '/home/imml/git/research_2025/apple-harvest-refactor/install/harvest_control/local/lib/python3.10/dist-packages/harvest_control/__init__.py'...

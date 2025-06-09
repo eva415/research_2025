@@ -1,0 +1,4 @@
+source;share/harvest/local_setup.bash
+source;share/harvest/local_setup.dsv
+source;share/harvest/local_setup.sh
+source;share/harvest/local_setup.zsh

@@ -1,0 +1,17 @@
+{
+  "package_name": "harvest_interfaces",
+  "non_idl_tuples": [
+    "/home/imml/git/research_2025/apple-harvest-refactor/harvest_interfaces:action/EventDetection.action",
+    "/home/imml/git/research_2025/apple-harvest-refactor/harvest_interfaces:action/SendTrajectory.action",
+    "/home/imml/git/research_2025/apple-harvest-refactor/harvest_interfaces:srv/ApplePrediction.srv",
+    "/home/imml/git/research_2025/apple-harvest-refactor/harvest_interfaces:srv/SendTrajectory.srv",
+    "/home/imml/git/research_2025/apple-harvest-refactor/harvest_interfaces:srv/CoordinateToTrajectory.srv",
+    "/home/imml/git/research_2025/apple-harvest-refactor/harvest_interfaces:srv/VoxelMask.srv",
+    "/home/imml/git/research_2025/apple-harvest-refactor/harvest_interfaces:srv/MoveToPose.srv",
+    "/home/imml/git/research_2025/apple-harvest-refactor/harvest_interfaces:srv/TrajectoryBetweenPoints.srv",
+    "/home/imml/git/research_2025/apple-harvest-refactor/harvest_interfaces:srv/SetValue.srv",
+    "/home/imml/git/research_2025/apple-harvest-refactor/harvest_interfaces:srv/RecordTopics.srv",
+    "/home/imml/git/research_2025/apple-harvest-refactor/harvest_interfaces:srv/GetGripperPose.srv",
+    "/home/imml/git/research_2025/apple-harvest-refactor/harvest_interfaces:srv/VoxelGrid.srv"
+  ]
+}

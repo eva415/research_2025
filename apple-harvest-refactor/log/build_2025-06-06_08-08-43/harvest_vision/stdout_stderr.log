@@ -1,0 +1,73 @@
+running develop
+running egg_info
+creating harvest_vision.egg-info
+writing harvest_vision.egg-info/PKG-INFO
+writing dependency_links to harvest_vision.egg-info/dependency_links.txt
+writing entry points to harvest_vision.egg-info/entry_points.txt
+writing requirements to harvest_vision.egg-info/requires.txt
+writing top-level names to harvest_vision.egg-info/top_level.txt
+writing manifest file 'harvest_vision.egg-info/SOURCES.txt'
+reading manifest file 'harvest_vision.egg-info/SOURCES.txt'
+writing manifest file 'harvest_vision.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/lib/python3.10/site-packages/harvest-vision.egg-link (link to .)
+Installing apple_prediction script to /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/lib/harvest_vision
+Installing apple_prediction_presaved_images script to /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/lib/harvest_vision
+Installing voxelize_scan script to /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/lib/harvest_vision
+
+Installed /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision
+running symlink_data
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/ament_index
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/ament_index/resource_index
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/ament_index/resource_index/packages
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/resource/harvest_vision -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/ament_index/resource_index/packages
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/package.xml -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/launch
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/yolo_networks
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/yolo_networks/best-merged-apples-thlo-merged-wsu-v8s.pt -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/yolo_networks
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/yolo_networks/best-merged-apples-thlo-merged-wsu-v8m.pt -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/yolo_networks
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/yolo_networks/best-merged-apples-thlo-merged-wsu-v9c.pt -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/yolo_networks
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/yolo_networks/best-merged-apples-thlo-merged-wsu-v8n.pt -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/yolo_networks
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/yolo_networks/best_segmentation.pt -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/yolo_networks
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/yolo_networks/best-merged-apples-thlo-merged-wsu-v8l.pt -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/yolo_networks
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_a
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_a/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_a
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_a/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_a
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_a/color_raw.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_a
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_b
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_b/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_b
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_b/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_b
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_b/color_raw.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_b
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_c
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_c/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_c
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_c/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_c
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_c/color_raw.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_c
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_d
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_d/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_d
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_d/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_d
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_d/color_raw.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_d
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_e
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_e/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_e
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_e/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_e
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_e/color_raw.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_e
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_f
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_f/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_f
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_f/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_f
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_f/color_raw.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_f
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_g
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_g/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_g
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_g/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_g
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_g/color_raw.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_g
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_h
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_h/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_h
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_h/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_h
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_h/color_raw.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_h
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_i
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_i/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_i
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_i/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_i
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_i/color_raw.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_i
+creating /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_j
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_j/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_j
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_j/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_j
+symbolically linking /home/imml/git/research_2025/apple-harvest-refactor/build/harvest_vision/data/prosser_j/color_raw.png -> /home/imml/git/research_2025/apple-harvest-refactor/install/harvest_vision/share/harvest_vision/data/prosser_j

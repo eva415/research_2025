@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-74de55858f92c5446ef7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "harvest_control",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_harvest_control_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_harvest_control_egg-5132b111ba973f602fc6.json",
+					"name" : "ament_cmake_python_build_harvest_control_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_harvest_control::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_harvest_control-b950e5bfd79d10cbe23a.json",
+					"name" : "ament_cmake_python_symlink_harvest_control",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "harvest_control_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-harvest_control_uninstall-9230ec7d7c2ada9e8ceb.json",
+					"name" : "harvest_control_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "move_arm::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-move_arm-1282194e08c698354d32.json",
+					"name" : "move_arm",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-4e61a3abd29a1f3e6fc0.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/imml/git/research_2025/apple-harvest-refactor/build/harvest_control",
+		"source" : "/home/imml/git/research_2025/apple-harvest-refactor/harvest_control"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

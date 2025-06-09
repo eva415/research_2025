@@ -1,0 +1,16 @@
+In file included from [01m[K/home/imml/git/research_2025/apple-harvest-refactor/harvest_hardware/Universal_Robots_ROS2_Driver/ur_controllers/include/ur_controllers/speed_scaling_state_broadcaster.hpp:51[m[K,
+                 from [01m[K/home/imml/git/research_2025/apple-harvest-refactor/harvest_hardware/Universal_Robots_ROS2_Driver/ur_controllers/src/speed_scaling_state_broadcaster.cpp:38[m[K:
+[01m[K/home/imml/git/research_2025/apple-harvest-refactor/build/ur_controllers/include/speed_scaling_state_broadcaster_parameters.hpp:1:179:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: #include "speed_scaling_state_broadcaster_parameters.hpp" is deprecated. Use #include <ur_controllers/speed_scaling_state_broadcaster_parameters.hpp> instead.[m[K’
+    1 | #pragma message("#include \"speed_scaling_state_broadcaster_parameters.hpp\" is deprecated. Use #include <ur_controllers/speed_scaling_state_broadcaster_parameters.hpp> instead."[01;36m[K)[m[K
+      |                                                                                                                                                                                   [01;36m[K^[m[K
+In file included from [01m[K/home/imml/git/research_2025/apple-harvest-refactor/harvest_hardware/Universal_Robots_ROS2_Driver/ur_controllers/include/ur_controllers/gpio_controller.hpp:59[m[K,
+                 from [01m[K/home/imml/git/research_2025/apple-harvest-refactor/harvest_hardware/Universal_Robots_ROS2_Driver/ur_controllers/src/gpio_controller.cpp:38[m[K:
+[01m[K/home/imml/git/research_2025/apple-harvest-refactor/build/ur_controllers/include/gpio_controller_parameters.hpp:1:147:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: #include "gpio_controller_parameters.hpp" is deprecated. Use #include <ur_controllers/gpio_controller_parameters.hpp> instead.[m[K’
+    1 | #pragma message("#include \"gpio_controller_parameters.hpp\" is deprecated. Use #include <ur_controllers/gpio_controller_parameters.hpp> instead."[01;36m[K)[m[K
+      |                                                                                                                                                   [01;36m[K^[m[K
+In file included from [01m[K/home/imml/git/research_2025/apple-harvest-refactor/harvest_hardware/Universal_Robots_ROS2_Driver/ur_controllers/include/ur_controllers/scaled_joint_trajectory_controller.hpp:46[m[K,
+                 from [01m[K/home/imml/git/research_2025/apple-harvest-refactor/harvest_hardware/Universal_Robots_ROS2_Driver/ur_controllers/src/scaled_joint_trajectory_controller.cpp:41[m[K:
+[01m[K/home/imml/git/research_2025/apple-harvest-refactor/build/ur_controllers/include/scaled_joint_trajectory_controller_parameters.hpp:1:185:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: #include "scaled_joint_trajectory_controller_parameters.hpp" is deprecated. Use #include <ur_controllers/scaled_joint_trajectory_controller_parameters.hpp> instead.[m[K’
+    1 | ry_controller_parameters.hpp\" is deprecated. Use #include <ur_controllers/scaled_joint_trajectory_controller_parameters.hpp> instead."[01;36m[K)[m[K
+      |                                                                                                                                        [01;36m[K^[m[K
+

@@ -1,0 +1,178 @@
+[0.027s] Invoking command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur_robot_driver': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_controllers:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_controllers:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs:/home/imml/git/research_2025/apple-harvest/install/ur_moveit_config:/home/imml/git/research_2025/apple-harvest/install/ur_description:/home/imml/git/research_2025/apple-harvest/install/ur_dashboard_msgs:/home/imml/git/research_2025/apple-harvest/install/realsense2_description:/home/imml/git/research_2025/apple-harvest/install/realsense2_camera_msgs:/home/imml/git/research_2025/apple-harvest/install/harvest_interfaces:/home/imml/git/research_2025/apple-harvest/install/ur5e_custom_hardware:/home/imml/git/research_2025/apple-harvest/install/harvest_vision:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_controllers/lib:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/imml/git/research_2025/apple-harvest-refactor/harvest_hardware/Universal_Robots_ROS2_Driver/ur_robot_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver
+[0.121s] -- The C compiler identification is GNU 11.4.0
+[0.201s] -- The CXX compiler identification is GNU 11.4.0
+[0.211s] -- Detecting C compiler ABI info
+[0.324s] -- Detecting C compiler ABI info - done
+[0.335s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.336s] -- Detecting C compile features
+[0.337s] -- Detecting C compile features - done
+[0.341s] -- Detecting CXX compiler ABI info
+[0.488s] -- Detecting CXX compiler ABI info - done
+[0.500s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.502s] -- Detecting CXX compile features
+[0.503s] -- Detecting CXX compile features - done
+[0.505s] [0mur_robot_driver: You did not request a specific build type: selecting 'RelWithDebInfo'.[0m
+[0.515s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.807s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.933s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.988s] -- Found controller_manager: 2.48.0 (/opt/ros/humble/share/controller_manager/cmake)
+[1.083s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.094s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.128s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.153s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.207s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.577s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.584s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.626s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.735s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.740s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.765s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.769s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.783s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.804s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.821s] -- Looking for pthread.h
+[2.012s] -- Looking for pthread.h - found
+[2.013s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.223s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.224s] -- Found Threads: TRUE  
+[2.354s] -- Found rclpy: 3.3.15 (/opt/ros/humble/share/rclpy/cmake)
+[2.356s] -- Found std_srvs: 4.2.4 (/opt/ros/humble/share/std_srvs/cmake)
+[2.369s] -- Found tf2_geometry_msgs: 0.25.12 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[2.385s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[2.386s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.387s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.457s] -- Found ur_dashboard_msgs: 2.2.15 (/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake)
+[2.778s] -- Found ur_controllers: 2.2.15 (/home/imml/git/research_2025/apple-harvest-refactor/install/ur_controllers/share/ur_controllers/cmake)
+[2.887s] -- Found ur_description: 2.1.7 (/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description/share/ur_description/cmake)
+[2.891s] -- Found launch_testing_ament_cmake: 1.0.7 (/opt/ros/humble/share/launch_testing_ament_cmake/cmake)
+[2.894s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.925s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.935s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.936s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.936s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.936s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.977s] -- Found PythonExtra: .so  
+[2.978s] -- Configuring done
+[3.173s] -- Generating done
+[3.195s] -- Build files have been written to: /home/imml/git/research_2025/apple-harvest-refactor/build/ur_robot_driver
+[3.218s] Invoked command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur_robot_driver' returned '0': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_controllers:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_controllers:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs:/home/imml/git/research_2025/apple-harvest/install/ur_moveit_config:/home/imml/git/research_2025/apple-harvest/install/ur_description:/home/imml/git/research_2025/apple-harvest/install/ur_dashboard_msgs:/home/imml/git/research_2025/apple-harvest/install/realsense2_description:/home/imml/git/research_2025/apple-harvest/install/realsense2_camera_msgs:/home/imml/git/research_2025/apple-harvest/install/harvest_interfaces:/home/imml/git/research_2025/apple-harvest/install/ur5e_custom_hardware:/home/imml/git/research_2025/apple-harvest/install/harvest_vision:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_controllers/lib:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/imml/git/research_2025/apple-harvest-refactor/harvest_hardware/Universal_Robots_ROS2_Driver/ur_robot_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver
+[3.220s] Invoking command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur_robot_driver': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_controllers:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_controllers:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs:/home/imml/git/research_2025/apple-harvest/install/ur_moveit_config:/home/imml/git/research_2025/apple-harvest/install/ur_description:/home/imml/git/research_2025/apple-harvest/install/ur_dashboard_msgs:/home/imml/git/research_2025/apple-harvest/install/realsense2_description:/home/imml/git/research_2025/apple-harvest/install/realsense2_camera_msgs:/home/imml/git/research_2025/apple-harvest/install/harvest_interfaces:/home/imml/git/research_2025/apple-harvest/install/ur5e_custom_hardware:/home/imml/git/research_2025/apple-harvest/install/harvest_vision:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_controllers/lib:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/imml/git/research_2025/apple-harvest-refactor/build/ur_robot_driver -- -j16 -l16
+[3.296s] [ 26%] [32mBuilding CXX object CMakeFiles/dashboard_client.dir/src/urcl_log_handler.cpp.o[0m
+[3.296s] [ 26%] [32mBuilding CXX object CMakeFiles/ur_robot_driver_plugin.dir/src/hardware_interface.cpp.o[0m
+[3.296s] [ 26%] [32mBuilding CXX object CMakeFiles/dashboard_client.dir/src/dashboard_client_node.cpp.o[0m
+[3.296s] [ 26%] [32mBuilding CXX object CMakeFiles/dashboard_client.dir/src/dashboard_client_ros.cpp.o[0m
+[3.296s] [ 33%] [32mBuilding CXX object CMakeFiles/controller_stopper_node.dir/src/controller_stopper_node.cpp.o[0m
+[3.296s] [ 40%] [32mBuilding CXX object CMakeFiles/urscript_interface.dir/src/urscript_interface.cpp.o[0m
+[3.296s] [ 46%] [32mBuilding CXX object CMakeFiles/controller_stopper_node.dir/src/controller_stopper.cpp.o[0m
+[3.296s] [ 53%] [32mBuilding CXX object CMakeFiles/ur_ros2_control_node.dir/src/ur_ros2_control_node.cpp.o[0m
+[3.306s] [ 60%] [32mBuilding CXX object CMakeFiles/ur_robot_driver_plugin.dir/src/dashboard_client_ros.cpp.o[0m
+[3.309s] [ 66%] [32mBuilding CXX object CMakeFiles/ur_robot_driver_plugin.dir/src/urcl_log_handler.cpp.o[0m
+[3.320s] [ 66%] Built target ament_cmake_python_symlink_ur_robot_driver
+[3.944s] In file included from [01m[K/home/imml/git/research_2025/apple-harvest-refactor/harvest_hardware/Universal_Robots_ROS2_Driver/ur_robot_driver/src/ur_ros2_control_node.cpp:44[m[K:
+[3.945s] [01m[K/opt/ros/humble/include/realtime_tools/realtime_tools/thread_priority.hpp:39:2:[m[K [01;35m[Kwarning: [m[K#warning "This header include is deprecated. Please update your code to use 'realtime_helpers.hpp' header and link against 'realtime_tools' library." [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+[3.945s]    39 | #[01;35m[Kwarning[m[K \
+[3.945s]       |  [01;35m[K^~~~~~~[m[K
+[4.391s] running egg_info
+[4.393s] creating ur_robot_driver.egg-info
+[4.393s] writing ur_robot_driver.egg-info/PKG-INFO
+[4.398s] writing dependency_links to ur_robot_driver.egg-info/dependency_links.txt
+[4.400s] writing top-level names to ur_robot_driver.egg-info/top_level.txt
+[4.400s] writing manifest file 'ur_robot_driver.egg-info/SOURCES.txt'
+[4.407s] reading manifest file 'ur_robot_driver.egg-info/SOURCES.txt'
+[4.408s] writing manifest file 'ur_robot_driver.egg-info/SOURCES.txt'
+[4.536s] [ 66%] Built target ament_cmake_python_build_ur_robot_driver_egg
+[11.781s] [ 73%] [32m[1mLinking CXX executable ur_ros2_control_node[0m
+[12.042s] [ 73%] Built target ur_ros2_control_node
+[19.567s] [ 80%] [32m[1mLinking CXX executable urscript_interface[0m
+[19.866s] [ 80%] Built target urscript_interface
+[22.299s] [ 86%] [32m[1mLinking CXX executable controller_stopper_node[0m
+[22.610s] [ 86%] Built target controller_stopper_node
+[24.489s] [ 93%] [32m[1mLinking CXX executable dashboard_client[0m
+[24.822s] [ 93%] Built target dashboard_client
+[25.016s] [100%] [32m[1mLinking CXX shared library libur_robot_driver_plugin.so[0m
+[25.357s] [100%] Built target ur_robot_driver_plugin
+[25.368s] Invoked command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur_robot_driver' returned '0': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_controllers:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_controllers:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs:/home/imml/git/research_2025/apple-harvest/install/ur_moveit_config:/home/imml/git/research_2025/apple-harvest/install/ur_description:/home/imml/git/research_2025/apple-harvest/install/ur_dashboard_msgs:/home/imml/git/research_2025/apple-harvest/install/realsense2_description:/home/imml/git/research_2025/apple-harvest/install/realsense2_camera_msgs:/home/imml/git/research_2025/apple-harvest/install/harvest_interfaces:/home/imml/git/research_2025/apple-harvest/install/ur5e_custom_hardware:/home/imml/git/research_2025/apple-harvest/install/harvest_vision:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_controllers/lib:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/imml/git/research_2025/apple-harvest-refactor/build/ur_robot_driver -- -j16 -l16
+[25.369s] Invoking command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur_robot_driver': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_controllers:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_controllers:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs:/home/imml/git/research_2025/apple-harvest/install/ur_moveit_config:/home/imml/git/research_2025/apple-harvest/install/ur_description:/home/imml/git/research_2025/apple-harvest/install/ur_dashboard_msgs:/home/imml/git/research_2025/apple-harvest/install/realsense2_description:/home/imml/git/research_2025/apple-harvest/install/realsense2_camera_msgs:/home/imml/git/research_2025/apple-harvest/install/harvest_interfaces:/home/imml/git/research_2025/apple-harvest/install/ur5e_custom_hardware:/home/imml/git/research_2025/apple-harvest/install/harvest_vision:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_controllers/lib:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/imml/git/research_2025/apple-harvest-refactor/build/ur_robot_driver
+[25.376s] -- Install configuration: "RelWithDebInfo"
+[25.376s] -- Execute custom install script
+[25.377s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver//hardware_interface_plugin.xml
+[25.386s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/lib/ur_robot_driver/dashboard_client
+[25.394s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/lib/ur_robot_driver/ur_ros2_control_node
+[25.402s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/lib/ur_robot_driver/controller_stopper_node
+[25.409s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/lib/ur_robot_driver/urscript_interface
+[25.419s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/lib/libur_robot_driver_plugin.so
+[25.427s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/include/ur_robot_driver/controller_stopper.hpp
+[25.435s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/include/ur_robot_driver/dashboard_client_ros.hpp
+[25.443s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/include/ur_robot_driver/hardware_interface.hpp
+[25.453s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/include/ur_robot_driver/urcl_log_handler.hpp
+[25.460s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/environment/library_path.sh
+[25.468s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/environment/library_path.dsv
+[25.476s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/include/ur_robot_driver/controller_stopper.hpp
+[25.476s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/include/ur_robot_driver/dashboard_client_ros.hpp
+[25.476s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/include/ur_robot_driver/hardware_interface.hpp
+[25.476s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/include/ur_robot_driver/urcl_log_handler.hpp
+[25.476s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/environment/pythonpath.sh
+[25.485s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/environment/pythonpath.dsv
+[25.495s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/local/lib/python3.10/dist-packages/ur_robot_driver-2.2.15-py3.10.egg-info/PKG-INFO
+[25.503s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/local/lib/python3.10/dist-packages/ur_robot_driver-2.2.15-py3.10.egg-info/SOURCES.txt
+[25.510s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/local/lib/python3.10/dist-packages/ur_robot_driver-2.2.15-py3.10.egg-info/dependency_links.txt
+[25.519s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/local/lib/python3.10/dist-packages/ur_robot_driver-2.2.15-py3.10.egg-info/top_level.txt
+[25.527s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/local/lib/python3.10/dist-packages/ur_robot_driver/__init__.py
+[25.534s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/lib/ur_robot_driver/tool_communication.py
+[25.543s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/bin/wait_dashboard_server.sh
+[25.552s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/lib/ur_robot_driver/start_ursim.sh
+[25.559s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/config/test_goal_publishers_config.yaml
+[25.567s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/config/test_velocity_goal_publishers_config.yaml
+[25.575s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/config/ur10_update_rate.yaml
+[25.585s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/config/ur10e_update_rate.yaml
+[25.593s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/config/ur16e_update_rate.yaml
+[25.602s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/config/ur20_update_rate.yaml
+[25.610s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/config/ur30_update_rate.yaml
+[25.619s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/config/ur3_update_rate.yaml
+[25.627s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/config/ur3e_update_rate.yaml
+[25.636s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/config/ur5_update_rate.yaml
+[25.644s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/config/ur5e_update_rate.yaml
+[25.653s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/config/ur_controllers.yaml
+[25.668s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/launch/test_forward_velocity_controller.launch.py
+[25.677s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/launch/test_joint_trajectory_controller.launch.py
+[25.686s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/launch/test_scaled_joint_trajectory_controller.launch.py
+[25.694s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/launch/ur10.launch.py
+[25.703s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/launch/ur10e.launch.py
+[25.710s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/launch/ur16e.launch.py
+[25.720s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/launch/ur20.launch.py
+[25.727s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/launch/ur3.launch.py
+[25.734s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/launch/ur30.launch.py
+[25.743s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/launch/ur3e.launch.py
+[25.751s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/launch/ur5.launch.py
+[25.760s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/launch/ur5e.launch.py
+[25.768s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/launch/ur_control.launch.py
+[25.775s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/launch/ur_control_custom_hw.launch.py
+[25.784s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/launch/ur_dashboard_client.launch.py
+[25.793s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ament_index/resource_index/package_run_dependencies/ur_robot_driver
+[25.801s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ament_index/resource_index/parent_prefix_path/ur_robot_driver
+[25.808s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/environment/ament_prefix_path.sh
+[25.817s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/environment/ament_prefix_path.dsv
+[25.826s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/environment/path.sh
+[25.835s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/environment/path.dsv
+[25.843s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/local_setup.bash
+[25.852s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/local_setup.sh
+[25.860s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/local_setup.zsh
+[25.869s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/local_setup.dsv
+[25.877s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/package.dsv
+[25.886s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ament_index/resource_index/packages/ur_robot_driver
+[25.894s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/ur_robot_driver
+[25.904s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[25.911s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/cmake/ament_cmake_export_libraries-extras.cmake
+[25.921s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[25.929s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/cmake/ur_robot_driverConfig.cmake
+[25.937s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/cmake/ur_robot_driverConfig-version.cmake
+[25.944s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/package.xml
+[25.954s] -- Installing: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/resources
+[25.960s] -- Installing: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/resources/externalcontrol-1.0.5.urcap
+[25.960s] -- Installing: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/resources/rtde_input_recipe.txt
+[25.960s] -- Installing: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/resources/rtde_output_recipe.txt
+[25.961s] -- Installing: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/resources/ros_control.urscript
+[25.961s] -- Installing: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/share/ur_robot_driver/resources/rs485-1.0.urcap
+[25.988s] Listing '/home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/local/lib/python3.10/dist-packages/ur_robot_driver'...
+[25.988s] Compiling '/home/imml/git/research_2025/apple-harvest-refactor/install/ur_robot_driver/local/lib/python3.10/dist-packages/ur_robot_driver/__init__.py'...
+[25.995s] Invoked command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur_robot_driver' returned '0': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_controllers:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_controllers:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs:/home/imml/git/research_2025/apple-harvest/install/ur_moveit_config:/home/imml/git/research_2025/apple-harvest/install/ur_description:/home/imml/git/research_2025/apple-harvest/install/ur_dashboard_msgs:/home/imml/git/research_2025/apple-harvest/install/realsense2_description:/home/imml/git/research_2025/apple-harvest/install/realsense2_camera_msgs:/home/imml/git/research_2025/apple-harvest/install/harvest_interfaces:/home/imml/git/research_2025/apple-harvest/install/ur5e_custom_hardware:/home/imml/git/research_2025/apple-harvest/install/harvest_vision:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_controllers/lib:/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/imml/git/research_2025/apple-harvest-refactor/build/ur_robot_driver

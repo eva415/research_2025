@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from harvest_interfaces/srv/SetValue.srv
+// generated code does not contain a copyright notice
+
+
+module harvest_interfaces {
+  module srv {
+    struct SetValue_Request {
+      double val;
+    };
+    struct SetValue_Response {
+      boolean success;
+    };
+  };
+};

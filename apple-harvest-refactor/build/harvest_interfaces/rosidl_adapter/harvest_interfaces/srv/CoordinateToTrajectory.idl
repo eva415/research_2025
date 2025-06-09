@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from harvest_interfaces/srv/CoordinateToTrajectory.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "std_msgs/msg/Float32MultiArray.idl"
+
+module harvest_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "CoordinateToTrajectory.srv" "\n"
+      "Request")
+    struct CoordinateToTrajectory_Request {
+      geometry_msgs::msg::Point coordinate;
+    };
+    @verbatim (language="comment", text=
+      "Response")
+    struct CoordinateToTrajectory_Response {
+      boolean success;
+
+      std_msgs::msg::Float32MultiArray waypoints;
+    };
+  };
+};

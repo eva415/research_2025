@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from harvest_interfaces/action/EventDetection.action
+// generated code does not contain a copyright notice
+
+
+module harvest_interfaces {
+  module action {
+    @verbatim (language="comment", text=
+      "Goal")
+    struct EventDetection_Goal {
+      float failure_ratio;
+    };
+    @verbatim (language="comment", text=
+      "Result")
+    struct EventDetection_Result {
+      boolean finished;
+    };
+    @verbatim (language="comment", text=
+      "Feedback")
+    struct EventDetection_Feedback {
+      boolean listening;
+    };
+  };
+};

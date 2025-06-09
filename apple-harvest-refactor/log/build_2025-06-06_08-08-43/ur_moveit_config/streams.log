@@ -1,0 +1,74 @@
+[0.052s] Invoking command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur_moveit_config': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:/home/imml/git/research_2025/apple-harvest/install/ur_moveit_config:/home/imml/git/research_2025/apple-harvest/install/ur_description:/home/imml/git/research_2025/apple-harvest/install/ur_dashboard_msgs:/home/imml/git/research_2025/apple-harvest/install/realsense2_description:/home/imml/git/research_2025/apple-harvest/install/realsense2_camera_msgs:/home/imml/git/research_2025/apple-harvest/install/harvest_interfaces:/home/imml/git/research_2025/apple-harvest/install/ur5e_custom_hardware:/home/imml/git/research_2025/apple-harvest/install/harvest_vision:/opt/ros/humble /usr/bin/cmake /home/imml/git/research_2025/apple-harvest-refactor/harvest_hardware/Universal_Robots_ROS2_Driver/ur_moveit_config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config
+[0.279s] -- The C compiler identification is GNU 11.4.0
+[0.566s] -- The CXX compiler identification is GNU 11.4.0
+[0.596s] -- Detecting C compiler ABI info
+[0.953s] -- Detecting C compiler ABI info - done
+[0.998s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.998s] -- Detecting C compile features
+[0.999s] -- Detecting C compile features - done
+[1.013s] -- Detecting CXX compiler ABI info
+[1.408s] -- Detecting CXX compiler ABI info - done
+[1.441s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.442s] -- Detecting CXX compile features
+[1.443s] -- Detecting CXX compile features - done
+[1.463s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.106s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.424s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.879s] -- Configuring done
+[2.897s] -- Generating done
+[2.906s] -- Build files have been written to: /home/imml/git/research_2025/apple-harvest-refactor/build/ur_moveit_config
+[2.925s] Invoked command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:/home/imml/git/research_2025/apple-harvest/install/ur_moveit_config:/home/imml/git/research_2025/apple-harvest/install/ur_description:/home/imml/git/research_2025/apple-harvest/install/ur_dashboard_msgs:/home/imml/git/research_2025/apple-harvest/install/realsense2_description:/home/imml/git/research_2025/apple-harvest/install/realsense2_camera_msgs:/home/imml/git/research_2025/apple-harvest/install/harvest_interfaces:/home/imml/git/research_2025/apple-harvest/install/ur5e_custom_hardware:/home/imml/git/research_2025/apple-harvest/install/harvest_vision:/opt/ros/humble /usr/bin/cmake /home/imml/git/research_2025/apple-harvest-refactor/harvest_hardware/Universal_Robots_ROS2_Driver/ur_moveit_config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config
+[2.925s] Invoking command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur_moveit_config': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:/home/imml/git/research_2025/apple-harvest/install/ur_moveit_config:/home/imml/git/research_2025/apple-harvest/install/ur_description:/home/imml/git/research_2025/apple-harvest/install/ur_dashboard_msgs:/home/imml/git/research_2025/apple-harvest/install/realsense2_description:/home/imml/git/research_2025/apple-harvest/install/realsense2_camera_msgs:/home/imml/git/research_2025/apple-harvest/install/harvest_interfaces:/home/imml/git/research_2025/apple-harvest/install/ur5e_custom_hardware:/home/imml/git/research_2025/apple-harvest/install/harvest_vision:/opt/ros/humble /usr/bin/cmake --build /home/imml/git/research_2025/apple-harvest-refactor/build/ur_moveit_config -- -j16 -l16
+[3.064s] Built target ament_cmake_python_symlink_ur_moveit_config
+[3.549s] running egg_info
+[3.550s] creating ur_moveit_config.egg-info
+[3.550s] writing ur_moveit_config.egg-info/PKG-INFO
+[3.551s] writing dependency_links to ur_moveit_config.egg-info/dependency_links.txt
+[3.551s] writing top-level names to ur_moveit_config.egg-info/top_level.txt
+[3.551s] writing manifest file 'ur_moveit_config.egg-info/SOURCES.txt'
+[3.553s] reading manifest file 'ur_moveit_config.egg-info/SOURCES.txt'
+[3.553s] writing manifest file 'ur_moveit_config.egg-info/SOURCES.txt'
+[3.597s] Built target ament_cmake_python_build_ur_moveit_config_egg
+[3.609s] Invoked command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:/home/imml/git/research_2025/apple-harvest/install/ur_moveit_config:/home/imml/git/research_2025/apple-harvest/install/ur_description:/home/imml/git/research_2025/apple-harvest/install/ur_dashboard_msgs:/home/imml/git/research_2025/apple-harvest/install/realsense2_description:/home/imml/git/research_2025/apple-harvest/install/realsense2_camera_msgs:/home/imml/git/research_2025/apple-harvest/install/harvest_interfaces:/home/imml/git/research_2025/apple-harvest/install/ur5e_custom_hardware:/home/imml/git/research_2025/apple-harvest/install/harvest_vision:/opt/ros/humble /usr/bin/cmake --build /home/imml/git/research_2025/apple-harvest-refactor/build/ur_moveit_config -- -j16 -l16
+[3.611s] Invoking command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur_moveit_config': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:/home/imml/git/research_2025/apple-harvest/install/ur_moveit_config:/home/imml/git/research_2025/apple-harvest/install/ur_description:/home/imml/git/research_2025/apple-harvest/install/ur_dashboard_msgs:/home/imml/git/research_2025/apple-harvest/install/realsense2_description:/home/imml/git/research_2025/apple-harvest/install/realsense2_camera_msgs:/home/imml/git/research_2025/apple-harvest/install/harvest_interfaces:/home/imml/git/research_2025/apple-harvest/install/ur5e_custom_hardware:/home/imml/git/research_2025/apple-harvest/install/harvest_vision:/opt/ros/humble /usr/bin/cmake --install /home/imml/git/research_2025/apple-harvest-refactor/build/ur_moveit_config
+[3.618s] -- Install configuration: ""
+[3.619s] -- Execute custom install script
+[3.619s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/config/controllers.yaml
+[3.629s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/config/joint_limits.yaml
+[3.639s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/config/kinematics.yaml
+[3.648s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/config/ompl_planning.yaml
+[3.658s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/config/ur_servo.yaml
+[3.667s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/launch/ur_moveit.launch.py
+[3.677s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/launch/ur_moveit_custom_hw.launch.py
+[3.686s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/rviz/view_robot.rviz
+[3.696s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/srdf/ur.srdf.xacro
+[3.707s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/srdf/ur_macro.srdf.xacro
+[3.717s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/environment/pythonpath.sh
+[3.727s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/environment/pythonpath.dsv
+[3.737s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/local/lib/python3.10/dist-packages/ur_moveit_config-2.2.15-py3.10.egg-info/PKG-INFO
+[3.746s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/local/lib/python3.10/dist-packages/ur_moveit_config-2.2.15-py3.10.egg-info/SOURCES.txt
+[3.756s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/local/lib/python3.10/dist-packages/ur_moveit_config-2.2.15-py3.10.egg-info/dependency_links.txt
+[3.764s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/local/lib/python3.10/dist-packages/ur_moveit_config-2.2.15-py3.10.egg-info/top_level.txt
+[3.773s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/local/lib/python3.10/dist-packages/ur_moveit_config/__init__.py
+[3.781s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/local/lib/python3.10/dist-packages/ur_moveit_config/launch_common.py
+[3.789s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/local/lib/python3.10/dist-packages/launch_common.py
+[3.797s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ament_index/resource_index/package_run_dependencies/ur_moveit_config
+[3.806s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ament_index/resource_index/parent_prefix_path/ur_moveit_config
+[3.814s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/environment/ament_prefix_path.sh
+[3.824s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/environment/ament_prefix_path.dsv
+[3.833s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/environment/path.sh
+[3.842s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/environment/path.dsv
+[3.850s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/local_setup.bash
+[3.859s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/local_setup.sh
+[3.867s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/local_setup.zsh
+[3.875s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/local_setup.dsv
+[3.884s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/package.dsv
+[3.892s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ament_index/resource_index/packages/ur_moveit_config
+[3.900s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/cmake/ur_moveit_configConfig.cmake
+[3.909s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/cmake/ur_moveit_configConfig-version.cmake
+[3.918s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/share/ur_moveit_config/package.xml
+[3.955s] Listing '/home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/local/lib/python3.10/dist-packages/ur_moveit_config'...
+[3.956s] Compiling '/home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/local/lib/python3.10/dist-packages/ur_moveit_config/__init__.py'...
+[3.956s] Compiling '/home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/local/lib/python3.10/dist-packages/ur_moveit_config/launch_common.py'...
+[3.990s] Compiling '/home/imml/git/research_2025/apple-harvest-refactor/install/ur_moveit_config/local/lib/python3.10/dist-packages/launch_common.py'...
+[3.998s] Invoked command in '/home/imml/git/research_2025/apple-harvest-refactor/build/ur_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/ur_description:/home/imml/git/research_2025/apple-harvest/install/ur_moveit_config:/home/imml/git/research_2025/apple-harvest/install/ur_description:/home/imml/git/research_2025/apple-harvest/install/ur_dashboard_msgs:/home/imml/git/research_2025/apple-harvest/install/realsense2_description:/home/imml/git/research_2025/apple-harvest/install/realsense2_camera_msgs:/home/imml/git/research_2025/apple-harvest/install/harvest_interfaces:/home/imml/git/research_2025/apple-harvest/install/ur5e_custom_hardware:/home/imml/git/research_2025/apple-harvest/install/harvest_vision:/opt/ros/humble /usr/bin/cmake --install /home/imml/git/research_2025/apple-harvest-refactor/build/ur_moveit_config

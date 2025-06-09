@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from harvest_interfaces/srv/VoxelMask.srv
+// generated code does not contain a copyright notice
+
+
+module harvest_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "IntToBool.srv")
+    struct VoxelMask_Request {
+      int64 tree_pos;
+    };
+    struct VoxelMask_Response {
+      boolean success;
+    };
+  };
+};
