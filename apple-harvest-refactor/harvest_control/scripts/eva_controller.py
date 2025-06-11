@@ -21,6 +21,13 @@ class FlexToFListener(Node):
         self.cbgroup = ReentrantCallbackGroup()
         self.calibrate = calibrate
 
+        # State machine: servo -> approach -> pick
+        self.state = 'servo'
+        self.position_threshold = 0.5  # xy-centering threshold
+        self.tof_servo_threshold = 60
+        self.tof_threshold = 45       # z-approach threshold (example value)
+        self.tof_distance = None
+
         self.flex_subscriber = self.create_subscription(
             Float32MultiArray,
             '/flex_sensor_data',
@@ -38,11 +45,10 @@ class FlexToFListener(Node):
         )
 
         self.apple_publisher = self.create_publisher(Float32MultiArray, '/position_apple', 10)
-        # self.gripper_publisher = self.create_publisher(Float32MultiArray, '/position_gripper', 10)
-        self.gripper_publisher = self.create_publisher(TwistStamped, '/servo_node/delta_twist_cmds', 10) # to publish to the UR5
-
+        self.gripper_publisher = self.create_publisher(TwistStamped, '/servo_node/delta_twist_cmds', 10)
 
         self.get_logger().info('FlexToFListener node has been started.')
+
 
         # Kalman filter state
         n = 2
@@ -77,7 +83,6 @@ class FlexToFListener(Node):
         self.scale = 4.0
         self.alpha = 0.5  # increased smoothing alpha
         self.deadband = 0.05  # increased deadband threshold
-        self.position_threshold = 0.5 # threshold to stop velocity and switch control
 
         if self.calibrate:
             self.all_data = np.zeros([1, 4])
@@ -166,54 +171,73 @@ class FlexToFListener(Node):
         self.get_logger().info(f"Configured MoveIt Servo planning frame to '{frame}'.")
 
     def flex_callback(self, msg: Float32MultiArray):
-        values = list(msg.data)
-        measurement = np.array([
-            values[0]/self.scale,
-            values[1]/self.scale,
-            values[2]/self.scale,
-            values[3]/self.scale
-        ]).reshape((4, 1))
+            # Read and scale sensor values
+            values = list(msg.data)
+            measurement = np.array([v / self.scale for v in values]).reshape((4, 1))
 
-        if self.calibrate:
-            mes = np.array([values[0], values[1], values[2], values[3]])
-            self.all_data = np.append(self.all_data, [mes], axis=0)
-            current_data = self.all_data[1:]
-            df = pd.DataFrame(current_data)
-            df.to_csv("Calibration_data.csv")
-            sigma = np.cov(current_data.T)
-            self.get_logger().info(f'Predicted covariance matrix: {sigma}')
+            # Optional calibration logging
+            if self.calibrate:
+                mes = np.array(values)
+                self.all_data = np.vstack([self.all_data, mes])
+                df = pd.DataFrame(self.all_data[1:], columns=['f1','f2','f3','f4'])
+                df.to_csv('Calibration_data.csv', index=False)
+                sigma = np.cov(df.values.T)
+                self.get_logger().info(f'Predicted covariance matrix: {sigma}')
 
-        self.kalman_update(measurement)
-        self.pid_controller(self.x)
+            # Update filter + PID
+            self.kalman_update(measurement)
+            self.pid_controller(self.x)
 
-        # Publish apple position
-        apple_msg = Float32MultiArray()
-        apple_msg.data = [float(self.x[1]), float(self.x[0])]
-        self.apple_publisher.publish(apple_msg)
+            # Publish detected apple position
+            apple_msg = Float32MultiArray(data=[float(self.x[1]), float(self.x[0])])
+            self.apple_publisher.publish(apple_msg)
 
-        # Publish gripper velocity to the UR5
-        gripper_msg = TwistStamped()
-        gripper_msg.header.stamp = self.get_clock().now().to_msg()
-        gripper_msg.header.frame_id = "tool0" # use the gripper frame
+            # Build a single TwistStamped command based on state
+            cmd = TwistStamped()
+            cmd.header.stamp = self.get_clock().now().to_msg()
+            cmd.header.frame_id = 'tool0'
 
-        # Linear velocity commands from your PID controller
-        gripper_msg.twist.linear.x = -self.current_x_vel
-        gripper_msg.twist.linear.y = -self.current_y_vel
-        gripper_msg.twist.linear.z = 0.0  # set if you have vertical velocity control
+            if self.state == 'servo':
+                # x-y centering
+                cmd.twist.linear.x = -self.current_x_vel
+                cmd.twist.linear.y = -self.current_y_vel
+                cmd.twist.linear.z = 0.0
+                # transition if centered
+                ex = abs(self.smoothed_x - self.current_x)
+                ey = abs(self.smoothed_y - self.current_y)
+                if ex < self.position_threshold and ey < self.position_threshold and self.tof_distance < self.tof_servo_threshold:
+                    self.get_logger().info('Transition to approach')
+                    self.state = 'approach'
 
-        # Angular velocities — set to zero or control as needed
-        gripper_msg.twist.angular.x = 0.0
-        gripper_msg.twist.angular.y = 0.0
-        gripper_msg.twist.angular.z = 0.0
+            elif self.state == 'approach':
+                # hold x-y, move down until within tof_threshold
+                cmd.twist.linear.x = 0.0
+                cmd.twist.linear.y = 0.0
+                if self.tof_distance is not None:
+                    if self.tof_distance > self.tof_threshold:
+                        cmd.twist.linear.z = -0.05
+                    else:
+                        self.get_logger().info('Reached approach threshold, ready to pick')
+                        self.state = 'pick'
+                else:
+                    cmd.twist.linear.z = 0.0
 
-        self.gripper_publisher.publish(gripper_msg)
-        self.get_logger().info(f'Publishing to the UR5: {gripper_msg}')
+            else:  # pick
+                cmd.twist.linear.x = 0.0
+                cmd.twist.linear.y = 0.0
+                cmd.twist.linear.z = 0.0
+                self.get_logger().info('pick')
+                # TODO: call gripper close here
 
+            # zeros for angular velocities
+            cmd.twist.angular.x = cmd.twist.angular.y = cmd.twist.angular.z = 0.0
 
+            # Publish to UR5
+            self.gripper_publisher.publish(cmd)
+            self.get_logger().info(f'Publishing to UR5: {cmd}')
 
     def tof_callback(self, msg: Int32):
-        # Reserved for future use
-        pass
+        self.tof_distance = msg.data
 
     def kalman_update(self, measurement):
         self.z = measurement
@@ -278,7 +302,6 @@ class FlexToFListener(Node):
         self.prev_x_error = error_x
         self.prev_y_error = error_y
 
-
 def main():
     rclpy.init()
     node = FlexToFListener()
@@ -289,6 +312,7 @@ def main():
     finally:
         node.destroy_node()
         rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()
