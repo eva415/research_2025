@@ -24,8 +24,9 @@ class FlexToFListener(Node):
         # State machine: servo -> approach -> pick
         self.state = 'servo'
         self.position_threshold = 0.5  # xy-centering threshold
-        self.tof_servo_threshold = 60
+        self.tof_servo_threshold = 95
         self.tof_threshold = 45       # z-approach threshold (example value)
+        self.tof_override = 65         # override threshold to force approach
         self.tof_distance = None
 
         self.flex_subscriber = self.create_subscription(
@@ -171,70 +172,90 @@ class FlexToFListener(Node):
         self.get_logger().info(f"Configured MoveIt Servo planning frame to '{frame}'.")
 
     def flex_callback(self, msg: Float32MultiArray):
-            # Read and scale sensor values
-            values = list(msg.data)
-            measurement = np.array([v / self.scale for v in values]).reshape((4, 1))
+        self.get_logger().info(f"STATE: {self.state}, tof: {self.tof_distance}")
+        # Read and scale sensor values
+        values = list(msg.data)
+        measurement = np.array([v/self.scale for v in values]).reshape((4,1))
 
-            # Optional calibration logging
-            if self.calibrate:
-                mes = np.array(values)
-                self.all_data = np.vstack([self.all_data, mes])
-                df = pd.DataFrame(self.all_data[1:], columns=['f1','f2','f3','f4'])
-                df.to_csv('Calibration_data.csv', index=False)
-                sigma = np.cov(df.values.T)
-                self.get_logger().info(f'Predicted covariance matrix: {sigma}')
+        # Calibrate if requested
+        if self.calibrate:
+            mes = np.array(values)
+            self.all_data = np.vstack([self.all_data, mes])
+            df = pd.DataFrame(self.all_data[1:], columns=['f1','f2','f3','f4'])
+            df.to_csv('Calibration_data.csv', index=False)
+            sigma = np.cov(df.values.T)
+            self.get_logger().info(f'Predicted covariance matrix: {sigma}')
 
-            # Update filter + PID
-            self.kalman_update(measurement)
-            self.pid_controller(self.x)
+        # Filter + PID
+        self.kalman_update(measurement)
+        self.pid_controller(self.x)
+        # Publish apple pos
+        apple_msg = Float32MultiArray(data=[float(self.x[1]), float(self.x[0])])
+        self.apple_publisher.publish(apple_msg)
 
-            # Publish detected apple position
-            apple_msg = Float32MultiArray(data=[float(self.x[1]), float(self.x[0])])
-            self.apple_publisher.publish(apple_msg)
+        # Build command
+        cmd = TwistStamped()
+        cmd.header.stamp = self.get_clock().now().to_msg()
+        cmd.header.frame_id = 'tool0'
 
-            # Build a single TwistStamped command based on state
-            cmd = TwistStamped()
-            cmd.header.stamp = self.get_clock().now().to_msg()
-            cmd.header.frame_id = 'tool0'
+        ex = abs(self.smoothed_x - self.current_x)
+        ey = abs(self.smoothed_y - self.current_y)
 
-            if self.state == 'servo':
-                # x-y centering
-                cmd.twist.linear.x = -self.current_x_vel
-                cmd.twist.linear.y = -self.current_y_vel
-                cmd.twist.linear.z = 0.0
-                # transition if centered
-                ex = abs(self.smoothed_x - self.current_x)
-                ey = abs(self.smoothed_y - self.current_y)
-                if ex < self.position_threshold and ey < self.position_threshold and self.tof_distance < self.tof_servo_threshold:
-                    self.get_logger().info('Transition to approach')
-                    self.state = 'approach'
+        if self.state == 'servo':
+            # Always perform xy PID
+            cmd.twist.linear.x = -self.current_x_vel
+            cmd.twist.linear.y = -self.current_y_vel
+            cmd.twist.linear.z = 0.0
+            # Transition to approach if centered + tof ok, OR if tof below override
+            if (
+                (self.tof_distance is not None and self.tof_distance < self.tof_override)
+                or (
+                    ex < self.position_threshold and
+                    ey < self.position_threshold and
+                    self.tof_distance is not None and
+                    self.tof_distance < self.tof_servo_threshold
+                )
+            ):
+                self.get_logger().info(
+                    f'Transition to approach (tof={self.tof_distance}, ex={ex:.3f}, ey={ey:.3f})'
+                )
+                self.state = 'approach'
 
-            elif self.state == 'approach':
-                # hold x-y, move down until within tof_threshold
-                cmd.twist.linear.x = 0.0
-                cmd.twist.linear.y = 0.0
-                if self.tof_distance is not None:
-                    if self.tof_distance > self.tof_threshold:
-                        cmd.twist.linear.z = -0.05
-                    else:
-                        self.get_logger().info('Reached approach threshold, ready to pick')
-                        self.state = 'pick'
-                else:
+        elif self.state == 'approach':
+            # If tof above override and drifted off-center, return to servo
+            if self.tof_distance is not None and self.tof_distance >= self.tof_override:
+                if ex > self.position_threshold or ey > self.position_threshold:
+                    self.get_logger().warn(
+                        f'Drift off-center and tof>=override ({self.tof_distance}), back to servo'
+                    )
+                    self.state = 'servo'
+                    cmd.twist.linear.x = -self.current_x_vel
+                    cmd.twist.linear.y = -self.current_y_vel
                     cmd.twist.linear.z = 0.0
-
-            else:  # pick
-                cmd.twist.linear.x = 0.0
-                cmd.twist.linear.y = 0.0
+                    # skip descent this cycle
+                    self.gripper_publisher.publish(cmd)
+                    return
+            # Otherwise hold xy and descend if needed
+            cmd.twist.linear.x = 0.0
+            cmd.twist.linear.y = 0.0
+            if self.tof_distance is not None and self.tof_distance > self.tof_threshold:
+                cmd.twist.linear.z = 0.05
+            elif self.tof_distance is not None:
+                self.get_logger().info('Reached approach threshold, ready to pick')
+                self.state = 'pick'
                 cmd.twist.linear.z = 0.0
-                self.get_logger().info('pick')
-                # TODO: call gripper close here
+            else:
+                cmd.twist.linear.z = 0.0
 
-            # zeros for angular velocities
-            cmd.twist.angular.x = cmd.twist.angular.y = cmd.twist.angular.z = 0.0
+        else:  # pick
+            cmd.twist.linear.x = cmd.twist.linear.y = cmd.twist.linear.z = 0.0
+            self.get_logger().info('pick')
+            # TODO: trigger gripper close
 
-            # Publish to UR5
-            self.gripper_publisher.publish(cmd)
-            self.get_logger().info(f'Publishing to UR5: {cmd}')
+        # Zero angular
+        cmd.twist.angular.x = cmd.twist.angular.y = cmd.twist.angular.z = 0.0
+        # Publish
+        self.gripper_publisher.publish(cmd)
 
     def tof_callback(self, msg: Int32):
         self.tof_distance = msg.data

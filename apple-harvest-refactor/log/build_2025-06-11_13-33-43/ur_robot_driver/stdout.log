@@ -1,0 +1,6 @@
+[ 33%] Built target controller_stopper_node
+[ 33%] Built target urscript_interface
+[ 46%] Built target ur_ros2_control_node
+[ 86%] Built target dashboard_client
+[100%] Built target ur_robot_driver_plugin
+[100%] Built target ament_cmake_python_symlink_ur_robot_driver
