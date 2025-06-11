@@ -1,0 +1,47 @@
+[0.032s] Invoking command in '/home/imml/git/research_2025/apple-harvest-refactor/build/harvest': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/harvest_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/harvest_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/harvest_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-refactor/install/harvest_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/imml/git/research_2025/apple-harvest-refactor/build/harvest -- -j16 -l16
+[0.409s] Built target ament_cmake_python_symlink_harvest
+[0.474s] running egg_info
+[0.475s] writing harvest.egg-info/PKG-INFO
+[0.475s] writing dependency_links to harvest.egg-info/dependency_links.txt
+[0.476s] writing top-level names to harvest.egg-info/top_level.txt
+[0.479s] reading manifest file 'harvest.egg-info/SOURCES.txt'
+[0.479s] writing manifest file 'harvest.egg-info/SOURCES.txt'
+[0.531s] Built target ament_cmake_python_build_harvest_egg
+[0.558s] Invoked command in '/home/imml/git/research_2025/apple-harvest-refactor/build/harvest' returned '0': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/harvest_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/harvest_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/harvest_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-refactor/install/harvest_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/imml/git/research_2025/apple-harvest-refactor/build/harvest -- -j16 -l16
+[0.561s] Invoking command in '/home/imml/git/research_2025/apple-harvest-refactor/build/harvest': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/harvest_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/harvest_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/harvest_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-refactor/install/harvest_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/imml/git/research_2025/apple-harvest-refactor/build/harvest
+[0.571s] -- Install configuration: ""
+[0.574s] -- Execute custom install script
+[0.574s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/harvest/environment/pythonpath.sh
+[0.574s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/harvest/environment/pythonpath.dsv
+[0.574s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/local/lib/python3.10/dist-packages/harvest-0.0.0-py3.10.egg-info/PKG-INFO
+[0.575s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/local/lib/python3.10/dist-packages/harvest-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.575s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/local/lib/python3.10/dist-packages/harvest-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.575s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/local/lib/python3.10/dist-packages/harvest-0.0.0-py3.10.egg-info/top_level.txt
+[0.575s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/local/lib/python3.10/dist-packages/harvest/__init__.py
+[0.576s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/lib/harvest/start_harvest.py
+[0.576s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/lib/harvest/start_harvest_demo.py
+[0.576s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/lib/harvest/record.py
+[0.576s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/lib/harvest/orchard_templating.py
+[0.576s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/lib/harvest/apple_prediction_test.py
+[0.576s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/lib/harvest/visual_servo_test.py
+[0.577s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/harvest//launch/launch_gripper.launch.py
+[0.577s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/harvest//launch/launch_lab_demo.py
+[0.577s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/harvest//launch/launch_vision.launch.py
+[0.577s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/harvest//launch/launch_vision_templating.launch.py
+[0.577s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/ament_index/resource_index/package_run_dependencies/harvest
+[0.578s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/ament_index/resource_index/parent_prefix_path/harvest
+[0.578s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/harvest/environment/ament_prefix_path.sh
+[0.578s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/harvest/environment/ament_prefix_path.dsv
+[0.578s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/harvest/environment/path.sh
+[0.578s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/harvest/environment/path.dsv
+[0.578s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/harvest/local_setup.bash
+[0.579s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/harvest/local_setup.sh
+[0.579s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/harvest/local_setup.zsh
+[0.579s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/harvest/local_setup.dsv
+[0.579s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/harvest/package.dsv
+[0.596s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/ament_index/resource_index/packages/harvest
+[0.596s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/harvest/cmake/harvestConfig.cmake
+[0.597s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/harvest/cmake/harvestConfig-version.cmake
+[0.598s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-refactor/install/harvest/share/harvest/package.xml
+[0.659s] Listing '/home/imml/git/research_2025/apple-harvest-refactor/install/harvest/local/lib/python3.10/dist-packages/harvest'...
+[0.676s] Invoked command in '/home/imml/git/research_2025/apple-harvest-refactor/build/harvest' returned '0': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/harvest_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/harvest_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-refactor/install/harvest_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-refactor/install/harvest_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/imml/git/research_2025/apple-harvest-refactor/build/harvest

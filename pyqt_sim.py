@@ -85,7 +85,7 @@ class PlotSubscriber(Node):
             self.x_gripper.pop(0)
             self.y_gripper.pop(0)
             self.z_apple.pop(0)
-class PlotWindow(QWidget): # Plot the three graphs with apple xyz position, gripper xy position (or velocity?)
+class PlotWindow(QWidget):
     def __init__(self, node: PlotSubscriber):
         super().__init__()
         self.node = node
@@ -93,62 +93,105 @@ class PlotWindow(QWidget): # Plot the three graphs with apple xyz position, grip
         self.setGeometry(100, 100, 1000, 900)
         layout = QVBoxLayout()
         self.fig = Figure(figsize=(8, 8))
+
+        # Primary axes
         self.ax1 = self.fig.add_subplot(311)
         self.ax2 = self.fig.add_subplot(312)
         self.ax3 = self.fig.add_subplot(313)
+
+        # Twin axes for gripper data
+        self.ax1b = self.ax1.twinx()
+        self.ax2b = self.ax2.twinx()
+
+        # Canvas
         self.canvas = FigureCanvas(self.fig)
         layout.addWidget(self.canvas)
         self.setLayout(layout)
+
+        # Start update loop
         self.timer_thread = Thread(target=self.update_loop, daemon=True)
         self.timer_thread.start()
+
         self.z_threshold = 45
         self.xy_threshold = 0.5
+
     def update_loop(self):
         while rclpy.ok():
             sleep(0.1)
+
+            # Clear both y-axes
             self.ax1.clear()
+            self.ax1b.clear()
             self.ax2.clear()
-            self.ax3.clear()  # NEW
+            self.ax2b.clear()
+            self.ax3.clear()
+
             times = self.node.times
             if times:
-                self.ax1.plot(times, self.node.x_apple, label="X Apple", color='red', linewidth=2)
-                self.ax1.plot(times, self.node.x_gripper, label="X Gripper", color='blue', linewidth=2)
-                self.ax1.set_ylabel("X Position", fontsize=20)
-                self.ax1.axhline(y=self.xy_threshold, color='green', linestyle='--', label=f"Threshold ({self.z_threshold} mm)")
-                self.ax1.axhline(y=-1*self.xy_threshold, color='green', linestyle='--', label=f"Threshold ({self.z_threshold} mm)")
-                self.ax1.legend(fontsize=12)
-                self.ax1.tick_params(axis='both', labelsize=12)
-                self.ax2.plot(times, self.node.y_apple, label="Y Apple", color='red', linewidth=2)
-                self.ax2.plot(times, self.node.y_gripper, label="Y Gripper", color='blue', linewidth=2)
-                self.ax2.set_ylabel("Y Position", fontsize=20)
-                self.ax2.axhline(y=self.xy_threshold, color='green', linestyle='--', label=f"Threshold ({self.z_threshold} mm)")
-                self.ax2.axhline(y=-1*self.xy_threshold, color='green', linestyle='--', label=f"Threshold ({self.z_threshold} mm)")
-                self.ax2.legend(fontsize=12)
-                self.ax2.tick_params(axis='both', labelsize=12)
-                self.ax3.plot(times, self.node.z_apple, label="Z Apple", color='red', linewidth=2)
-                self.ax3.set_ylabel("Z Position", fontsize=20)
-                self.ax3.set_xlabel("Time (s)", fontsize=20)
-                self.ax3.axhline(y=self.z_threshold, color='green', linestyle='--', label=f"Threshold ({self.z_threshold} mm)")
+                # --- Subplot 1: X ---
+                # Apple (left y-axis)
+                self.ax1.plot(times, self.node.x_apple, color='red', linewidth=2, label="X Apple")
+                self.ax1.set_ylabel("X Apple", fontsize=16, color='red')
+                self.ax1.tick_params(axis='y', labelcolor='red')
+                # Threshold lines (plotted on left)
+                self.ax1.axhline(self.xy_threshold, color='green', linestyle='--')
+                self.ax1.axhline(-self.xy_threshold, color='green', linestyle='--')
+
+                # Gripper (right y-axis)
+                self.ax1b.plot(times, self.node.x_gripper, color='blue', linewidth=2, label="X Gripper")
+                self.ax1b.set_ylabel("X Gripper", fontsize=16, color='blue')
+                self.ax1b.tick_params(axis='y', labelcolor='blue')
+
+                # Legends
+                # We need to combine legends from both axes:
+                lines1, labels1 = self.ax1.get_legend_handles_labels()
+                lines2, labels2 = self.ax1b.get_legend_handles_labels()
+                self.ax1.legend(lines1 + lines2, labels1 + labels2, fontsize=12, loc='upper left')
+
+                # --- Subplot 2: Y ---
+                self.ax2.plot(times, self.node.y_apple, color='red', linewidth=2, label="Y Apple")
+                self.ax2.set_ylabel("Y Apple", fontsize=16, color='red')
+                self.ax2.tick_params(axis='y', labelcolor='red')
+                self.ax2.axhline(self.xy_threshold, color='green', linestyle='--')
+                self.ax2.axhline(-self.xy_threshold, color='green', linestyle='--')
+
+                self.ax2b.plot(times, self.node.y_gripper, color='blue', linewidth=2, label="Y Gripper")
+                self.ax2b.set_ylabel("Y Gripper", fontsize=16, color='blue')
+                self.ax2b.tick_params(axis='y', labelcolor='blue')
+
+                lines1, labels1 = self.ax2.get_legend_handles_labels()
+                lines2, labels2 = self.ax2b.get_legend_handles_labels()
+                self.ax2.legend(lines1 + lines2, labels1 + labels2, fontsize=12, loc='upper left')
+
+                # --- Subplot 3: Z (single axis) ---
+                self.ax3.plot(times, self.node.z_apple, color='red', linewidth=2, label="Z Apple")
+                self.ax3.set_ylabel("Z Position", fontsize=16)
+                self.ax3.set_xlabel("Time (s)", fontsize=16)
+                self.ax3.axhline(self.z_threshold, color='green', linestyle='--', label=f"Z Threshold ({self.z_threshold} mm)")
                 self.ax3.legend(fontsize=12)
                 self.ax3.tick_params(axis='both', labelsize=12)
-                # Set time range
-                self.ax1.set_xlim(0, 60)
-                self.ax2.set_xlim(0, 60)
-                self.ax3.set_xlim(0, 60)
-            self.fig.suptitle(f"{title}", fontsize=30)
+
+                # Limit x-axis to the time window
+                for ax in (self.ax1, self.ax2, self.ax3):
+                    ax.set_xlim(max(0, times[-1] - self.node.max_time_window), times[-1])
+
+            self.fig.suptitle(title, fontsize=24)
             self.canvas.draw()
+
 def ros_spin(node):
     while rclpy.ok():
         rclpy.spin_once(node, timeout_sec=0.1)
+
 def main():
     rclpy.init()
     node = PlotSubscriber()
-    # Start ROS spin thread
     ros_thread = Thread(target=ros_spin, args=(node,), daemon=True)
     ros_thread.start()
+
     app = QApplication(sys.argv)
     window = PlotWindow(node)
     window.show()
     sys.exit(app.exec())
+
 if __name__ == '__main__':
     main()

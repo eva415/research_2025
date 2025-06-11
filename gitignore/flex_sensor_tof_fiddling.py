@@ -1,74 +1,78 @@
+#!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Float32, String
+from std_msgs.msg import Int32, Float32MultiArray
 import serial
-import re
+import re  # For extracting sensor data
 
-class SensorNode(Node):
+class FlexSensorControl(Node):
     def __init__(self):
-        super().__init__("sensor_node")
+        super().__init__("flex_sensor_node")
 
-        # Publishers for flex sensor data and ToF data
-        self.tof_publisher = self.create_publisher(Float32, 'tof_sensor_data', 10)
-        self.flex_publisher = self.create_publisher(String, 'flex_sensor_data', 10)
+        # Create publisher for sensor data
+        self.publisher_flex = self.create_publisher(Float32MultiArray, 'flex_sensor_data', 50)
+        self.publisher_tof = self.create_publisher(Int32, 'tof_sensor_data', 50)
 
-        # Connect to Arduino
+        # Initialize serial connection
         try:
-            self.serial_port = serial.Serial('/dev/ttyACM0', 115200, timeout=1)
+            self.arduinoData = serial.Serial('/dev/ttyACM0', 115200, timeout=0.05)
             self.get_logger().info("Connected to Arduino on /dev/ttyACM0")
         except serial.SerialException as e:
             self.get_logger().error(f"Could not open serial port: {e}")
             return
 
-        # Timer to read serial data
-        self.timer = self.create_timer(0.1, self.read_serial_data)
+        # Dictionaries to store sensor data
+        self.flex_sensor_values = [0.0] * 4  # For sensors 1 to 4
+        # self.resistance_values = {}  # Stores resistance values per sensor
+        self.tof_value = None        # Stores ToF sensor data
+
+        # Timer to read serial data (every 0.05 sec)
+        self.timer = self.create_timer(0.05, self.read_serial_data)
 
     def read_serial_data(self):
-        """Reads serial data from Arduino and publishes relevant topics."""
-        if self.serial_port.in_waiting > 0:
+        """ Reads serial data from Arduino and updates sensor dictionaries. """
+        if self.arduinoData.in_waiting > 0:  # Check if data is available
             try:
-                data = self.serial_port.readline().decode('utf-8').strip()
-                
-                # Match ToF sensor data
-                match_tof = re.search(r"ToF: (\d+)", data)
-                if match_tof:
-                    distance = float(match_tof.group(1))
-                    msg = Float32()
-                    msg.data = distance
-                    self.tof_publisher.publish(msg)
-                    self.get_logger().info(f"ToF Distance: {distance} mm")
-                    return
-
-                # Match Flex Sensor Resistance
-                match_resistance = re.search(r"Flex Sensor (\d+) Resistance: ([\d.]+) ohms", data)
-                if match_resistance:
-                    sensor_id = int(match_resistance.group(1))
-                    resistance = float(match_resistance.group(2))
-                    msg = String()
-                    msg.data = f"Sensor {sensor_id} Resistance: {resistance} ohms"
-                    self.flex_publisher.publish(msg)
-                    self.get_logger().info(f"Flex Sensor {sensor_id} Resistance: {resistance} ohms")
-                    return
-
-                # Match Flex Sensor Bend
-                match_bend = re.search(r"Flex Sensor (\d+) Bend: ([\d.-]+) degrees", data)
-                if match_bend:
-                    sensor_id = int(match_bend.group(1))
-                    bend = float(match_bend.group(2))
-                    msg = String()
-                    msg.data = f"Sensor {sensor_id} Bend: {bend} degrees"
-                    self.flex_publisher.publish(msg)
-                    self.get_logger().info(f"Published Flex Sensor {sensor_id} Bend: {bend} degrees")
-                    return
-
+                data = self.arduinoData.readline().decode('utf-8').strip()
+                if data:
+                    self.parse_sensor_data(data)  # Process and store the data
             except Exception as e:
-                self.get_logger().error(f"Error reading serial data: {e}")
+                self.get_logger().error(f"Error reading from serial: {e}")
+
+    def parse_sensor_data(self, data):
+        """ Parses incoming sensor data and stores/publishes it. """
+
+        # Match Flex Sensor data: "Sensor 1 Resistance: 1000 ohms"
+        match = re.match(r"Sensor (\d+) (Resistance|Bend): ([\d.-]+) (ohms|degrees)", data)
+        if match:
+            sensor_id = int(match.group(1))  # Extract sensor number
+            data_type = match.group(2)       # "Resistance" or "Bend"
+            value = float(match.group(3))    # Extract value
+            if data_type == "Bend":
+                self.flex_sensor_values[sensor_id - 1] = value  # Update index 0–3
+                # Publish all flex sensor values
+                msg = Float32MultiArray()
+                msg.data = self.flex_sensor_values
+                self.publisher_flex.publish(msg)
+                return
+        
+        # Match ToF Sensor data: "ToF: 82 mm"
+        tof_match = re.match(r"ToF: ([\d.]+) mm", data)
+        if tof_match:
+            tof_value = int(float(tof_match.group(1)))  # Convert to integer (you can cast to int directly)
+
+            # Publish ToF data as an Int32
+            msg = Int32()  # Create an Int32 message
+            msg.data = tof_value  # Assign the integer value to the data field of the message
+            self.publisher_tof.publish(msg)  # Publish the message
+            return
+
 
 def main(args=None):
     rclpy.init(args=args)
-    node = SensorNode()
-    rclpy.spin(node)
-    node.destroy_node()
+    flex_node = FlexSensorControl()
+    rclpy.spin(flex_node)
+    flex_node.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':
