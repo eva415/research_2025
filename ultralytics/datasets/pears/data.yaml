@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['pears']
+
+roboflow:
+  workspace: roboeve
+  project: hood_river_pear_conveyor
+  version: 5
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/roboeve/hood_river_pear_conveyor/dataset/5
