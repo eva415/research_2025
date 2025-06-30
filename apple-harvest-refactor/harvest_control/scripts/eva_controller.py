@@ -21,8 +21,8 @@ class FlexToFListener(Node):
         self.cbgroup = ReentrantCallbackGroup()
         self.calibrate = calibrate
 
-        # State machine: servo -> approach -> pick
-        self.state = 'servo'
+        # State machine: approach -> servo/approach -> pick
+        self.state = 'approach'
         self.position_threshold = 0.5  # xy-centering threshold
         self.tof_servo_threshold = 95
         self.tof_threshold = 45       # z-approach threshold (example value)
