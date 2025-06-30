@@ -46,7 +46,7 @@ def get_centroids_from_image(image, draw=True):
 
 # Example usage:
 if __name__ == "__main__":
-    image_path = "/Users/evakrueger/git/ultralytics/datasets/test/green_pears.png"
+    image_path = "/home/imml/git/research_2025/ultralytics/datasets/test/green_pears.png"
     img = cv2.imread(image_path)
     centroids, img_with_drawings = get_centroids_from_image(img, draw=True)
 
