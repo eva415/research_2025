@@ -1,0 +1,8 @@
+source;share/harvest/hook/cmake_prefix_path.ps1
+source;share/harvest/hook/cmake_prefix_path.dsv
+source;share/harvest/hook/cmake_prefix_path.sh
+source;share/harvest/local_setup.bash
+source;share/harvest/local_setup.dsv
+source;share/harvest/local_setup.ps1
+source;share/harvest/local_setup.sh
+source;share/harvest/local_setup.zsh

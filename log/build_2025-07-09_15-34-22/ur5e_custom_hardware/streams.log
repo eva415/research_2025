@@ -1,0 +1,32 @@
+[2.849s] Invoking command in '/home/imml/git/research_2025/build/ur5e_custom_hardware': PYTHONPATH=/home/imml/git/research_2025/build/ur5e_custom_hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/imml/git/research_2025/install/ur5e_custom_hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/imml/git/research_2025/build/ur5e_custom_hardware/build --no-deps symlink_data
+[3.249s] running develop
+[3.554s] running egg_info
+[3.555s] creating ur5e_custom_hardware.egg-info
+[3.555s] writing ur5e_custom_hardware.egg-info/PKG-INFO
+[3.555s] writing dependency_links to ur5e_custom_hardware.egg-info/dependency_links.txt
+[3.555s] writing entry points to ur5e_custom_hardware.egg-info/entry_points.txt
+[3.555s] writing requirements to ur5e_custom_hardware.egg-info/requires.txt
+[3.555s] writing top-level names to ur5e_custom_hardware.egg-info/top_level.txt
+[3.555s] writing manifest file 'ur5e_custom_hardware.egg-info/SOURCES.txt'
+[3.558s] reading manifest file 'ur5e_custom_hardware.egg-info/SOURCES.txt'
+[3.558s] writing manifest file 'ur5e_custom_hardware.egg-info/SOURCES.txt'
+[3.560s] running build_ext
+[3.562s] Creating /home/imml/git/research_2025/install/ur5e_custom_hardware/lib/python3.10/site-packages/ur5e-custom-hardware.egg-link (link to .)
+[3.563s] Installing gripper_palm_camera script to /home/imml/git/research_2025/install/ur5e_custom_hardware/lib/ur5e_custom_hardware
+[3.563s] 
+[3.563s] Installed /home/imml/git/research_2025/build/ur5e_custom_hardware
+[3.563s] running symlink_data
+[3.563s] creating /home/imml/git/research_2025/install/ur5e_custom_hardware/share/ament_index
+[3.563s] creating /home/imml/git/research_2025/install/ur5e_custom_hardware/share/ament_index/resource_index
+[3.563s] creating /home/imml/git/research_2025/install/ur5e_custom_hardware/share/ament_index/resource_index/packages
+[3.565s] symbolically linking /home/imml/git/research_2025/build/ur5e_custom_hardware/resource/ur5e_custom_hardware -> /home/imml/git/research_2025/install/ur5e_custom_hardware/share/ament_index/resource_index/packages
+[3.565s] symbolically linking /home/imml/git/research_2025/build/ur5e_custom_hardware/package.xml -> /home/imml/git/research_2025/install/ur5e_custom_hardware/share/ur5e_custom_hardware
+[3.565s] creating /home/imml/git/research_2025/install/ur5e_custom_hardware/share/ur5e_custom_hardware/launch
+[3.565s] creating /home/imml/git/research_2025/install/ur5e_custom_hardware/share/ur5e_custom_hardware/urdf
+[3.565s] symbolically linking /home/imml/git/research_2025/build/ur5e_custom_hardware/urdf/gripper.urdf.xacro -> /home/imml/git/research_2025/install/ur5e_custom_hardware/share/ur5e_custom_hardware/urdf
+[3.565s] symbolically linking /home/imml/git/research_2025/build/ur5e_custom_hardware/urdf/ur_gripper.urdf.xacro -> /home/imml/git/research_2025/install/ur5e_custom_hardware/share/ur5e_custom_hardware/urdf
+[3.565s] creating /home/imml/git/research_2025/install/ur5e_custom_hardware/share/ur5e_custom_hardware/meshes
+[3.566s] symbolically linking /home/imml/git/research_2025/build/ur5e_custom_hardware/meshes/03_mk3_full_assembly.STL -> /home/imml/git/research_2025/install/ur5e_custom_hardware/share/ur5e_custom_hardware/meshes
+[3.566s] symbolically linking /home/imml/git/research_2025/build/ur5e_custom_hardware/meshes/03_mk3_full_assembly_coarse.STL -> /home/imml/git/research_2025/install/ur5e_custom_hardware/share/ur5e_custom_hardware/meshes
+[3.566s] symbolically linking /home/imml/git/research_2025/build/ur5e_custom_hardware/meshes/03_mk3_full_assembly_(simplified_for_RVIZ).STL -> /home/imml/git/research_2025/install/ur5e_custom_hardware/share/ur5e_custom_hardware/meshes
+[3.629s] Invoked command in '/home/imml/git/research_2025/build/ur5e_custom_hardware' returned '0': PYTHONPATH=/home/imml/git/research_2025/build/ur5e_custom_hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/imml/git/research_2025/install/ur5e_custom_hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/imml/git/research_2025/build/ur5e_custom_hardware/build --no-deps symlink_data

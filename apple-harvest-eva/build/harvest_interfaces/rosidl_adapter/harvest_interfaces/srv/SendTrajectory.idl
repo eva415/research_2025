@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from harvest_interfaces/srv/SendTrajectory.srv
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Float32MultiArray.idl"
+
+module harvest_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "Request: A list of waypoints")
+    struct SendTrajectory_Request {
+      std_msgs::msg::Float32MultiArray waypoints;
+    };
+    struct SendTrajectory_Response {
+      @verbatim (language="comment", text=
+        "Response: Success flag")
+      boolean success;
+    };
+  };
+};

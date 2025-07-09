@@ -1,0 +1,199 @@
+[0.019s] Invoking command in '/home/imml/git/research_2025/build/ur_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/imml/git/research_2025/apple-harvest-refactor/harvest_hardware/Universal_Robots_ROS2_Description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/imml/git/research_2025/install/ur_description
+[2.178s] -- The C compiler identification is GNU 11.4.0
+[2.178s] -- The CXX compiler identification is GNU 11.4.0
+[2.178s] -- Detecting C compiler ABI info
+[2.178s] -- Detecting C compiler ABI info - done
+[2.178s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.178s] -- Detecting C compile features
+[2.178s] -- Detecting C compile features - done
+[2.179s] -- Detecting CXX compiler ABI info
+[2.179s] -- Detecting CXX compiler ABI info - done
+[2.179s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.179s] -- Detecting CXX compile features
+[2.179s] -- Detecting CXX compile features - done
+[2.179s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.179s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.179s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.179s] -- Found ament_cmake_pytest: 1.3.11 (/opt/ros/humble/share/ament_cmake_pytest/cmake)
+[3.142s] -- Configuring done
+[3.147s] -- Generating done
+[3.152s] -- Build files have been written to: /home/imml/git/research_2025/build/ur_description
+[3.158s] Invoked command in '/home/imml/git/research_2025/build/ur_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/imml/git/research_2025/apple-harvest-refactor/harvest_hardware/Universal_Robots_ROS2_Description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/imml/git/research_2025/install/ur_description
+[3.161s] Invoking command in '/home/imml/git/research_2025/build/ur_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/imml/git/research_2025/build/ur_description -- -j16 -l16
+[3.230s] Invoked command in '/home/imml/git/research_2025/build/ur_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/imml/git/research_2025/build/ur_description -- -j16 -l16
+[3.245s] Invoking command in '/home/imml/git/research_2025/build/ur_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/imml/git/research_2025/build/ur_description
+[3.257s] -- Install configuration: ""
+[3.258s] -- Execute custom install script
+[3.261s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/initial_positions.yaml
+[3.275s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/initial_positions_marcus.yaml
+[3.290s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur10/default_kinematics.yaml
+[3.304s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur10/joint_limits.yaml
+[3.317s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur10/physical_parameters.yaml
+[3.332s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur10/visual_parameters.yaml
+[3.348s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur10e/default_kinematics.yaml
+[3.363s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur10e/joint_limits.yaml
+[3.378s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur10e/physical_parameters.yaml
+[3.393s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur10e/visual_parameters.yaml
+[3.407s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur16e/default_kinematics.yaml
+[3.421s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur16e/joint_limits.yaml
+[3.434s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur16e/physical_parameters.yaml
+[3.445s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur16e/visual_parameters.yaml
+[3.460s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur20/default_kinematics.yaml
+[3.472s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur20/joint_limits.yaml
+[3.486s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur20/physical_parameters.yaml
+[3.500s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur20/visual_parameters.yaml
+[3.512s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur3/default_kinematics.yaml
+[3.525s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur3/joint_limits.yaml
+[3.546s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur3/physical_parameters.yaml
+[3.557s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur3/visual_parameters.yaml
+[3.582s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur30/default_kinematics.yaml
+[3.598s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur30/joint_limits.yaml
+[3.615s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur30/physical_parameters.yaml
+[3.626s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur30/visual_parameters.yaml
+[3.642s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur3e/default_kinematics.yaml
+[3.659s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur3e/joint_limits.yaml
+[3.674s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur3e/physical_parameters.yaml
+[3.701s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur3e/visual_parameters.yaml
+[3.712s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur5/default_kinematics.yaml
+[3.728s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur5/joint_limits.yaml
+[3.749s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur5/physical_parameters.yaml
+[3.775s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur5/visual_parameters.yaml
+[3.793s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur5e/default_kinematics.yaml
+[3.839s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur5e/joint_limits.yaml
+[3.858s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur5e/physical_parameters.yaml
+[3.888s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/config/ur5e/visual_parameters.yaml
+[3.918s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/launch/view_ur.launch.py
+[3.957s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10/collision/base.stl
+[3.985s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10/collision/forearm.stl
+[4.015s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10/collision/shoulder.stl
+[4.032s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10/collision/upperarm.stl
+[4.060s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10/collision/wrist1.stl
+[4.094s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10/collision/wrist2.stl
+[4.123s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10/collision/wrist3.stl
+[4.153s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10/visual/base.dae
+[4.183s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10/visual/forearm.dae
+[4.216s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10/visual/shoulder.dae
+[4.249s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10/visual/upperarm.dae
+[4.279s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10/visual/wrist1.dae
+[4.309s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10/visual/wrist2.dae
+[4.340s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10/visual/wrist3.dae
+[4.382s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10e/collision/base.stl
+[4.410s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10e/collision/forearm.stl
+[4.437s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10e/collision/shoulder.stl
+[4.463s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10e/collision/upperarm.stl
+[4.493s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10e/collision/wrist1.stl
+[4.524s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10e/collision/wrist2.stl
+[4.553s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10e/collision/wrist3.stl
+[4.587s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10e/visual/base.dae
+[4.631s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10e/visual/forearm.dae
+[4.670s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10e/visual/shoulder.dae
+[4.689s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10e/visual/upperarm.dae
+[4.717s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10e/visual/wrist1.dae
+[4.744s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10e/visual/wrist2.dae
+[4.782s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur10e/visual/wrist3.dae
+[4.828s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur16e/collision/forearm.stl
+[4.861s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur16e/collision/upperarm.stl
+[4.892s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur16e/visual/forearm.dae
+[4.917s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur16e/visual/upperarm.dae
+[4.951s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur20/LICENSE.txt
+[4.999s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur20/collision/base.stl
+[5.029s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur20/collision/forearm.stl
+[5.064s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur20/collision/shoulder.stl
+[5.099s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur20/collision/upperarm.stl
+[5.134s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur20/collision/wrist1.stl
+[5.164s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur20/collision/wrist2.stl
+[5.187s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur20/collision/wrist3.stl
+[5.202s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur20/visual/UR20_DIFF_8bit_2K.png
+[5.219s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur20/visual/base.dae
+[5.235s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur20/visual/forearm.dae
+[5.252s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur20/visual/shoulder.dae
+[5.267s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur20/visual/upperarm.dae
+[5.284s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur20/visual/wrist1.dae
+[5.304s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur20/visual/wrist2.dae
+[5.316s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur20/visual/wrist3.dae
+[5.332s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3/collision/base.stl
+[5.351s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3/collision/forearm.stl
+[5.368s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3/collision/shoulder.stl
+[5.385s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3/collision/upperarm.stl
+[5.401s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3/collision/wrist1.stl
+[5.417s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3/collision/wrist2.stl
+[5.433s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3/collision/wrist3.stl
+[5.448s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3/visual/base.dae
+[5.463s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3/visual/forearm.dae
+[5.478s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3/visual/shoulder.dae
+[5.493s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3/visual/upperarm.dae
+[5.508s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3/visual/wrist1.dae
+[5.523s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3/visual/wrist2.dae
+[5.537s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3/visual/wrist3.dae
+[5.553s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur30/LICENSE.txt
+[5.567s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur30/collision/forearm.stl
+[5.579s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur30/collision/upperarm.stl
+[5.594s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur30/visual/UR30_DIFF_8bit_2K.png
+[5.607s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur30/visual/forearm.dae
+[5.621s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur30/visual/upperarm.dae
+[5.637s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3e/collision/base.stl
+[5.651s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3e/collision/forearm.stl
+[5.666s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3e/collision/shoulder.stl
+[5.682s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3e/collision/upperarm.stl
+[5.697s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3e/collision/wrist1.stl
+[5.714s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3e/collision/wrist2.stl
+[5.730s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3e/collision/wrist3.stl
+[5.744s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3e/visual/base.dae
+[5.768s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3e/visual/forearm.dae
+[5.785s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3e/visual/shoulder.dae
+[5.801s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3e/visual/upperarm.dae
+[5.818s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3e/visual/wrist1.dae
+[5.835s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3e/visual/wrist2.dae
+[5.850s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur3e/visual/wrist3.dae
+[5.872s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5/collision/base.stl
+[5.888s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5/collision/forearm.stl
+[5.904s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5/collision/shoulder.stl
+[5.921s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5/collision/upperarm.stl
+[5.937s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5/collision/wrist1.stl
+[5.954s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5/collision/wrist2.stl
+[5.969s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5/collision/wrist3.stl
+[5.983s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5/visual/base.dae
+[5.998s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5/visual/forearm.dae
+[6.013s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5/visual/shoulder.dae
+[6.029s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5/visual/upperarm.dae
+[6.044s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5/visual/wrist1.dae
+[6.060s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5/visual/wrist2.dae
+[6.075s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5/visual/wrist3.dae
+[6.089s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5e/collision/base.stl
+[6.107s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5e/collision/forearm.stl
+[6.127s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5e/collision/shoulder.stl
+[6.141s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5e/collision/upperarm.stl
+[6.159s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5e/collision/wrist1.stl
+[6.177s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5e/collision/wrist2.stl
+[6.193s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5e/collision/wrist3.stl
+[6.209s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5e/visual/base.dae
+[6.223s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5e/visual/forearm.dae
+[6.239s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5e/visual/shoulder.dae
+[6.253s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5e/visual/upperarm.dae
+[6.267s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5e/visual/wrist1.dae
+[6.281s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5e/visual/wrist2.dae
+[6.299s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/meshes/ur5e/visual/wrist3.dae
+[6.331s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/rviz/view_robot.rviz
+[6.343s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/urdf/inc/ur_common.xacro
+[6.365s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/urdf/inc/ur_transmissions.xacro
+[6.387s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/urdf/ur.ros2_control.xacro
+[6.409s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/urdf/ur.urdf.xacro
+[6.440s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/urdf/ur_macro.xacro
+[6.478s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/test/test_ur_urdf_xacro.py
+[6.492s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/test/test_view_ur_launch.py
+[6.538s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ament_index/resource_index/package_run_dependencies/ur_description
+[6.570s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ament_index/resource_index/parent_prefix_path/ur_description
+[6.599s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/environment/ament_prefix_path.sh
+[6.627s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/environment/ament_prefix_path.dsv
+[6.659s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/environment/path.sh
+[6.694s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/environment/path.dsv
+[6.708s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/local_setup.bash
+[6.725s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/local_setup.sh
+[6.767s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/local_setup.zsh
+[6.808s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/local_setup.dsv
+[6.844s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/package.dsv
+[6.887s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ament_index/resource_index/packages/ur_description
+[6.907s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/cmake/ur_descriptionConfig.cmake
+[6.930s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/cmake/ur_descriptionConfig-version.cmake
+[6.966s] -- Symlinking: /home/imml/git/research_2025/install/ur_description/share/ur_description/package.xml
+[7.017s] Invoked command in '/home/imml/git/research_2025/build/ur_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/imml/git/research_2025/build/ur_description

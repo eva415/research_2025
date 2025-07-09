@@ -1,0 +1,19 @@
+[0.028s] Invoking command in '/home/imml/git/research_2025/build/ur_moveit_config': AMENT_PREFIX_PATH=/home/imml/git/research_2025/install/ur_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/install/ur_description:/opt/ros/humble /usr/bin/cmake /home/imml/git/research_2025/apple-harvest-refactor/harvest_hardware/Universal_Robots_ROS2_Driver/ur_moveit_config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/imml/git/research_2025/install/ur_moveit_config
+[0.257s] -- The C compiler identification is GNU 11.4.0
+[0.555s] -- The CXX compiler identification is GNU 11.4.0
+[0.606s] -- Detecting C compiler ABI info
+[1.002s] -- Detecting C compiler ABI info - done
+[1.033s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.034s] -- Detecting C compile features
+[1.034s] -- Detecting C compile features - done
+[1.054s] -- Detecting CXX compiler ABI info
+[1.426s] -- Detecting CXX compiler ABI info - done
+[1.461s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.462s] -- Detecting CXX compile features
+[1.462s] -- Detecting CXX compile features - done
+[1.470s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.094s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.315s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[3.406s] -- Configuring done
+[3.413s] -- Generating done
+[3.421s] -- Build files have been written to: /home/imml/git/research_2025/build/ur_moveit_config

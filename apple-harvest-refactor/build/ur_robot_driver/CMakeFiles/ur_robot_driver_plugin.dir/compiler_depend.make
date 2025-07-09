@@ -721,7 +721,8 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/dashboard_client_ros.cpp.o: /home/imml
   /opt/ros/humble/include/std_srvs/std_srvs/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/humble/include/ur_client_library/ur/dashboard_client.h \
   /opt/ros/humble/include/ur_client_library/comm/tcp_socket.h \
-  /usr/include/netdb.h \
+  /opt/ros/humble/include/ur_client_library/comm/socket_t.h \
+  /usr/include/arpa/inet.h \
   /usr/include/netinet/in.h \
   /usr/include/x86_64-linux-gnu/sys/socket.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -742,8 +743,10 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/dashboard_client_ros.cpp.o: /home/imml
   /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
   /usr/include/x86_64-linux-gnu/bits/socket2.h \
   /usr/include/x86_64-linux-gnu/bits/in.h \
+  /usr/include/netdb.h \
   /usr/include/rpc/netdb.h \
   /usr/include/x86_64-linux-gnu/bits/netdb.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h \
   /opt/ros/humble/include/ur_client_library/ur/version_information.h \
   /opt/ros/humble/include/ur_client_library/types.h \
   /usr/include/inttypes.h \
@@ -1051,6 +1054,7 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/hardware_interface.cpp.o: /home/imml/g
   /opt/ros/humble/include/ur_client_library/types.h \
   /usr/include/inttypes.h \
   /usr/include/c++/11/iostream \
+  /usr/include/x86_64-linux-gnu/sys/time.h \
   /opt/ros/humble/include/ur_client_library/ur/tool_communication.h \
   /usr/include/c++/11/set \
   /usr/include/c++/11/bits/stl_tree.h \
@@ -1566,7 +1570,9 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/hardware_interface.cpp.o: /home/imml/g
   /opt/ros/humble/include/ur_client_library/comm/package_serializer.h \
   /opt/ros/humble/include/ur_client_library/rtde/rtde_package.h \
   /opt/ros/humble/include/ur_client_library/comm/stream.h \
-  /usr/include/netdb.h \
+  /opt/ros/humble/include/ur_client_library/comm/tcp_socket.h \
+  /opt/ros/humble/include/ur_client_library/comm/socket_t.h \
+  /usr/include/arpa/inet.h \
   /usr/include/netinet/in.h \
   /usr/include/x86_64-linux-gnu/sys/socket.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -1587,9 +1593,9 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/hardware_interface.cpp.o: /home/imml/g
   /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
   /usr/include/x86_64-linux-gnu/bits/socket2.h \
   /usr/include/x86_64-linux-gnu/bits/in.h \
+  /usr/include/netdb.h \
   /usr/include/rpc/netdb.h \
   /usr/include/x86_64-linux-gnu/bits/netdb.h \
-  /opt/ros/humble/include/ur_client_library/comm/tcp_socket.h \
   /opt/ros/humble/include/ur_client_library/rtde/rtde_parser.h \
   /opt/ros/humble/include/ur_client_library/comm/parser.h \
   /opt/ros/humble/include/ur_client_library/rtde/control_package_pause.h \
@@ -1609,18 +1615,27 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/hardware_interface.cpp.o: /home/imml/g
   /opt/ros/humble/include/ur_client_library/comm/control_mode.h \
   /opt/ros/humble/include/ur_client_library/ur/robot_receive_timeout.h \
   /opt/ros/humble/include/ur_client_library/control/trajectory_point_interface.h \
+  /opt/ros/humble/include/ur_client_library/control/motion_primitives.h \
   /opt/ros/humble/include/ur_client_library/control/script_command_interface.h \
   /opt/ros/humble/include/ur_client_library/control/script_sender.h \
+  /opt/ros/humble/include/ur_client_library/primary/primary_client.h \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /opt/ros/humble/include/ur_client_library/primary/abstract_primary_consumer.h \
   /opt/ros/humble/include/ur_client_library/primary/robot_message/version_message.h \
   /opt/ros/humble/include/ur_client_library/primary/robot_message.h \
   /opt/ros/humble/include/ur_client_library/primary/primary_package.h \
   /opt/ros/humble/include/ur_client_library/primary/package_header.h \
+  /opt/ros/humble/include/ur_client_library/primary/robot_message/error_code_message.h \
+  /opt/ros/humble/include/ur_client_library/primary/robot_state/kinematics_info.h \
+  /opt/ros/humble/include/ur_client_library/primary/robot_state.h \
+  /opt/ros/humble/include/ur_client_library/primary/robot_state/robot_mode_data.h \
+  /opt/ros/humble/include/ur_client_library/primary/primary_consumer.h \
+  /opt/ros/humble/include/ur_client_library/primary/primary_parser.h \
   /home/imml/git/research_2025/apple-harvest-refactor/harvest_hardware/Universal_Robots_ROS2_Driver/ur_robot_driver/include/ur_robot_driver/dashboard_client_ros.hpp \
   /usr/include/c++/11/regex \
   /usr/include/c++/11/stack \
-  /usr/include/c++/11/deque \
-  /usr/include/c++/11/bits/stl_deque.h \
-  /usr/include/c++/11/bits/deque.tcc \
   /usr/include/c++/11/bits/stl_stack.h \
   /usr/include/c++/11/bits/regex_constants.h \
   /usr/include/c++/11/bits/regex_error.h \
@@ -2270,6 +2285,14 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/urcl_log_handler.cpp.o: /home/imml/git
 
 /home/imml/git/research_2025/apple-harvest-refactor/build/ur_dashboard_msgs/rosidl_generator_cpp/ur_dashboard_msgs/msg/robot_mode.hpp:
 
+/opt/ros/humble/include/ur_client_library/primary/primary_consumer.h:
+
+/opt/ros/humble/include/ur_client_library/primary/robot_state.h:
+
+/opt/ros/humble/include/ur_client_library/primary/robot_state/kinematics_info.h:
+
+/opt/ros/humble/include/ur_client_library/primary/abstract_primary_consumer.h:
+
 /opt/ros/humble/include/ur_client_library/control/script_command_interface.h:
 
 /opt/ros/humble/include/ur_client_library/control/trajectory_point_interface.h:
@@ -2446,6 +2469,8 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/urcl_log_handler.cpp.o: /home/imml/git
 
 /opt/ros/humble/include/ur_client_library/types.h:
 
+/usr/include/x86_64-linux-gnu/sys/time.h:
+
 /usr/include/x86_64-linux-gnu/bits/netdb.h:
 
 /opt/ros/humble/include/tf2/tf2/convert.hpp:
@@ -2475,6 +2500,8 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/urcl_log_handler.cpp.o: /home/imml/git
 /usr/include/x86_64-linux-gnu/bits/sockaddr.h:
 
 /usr/include/x86_64-linux-gnu/sys/socket.h:
+
+/opt/ros/humble/include/ur_client_library/comm/socket_t.h:
 
 /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__type_support.hpp:
 
@@ -2624,6 +2651,8 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/urcl_log_handler.cpp.o: /home/imml/git
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/parameter_event.hpp:
 
+/opt/ros/humble/include/ur_client_library/primary/robot_state/robot_mode_data.h:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/integer_range__traits.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__builder.hpp:
@@ -2667,6 +2696,8 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/urcl_log_handler.cpp.o: /home/imml/git
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__builder.hpp:
 
 /opt/ros/humble/include/rcpputils/rcpputils/thread_safety_annotations.hpp:
+
+/opt/ros/humble/include/ur_client_library/primary/primary_client.h:
 
 /usr/include/c++/11/pstl/glue_numeric_defs.h:
 
@@ -2781,6 +2812,8 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/urcl_log_handler.cpp.o: /home/imml/git
 /home/imml/git/research_2025/apple-harvest-refactor/build/ur_dashboard_msgs/rosidl_generator_cpp/ur_dashboard_msgs/srv/get_safety_mode.hpp:
 
 /usr/include/c++/11/sstream:
+
+/opt/ros/humble/include/ur_client_library/primary/primary_parser.h:
 
 /usr/include/c++/11/bits/shared_ptr_atomic.h:
 
@@ -3654,6 +3687,8 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/urcl_log_handler.cpp.o: /home/imml/git
 
 /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
 
+/usr/include/arpa/inet.h:
+
 /usr/include/x86_64-linux-gnu/bits/sigaction.h:
 
 /opt/ros/humble/include/rmw/rmw/qos_string_conversions.h:
@@ -4000,6 +4035,8 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/urcl_log_handler.cpp.o: /home/imml/git
 
 /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:
 
+/opt/ros/humble/include/ur_client_library/control/motion_primitives.h:
+
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_base_interface.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/time.hpp:
@@ -4167,6 +4204,8 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/urcl_log_handler.cpp.o: /home/imml/git
 /home/imml/git/research_2025/apple-harvest-refactor/harvest_hardware/Universal_Robots_ROS2_Driver/ur_robot_driver/src/urcl_log_handler.cpp:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose_with_covariance_stamped.hpp:
+
+/opt/ros/humble/include/ur_client_library/primary/robot_message/error_code_message.h:
 
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__builder.hpp:
 

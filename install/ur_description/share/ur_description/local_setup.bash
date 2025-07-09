@@ -1,0 +1,1 @@
+/home/imml/git/research_2025/build/ur_description/ament_cmake_environment_hooks/local_setup.bash

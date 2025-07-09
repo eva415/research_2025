@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from harvest_interfaces/srv/VoxelGrid.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "std_msgs/msg/ColorRGBA.idl"
+
+module harvest_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "Size of each voxel")
+    struct VoxelGrid_Request {
+      float voxel_size;
+    };
+    @verbatim (language="comment", text=
+      "Array of voxel center coordinates")
+    struct VoxelGrid_Response {
+      sequence<geometry_msgs::msg::Point> voxel_centers;
+
+      sequence<std_msgs::msg::ColorRGBA> voxel_colors;
+    };
+  };
+};

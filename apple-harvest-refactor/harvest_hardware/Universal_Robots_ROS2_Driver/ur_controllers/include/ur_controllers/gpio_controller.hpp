@@ -56,7 +56,7 @@
 #include "rclcpp/time.hpp"
 #include "rclcpp/duration.hpp"
 #include "std_msgs/msg/bool.hpp"
-#include "gpio_controller_parameters.hpp"
+#include <ur_controllers/gpio_controller_parameters.hpp>
 
 namespace ur_controllers
 {

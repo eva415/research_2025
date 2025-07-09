@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from harvest_interfaces/action/SendTrajectory.action
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Float32MultiArray.idl"
+
+module harvest_interfaces {
+  module action {
+    @verbatim (language="comment", text=
+      "SendTrajectory.action")
+    struct SendTrajectory_Goal {
+      @verbatim (language="comment", text=
+        "Goal")
+      std_msgs::msg::Float32MultiArray waypoints;
+    };
+    struct SendTrajectory_Result {
+      @verbatim (language="comment", text=
+        "Result")
+      boolean success;
+    };
+    struct SendTrajectory_Feedback {
+      @verbatim (language="comment", text=
+        "Feedback")
+      float progress;
+    };
+  };
+};

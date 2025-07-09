@@ -136,6 +136,8 @@ rosidl_generator_c/harvest_interfaces/action/event_detection.h: /opt/ros/humble/
 rosidl_generator_c/harvest_interfaces/action/event_detection.h: /opt/ros/humble/share/geometry_msgs/msg/Point32.idl
 rosidl_generator_c/harvest_interfaces/action/event_detection.h: /opt/ros/humble/share/geometry_msgs/msg/PointStamped.idl
 rosidl_generator_c/harvest_interfaces/action/event_detection.h: /opt/ros/humble/share/geometry_msgs/msg/Polygon.idl
+rosidl_generator_c/harvest_interfaces/action/event_detection.h: /opt/ros/humble/share/geometry_msgs/msg/PolygonInstance.idl
+rosidl_generator_c/harvest_interfaces/action/event_detection.h: /opt/ros/humble/share/geometry_msgs/msg/PolygonInstanceStamped.idl
 rosidl_generator_c/harvest_interfaces/action/event_detection.h: /opt/ros/humble/share/geometry_msgs/msg/PolygonStamped.idl
 rosidl_generator_c/harvest_interfaces/action/event_detection.h: /opt/ros/humble/share/geometry_msgs/msg/Pose.idl
 rosidl_generator_c/harvest_interfaces/action/event_detection.h: /opt/ros/humble/share/geometry_msgs/msg/Pose2D.idl

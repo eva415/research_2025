@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from harvest_interfaces/srv/TrajectoryBetweenPoints.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+
+module harvest_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "TrajectoryBetweenPoints.srv" "\n"
+      "Request")
+    struct TrajectoryBetweenPoints_Request {
+      geometry_msgs::msg::Point start_coordinate;
+
+      geometry_msgs::msg::Point end_coordinate;
+    };
+    @verbatim (language="comment", text=
+      "Response")
+    struct TrajectoryBetweenPoints_Response {
+      boolean success;
+    };
+  };
+};

@@ -721,7 +721,8 @@ CMakeFiles/dashboard_client.dir/src/dashboard_client_node.cpp.o: /home/imml/git/
   /opt/ros/humble/include/std_srvs/std_srvs/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/humble/include/ur_client_library/ur/dashboard_client.h \
   /opt/ros/humble/include/ur_client_library/comm/tcp_socket.h \
-  /usr/include/netdb.h \
+  /opt/ros/humble/include/ur_client_library/comm/socket_t.h \
+  /usr/include/arpa/inet.h \
   /usr/include/netinet/in.h \
   /usr/include/x86_64-linux-gnu/sys/socket.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -742,8 +743,10 @@ CMakeFiles/dashboard_client.dir/src/dashboard_client_node.cpp.o: /home/imml/git/
   /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
   /usr/include/x86_64-linux-gnu/bits/socket2.h \
   /usr/include/x86_64-linux-gnu/bits/in.h \
+  /usr/include/netdb.h \
   /usr/include/rpc/netdb.h \
   /usr/include/x86_64-linux-gnu/bits/netdb.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h \
   /opt/ros/humble/include/ur_client_library/ur/version_information.h \
   /opt/ros/humble/include/ur_client_library/types.h \
   /usr/include/inttypes.h \
@@ -1532,7 +1535,8 @@ CMakeFiles/dashboard_client.dir/src/dashboard_client_ros.cpp.o: /home/imml/git/r
   /opt/ros/humble/include/std_srvs/std_srvs/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/humble/include/ur_client_library/ur/dashboard_client.h \
   /opt/ros/humble/include/ur_client_library/comm/tcp_socket.h \
-  /usr/include/netdb.h \
+  /opt/ros/humble/include/ur_client_library/comm/socket_t.h \
+  /usr/include/arpa/inet.h \
   /usr/include/netinet/in.h \
   /usr/include/x86_64-linux-gnu/sys/socket.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -1553,8 +1557,10 @@ CMakeFiles/dashboard_client.dir/src/dashboard_client_ros.cpp.o: /home/imml/git/r
   /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
   /usr/include/x86_64-linux-gnu/bits/socket2.h \
   /usr/include/x86_64-linux-gnu/bits/in.h \
+  /usr/include/netdb.h \
   /usr/include/rpc/netdb.h \
   /usr/include/x86_64-linux-gnu/bits/netdb.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h \
   /opt/ros/humble/include/ur_client_library/ur/version_information.h \
   /opt/ros/humble/include/ur_client_library/types.h \
   /usr/include/inttypes.h \
@@ -2039,6 +2045,8 @@ CMakeFiles/dashboard_client.dir/src/urcl_log_handler.cpp.o: /home/imml/git/resea
 
 /opt/ros/humble/include/ur_client_library/types.h:
 
+/usr/include/x86_64-linux-gnu/sys/time.h:
+
 /usr/include/x86_64-linux-gnu/bits/netdb.h:
 
 /usr/include/rpc/netdb.h:
@@ -2060,6 +2068,8 @@ CMakeFiles/dashboard_client.dir/src/urcl_log_handler.cpp.o: /home/imml/git/resea
 /usr/include/x86_64-linux-gnu/bits/sockaddr.h:
 
 /usr/include/x86_64-linux-gnu/sys/socket.h:
+
+/opt/ros/humble/include/ur_client_library/comm/socket_t.h:
 
 /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__type_support.hpp:
 
@@ -3082,6 +3092,8 @@ CMakeFiles/dashboard_client.dir/src/urcl_log_handler.cpp.o: /home/imml/git/resea
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__builder.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
+
+/usr/include/arpa/inet.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigaction.h:
 

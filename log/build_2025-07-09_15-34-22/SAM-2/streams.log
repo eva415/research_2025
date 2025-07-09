@@ -1,0 +1,6 @@
+[6.514s] Invoking command in '/home/imml/git/research_2025/build/SAM-2': PYTHONPATH=/home/imml/git/research_2025/build/SAM-2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/imml/git/research_2025/install/SAM-2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/imml/git/research_2025/build/SAM-2/build --no-deps
+[7.746s] Traceback (most recent call last):
+[7.746s]   File "/home/imml/git/research_2025/build/SAM-2/setup.py", line 20, in <module>
+[7.746s]     with open("README.md", "r", encoding="utf-8") as f:
+[7.746s] FileNotFoundError: [Errno 2] No such file or directory: 'README.md'
+[7.910s] Invoked command in '/home/imml/git/research_2025/build/SAM-2' returned '1': PYTHONPATH=/home/imml/git/research_2025/build/SAM-2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/imml/git/research_2025/install/SAM-2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/imml/git/research_2025/build/SAM-2/build --no-deps

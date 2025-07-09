@@ -138,6 +138,8 @@ CMakeFiles/harvest_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Point.idl
 CMakeFiles/harvest_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Point32.idl
 CMakeFiles/harvest_interfaces: /opt/ros/humble/share/geometry_msgs/msg/PointStamped.idl
 CMakeFiles/harvest_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Polygon.idl
+CMakeFiles/harvest_interfaces: /opt/ros/humble/share/geometry_msgs/msg/PolygonInstance.idl
+CMakeFiles/harvest_interfaces: /opt/ros/humble/share/geometry_msgs/msg/PolygonInstanceStamped.idl
 CMakeFiles/harvest_interfaces: /opt/ros/humble/share/geometry_msgs/msg/PolygonStamped.idl
 CMakeFiles/harvest_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Pose.idl
 CMakeFiles/harvest_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Pose2D.idl

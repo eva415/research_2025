@@ -310,6 +310,9 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
+# install("TARGETS" "move_arm" "RUNTIME_DESTINATION" "lib/harvest_control")
+include("/home/imml/git/research_2025/apple-harvest-refactor/build/harvest_control/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
 # install(FILES "/home/imml/git/research_2025/apple-harvest-refactor/build/harvest_control/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/harvest_control/environment")
 ament_cmake_symlink_install_files("/home/imml/git/research_2025/apple-harvest-refactor/harvest_control" FILES "/home/imml/git/research_2025/apple-harvest-refactor/build/harvest_control/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/harvest_control/environment")
 
@@ -322,17 +325,11 @@ ament_cmake_symlink_install_directory("/home/imml/git/research_2025/apple-harves
 # install(DIRECTORY "/home/imml/git/research_2025/apple-harvest-refactor/harvest_control/harvest_control/" "DESTINATION" "local/lib/python3.10/dist-packages/harvest_control" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 ament_cmake_symlink_install_directory("/home/imml/git/research_2025/apple-harvest-refactor/harvest_control" DIRECTORY "/home/imml/git/research_2025/apple-harvest-refactor/harvest_control/harvest_control/" "DESTINATION" "local/lib/python3.10/dist-packages/harvest_control" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 
-# install(PROGRAMS "scripts/coordinate_to_trajectory.py" "scripts/event_detector.py" "scripts/force_filter.py" "scripts/get_manual_apple_locations.py" "scripts/heuristic_controller.py" "scripts/linear_controller.py" "scripts/pose_listener.py" "scripts/pressure_averager.py" "scripts/pull_twist_controller.py" "scripts/visual_servo.py" "DESTINATION" "lib/harvest_control")
-ament_cmake_symlink_install_programs("/home/imml/git/research_2025/apple-harvest-refactor/harvest_control" PROGRAMS "scripts/coordinate_to_trajectory.py" "scripts/event_detector.py" "scripts/force_filter.py" "scripts/get_manual_apple_locations.py" "scripts/heuristic_controller.py" "scripts/linear_controller.py" "scripts/pose_listener.py" "scripts/pressure_averager.py" "scripts/pull_twist_controller.py" "scripts/visual_servo.py" "DESTINATION" "lib/harvest_control")
+# install(PROGRAMS "scripts/coordinate_to_trajectory.py" "scripts/event_detector.py" "DESTINATION" "lib/harvest_control")
+ament_cmake_symlink_install_programs("/home/imml/git/research_2025/apple-harvest-refactor/harvest_control" PROGRAMS "scripts/coordinate_to_trajectory.py" "scripts/event_detector.py" "DESTINATION" "lib/harvest_control")
 
-# install("TARGETS" "move_arm" "DESTINATION" "lib/harvest_control")
-include("/home/imml/git/research_2025/apple-harvest-refactor/build/harvest_control/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
-
-# install(DIRECTORY "launch/" "DESTINATION" "share/harvest_control/launch")
-ament_cmake_symlink_install_directory("/home/imml/git/research_2025/apple-harvest-refactor/harvest_control" DIRECTORY "launch/" "DESTINATION" "share/harvest_control/launch")
-
-# install(DIRECTORY "resource/" "DESTINATION" "share/harvest_control/resource")
-ament_cmake_symlink_install_directory("/home/imml/git/research_2025/apple-harvest-refactor/harvest_control" DIRECTORY "resource/" "DESTINATION" "share/harvest_control/resource")
+# install(DIRECTORY "launch/" "resource/" "DESTINATION" "share/harvest_control")
+ament_cmake_symlink_install_directory("/home/imml/git/research_2025/apple-harvest-refactor/harvest_control" DIRECTORY "launch/" "resource/" "DESTINATION" "share/harvest_control")
 
 # install(FILES "/home/imml/git/research_2025/apple-harvest-refactor/build/harvest_control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/harvest_control" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/imml/git/research_2025/apple-harvest-refactor/harvest_control" FILES "/home/imml/git/research_2025/apple-harvest-refactor/build/harvest_control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/harvest_control" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

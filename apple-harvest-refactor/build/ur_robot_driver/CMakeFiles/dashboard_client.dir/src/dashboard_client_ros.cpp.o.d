@@ -648,7 +648,8 @@ CMakeFiles/dashboard_client.dir/src/dashboard_client_ros.cpp.o: \
  /opt/ros/humble/include/std_srvs/std_srvs/msg/rosidl_generator_cpp__visibility_control.hpp \
  /opt/ros/humble/include/ur_client_library/ur/dashboard_client.h \
  /opt/ros/humble/include/ur_client_library/comm/tcp_socket.h \
- /usr/include/netdb.h /usr/include/netinet/in.h \
+ /opt/ros/humble/include/ur_client_library/comm/socket_t.h \
+ /usr/include/arpa/inet.h /usr/include/netinet/in.h \
  /usr/include/x86_64-linux-gnu/sys/socket.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
  /usr/include/x86_64-linux-gnu/bits/socket.h \
@@ -666,8 +667,9 @@ CMakeFiles/dashboard_client.dir/src/dashboard_client_ros.cpp.o: \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
  /usr/include/x86_64-linux-gnu/bits/socket2.h \
- /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/rpc/netdb.h \
- /usr/include/x86_64-linux-gnu/bits/netdb.h \
+ /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/netdb.h \
+ /usr/include/rpc/netdb.h /usr/include/x86_64-linux-gnu/bits/netdb.h \
+ /usr/include/x86_64-linux-gnu/sys/time.h \
  /opt/ros/humble/include/ur_client_library/ur/version_information.h \
  /opt/ros/humble/include/ur_client_library/types.h \
  /usr/include/inttypes.h \

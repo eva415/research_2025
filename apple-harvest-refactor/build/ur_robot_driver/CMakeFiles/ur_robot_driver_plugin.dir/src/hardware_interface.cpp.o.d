@@ -193,6 +193,7 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/hardware_interface.cpp.o: \
  /opt/ros/humble/include/ur_client_library/ur/version_information.h \
  /opt/ros/humble/include/ur_client_library/types.h \
  /usr/include/inttypes.h /usr/include/c++/11/iostream \
+ /usr/include/x86_64-linux-gnu/sys/time.h \
  /opt/ros/humble/include/ur_client_library/ur/tool_communication.h \
  /usr/include/c++/11/set /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_set.h \
@@ -687,7 +688,9 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/hardware_interface.cpp.o: \
  /opt/ros/humble/include/ur_client_library/comm/package_serializer.h \
  /opt/ros/humble/include/ur_client_library/rtde/rtde_package.h \
  /opt/ros/humble/include/ur_client_library/comm/stream.h \
- /usr/include/netdb.h /usr/include/netinet/in.h \
+ /opt/ros/humble/include/ur_client_library/comm/tcp_socket.h \
+ /opt/ros/humble/include/ur_client_library/comm/socket_t.h \
+ /usr/include/arpa/inet.h /usr/include/netinet/in.h \
  /usr/include/x86_64-linux-gnu/sys/socket.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
  /usr/include/x86_64-linux-gnu/bits/socket.h \
@@ -705,9 +708,8 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/hardware_interface.cpp.o: \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
  /usr/include/x86_64-linux-gnu/bits/socket2.h \
- /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/rpc/netdb.h \
- /usr/include/x86_64-linux-gnu/bits/netdb.h \
- /opt/ros/humble/include/ur_client_library/comm/tcp_socket.h \
+ /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/netdb.h \
+ /usr/include/rpc/netdb.h /usr/include/x86_64-linux-gnu/bits/netdb.h \
  /opt/ros/humble/include/ur_client_library/rtde/rtde_parser.h \
  /opt/ros/humble/include/ur_client_library/comm/parser.h \
  /opt/ros/humble/include/ur_client_library/rtde/control_package_pause.h \
@@ -727,16 +729,26 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/hardware_interface.cpp.o: \
  /opt/ros/humble/include/ur_client_library/comm/control_mode.h \
  /opt/ros/humble/include/ur_client_library/ur/robot_receive_timeout.h \
  /opt/ros/humble/include/ur_client_library/control/trajectory_point_interface.h \
+ /opt/ros/humble/include/ur_client_library/control/motion_primitives.h \
  /opt/ros/humble/include/ur_client_library/control/script_command_interface.h \
  /opt/ros/humble/include/ur_client_library/control/script_sender.h \
+ /opt/ros/humble/include/ur_client_library/primary/primary_client.h \
+ /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
+ /usr/include/c++/11/bits/deque.tcc \
+ /opt/ros/humble/include/ur_client_library/primary/abstract_primary_consumer.h \
  /opt/ros/humble/include/ur_client_library/primary/robot_message/version_message.h \
  /opt/ros/humble/include/ur_client_library/primary/robot_message.h \
  /opt/ros/humble/include/ur_client_library/primary/primary_package.h \
  /opt/ros/humble/include/ur_client_library/primary/package_header.h \
+ /opt/ros/humble/include/ur_client_library/primary/robot_message/error_code_message.h \
+ /opt/ros/humble/include/ur_client_library/primary/robot_state/kinematics_info.h \
+ /opt/ros/humble/include/ur_client_library/primary/robot_state.h \
+ /opt/ros/humble/include/ur_client_library/primary/robot_state/robot_mode_data.h \
+ /opt/ros/humble/include/ur_client_library/primary/primary_consumer.h \
+ /opt/ros/humble/include/ur_client_library/primary/primary_parser.h \
  /home/imml/git/research_2025/apple-harvest-refactor/harvest_hardware/Universal_Robots_ROS2_Driver/ur_robot_driver/include/ur_robot_driver/dashboard_client_ros.hpp \
  /usr/include/c++/11/regex /usr/include/c++/11/stack \
- /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
- /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_stack.h \
+ /usr/include/c++/11/bits/stl_stack.h \
  /usr/include/c++/11/bits/regex_constants.h \
  /usr/include/c++/11/bits/regex_error.h \
  /usr/include/c++/11/bits/regex_automaton.h \

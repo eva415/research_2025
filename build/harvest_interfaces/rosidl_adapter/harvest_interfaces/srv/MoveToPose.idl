@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from harvest_interfaces/srv/MoveToPose.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "geometry_msgs/msg/Quaternion.idl"
+#include "std_msgs/msg/Float32MultiArray.idl"
+
+module harvest_interfaces {
+  module srv {
+    struct MoveToPose_Request {
+      geometry_msgs::msg::Point position;
+
+      geometry_msgs::msg::Quaternion orientation;
+    };
+    struct MoveToPose_Response {
+      boolean result;
+
+      std_msgs::msg::Float32MultiArray reverse_traj;
+    };
+  };
+};
