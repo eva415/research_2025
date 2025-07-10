@@ -1,1 +1,0 @@
-/home/imml/git/research_2025/apple-harvest-refactor/harvest/tests/visual_servo_test.py

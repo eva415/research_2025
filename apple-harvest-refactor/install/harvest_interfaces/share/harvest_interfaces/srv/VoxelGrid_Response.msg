@@ -1,1 +1,0 @@
-/home/imml/git/research_2025/apple-harvest-refactor/build/harvest_interfaces/rosidl_cmake/srv/VoxelGrid_Response.msg

@@ -1,1 +1,0 @@
-/home/imml/git/research_2025/apple-harvest-refactor/build/realsense2_camera_msgs/rosidl_generator_cpp/realsense2_camera_msgs/srv/device_info.hpp

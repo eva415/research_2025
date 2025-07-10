@@ -26,7 +26,7 @@ class FlexToFListener(Node):
         self.position_threshold = 0.5  # xy-centering threshold
         self.tof_servo_threshold = 95
         self.tof_threshold = 45       # z-approach threshold (example value)
-        self.tof_override = 65         # override threshold to force approach
+        self.tof_override = 60         # override threshold to force approach
         self.tof_distance = None
 
         self.flex_subscriber = self.create_subscription(
@@ -202,6 +202,9 @@ class FlexToFListener(Node):
         ey = abs(self.smoothed_y - self.current_y)
 
         if self.state == 'servo':
+            self.get_logger().info(
+                f"X: {-self.current_x_vel}\t Y: {-self.current_y_vel}\t Z: {0.0}"
+            )
             # Always perform xy PID
             cmd.twist.linear.x = -self.current_x_vel
             cmd.twist.linear.y = -self.current_y_vel

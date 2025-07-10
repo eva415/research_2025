@@ -1,3 +1,0 @@
-
-bool result
-std_msgs/Float32MultiArray reverse_traj

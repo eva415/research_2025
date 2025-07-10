@@ -1,1 +1,0 @@
-/home/imml/git/research_2025/apple-harvest-refactor/build/ur_calibration/ament_cmake_environment_hooks/local_setup.sh
