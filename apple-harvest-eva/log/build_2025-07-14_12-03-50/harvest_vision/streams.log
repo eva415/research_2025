@@ -1,0 +1,19 @@
+[0.665s] Invoking command in '/home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages:/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/build --no-deps symlink_data
+[0.900s] running develop
+[1.106s] running egg_info
+[1.106s] writing harvest_vision.egg-info/PKG-INFO
+[1.106s] writing dependency_links to harvest_vision.egg-info/dependency_links.txt
+[1.106s] writing entry points to harvest_vision.egg-info/entry_points.txt
+[1.106s] writing requirements to harvest_vision.egg-info/requires.txt
+[1.107s] writing top-level names to harvest_vision.egg-info/top_level.txt
+[1.111s] reading manifest file 'harvest_vision.egg-info/SOURCES.txt'
+[1.113s] writing manifest file 'harvest_vision.egg-info/SOURCES.txt'
+[1.115s] running build_ext
+[1.115s] Creating /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages/harvest-vision.egg-link (link to .)
+[1.116s] Installing apple_prediction script to /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/harvest_vision
+[1.116s] Installing apple_prediction_presaved_images script to /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/harvest_vision
+[1.116s] Installing voxelize_scan script to /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/harvest_vision
+[1.117s] 
+[1.117s] Installed /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision
+[1.117s] running symlink_data
+[1.171s] Invoked command in '/home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision' returned '0': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages:/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/build --no-deps symlink_data
