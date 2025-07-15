@@ -24,7 +24,7 @@ class FlexToFListener(Node):
         self.state = 'servo'
         self.position_threshold = 0.5
         self.tof_override = 200
-        self.pick_distance_threshold = 53
+        # self.pick_distance_threshold = 53
         self.tof_distance = None
         self.tof_history = deque(maxlen=8)
         self.backoff_speed = -0.05
