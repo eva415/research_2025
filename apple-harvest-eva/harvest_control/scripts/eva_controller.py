@@ -135,8 +135,21 @@ class FlexToFListener(Node):
 
 
     def flex_callback(self, msg: Float32MultiArray):
-        self.get_logger().info(f'state: {self.state}, tof: {self.tof_distance}')
-        # filter & pid omitted
+        self.get_logger().info(f"STATE={self.state}, tof={self.tof_distance}")
+        # scale and filter flex
+        values = list(msg.data)
+        meas = np.array([v/self.scale for v in values]).reshape((4,1))
+        if self.calibrate:
+            self.all_data = np.vstack([self.all_data, np.array(values)])
+            df = pd.DataFrame(self.all_data[1:], columns=['f1','f2','f3','f4'])
+            df.to_csv('Calibration_data.csv', index=False)
+            self.get_logger().info(f"Covariance: {np.cov(df.values.T)}")
+        self.kalman_update(meas)
+        self.pid_controller(self.x)
+
+        # publish apple XY location
+        self.apple_publisher.publish(Float32MultiArray(data=[float(self.x[1]), float(self.x[0])]))
+
         # build cmd, compute ex, ey
         cmd = TwistStamped()
         cmd.header.stamp = self.get_clock().now().to_msg()
