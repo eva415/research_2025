@@ -1,0 +1,37 @@
+running develop
+Removing /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages/ur5e-custom-hardware.egg-link (link to .)
+running egg_info
+writing ../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/PKG-INFO
+writing dependency_links to ../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/dependency_links.txt
+writing entry points to ../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/entry_points.txt
+writing requirements to ../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/requires.txt
+writing top-level names to ../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/top_level.txt
+reading manifest file '../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/SOURCES.txt'
+writing manifest file '../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/build
+creating /home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/build/lib
+creating /home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/build/lib/ur5e_custom_hardware
+copying ur5e_custom_hardware/gripper_palm_camera.py -> /home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/build/lib/ur5e_custom_hardware
+copying ur5e_custom_hardware/__init__.py -> /home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/build/lib/ur5e_custom_hardware
+running install
+running install_lib
+creating /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages/ur5e_custom_hardware
+copying /home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/build/lib/ur5e_custom_hardware/gripper_palm_camera.py -> /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages/ur5e_custom_hardware
+copying /home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/build/lib/ur5e_custom_hardware/__init__.py -> /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages/ur5e_custom_hardware
+byte-compiling /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages/ur5e_custom_hardware/gripper_palm_camera.py to gripper_palm_camera.cpython-310.pyc
+byte-compiling /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages/ur5e_custom_hardware/__init__.py to __init__.cpython-310.pyc
+running install_data
+copying resource/ur5e_custom_hardware -> /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/share/ament_index/resource_index/packages
+copying package.xml -> /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/share/ur5e_custom_hardware
+copying urdf/gripper.urdf.xacro -> /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/share/ur5e_custom_hardware/urdf
+copying urdf/ur_gripper.urdf.xacro -> /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/share/ur5e_custom_hardware/urdf
+copying meshes/03_mk3_full_assembly.STL -> /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/share/ur5e_custom_hardware/meshes
+copying meshes/03_mk3_full_assembly_coarse.STL -> /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/share/ur5e_custom_hardware/meshes
+copying meshes/03_mk3_full_assembly_(simplified_for_RVIZ).STL -> /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/share/ur5e_custom_hardware/meshes
+running install_egg_info
+Copying ../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info to /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages/ur5e_custom_hardware-0.0.0-py3.10.egg-info
+running install_scripts
+Installing gripper_palm_camera script to /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/ur5e_custom_hardware
+writing list of installed files to '/home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/install.log'

@@ -1,0 +1,72 @@
+[0.009s] Invoking command in '/home/imml/git/research_2025/apple-harvest-eva/build/ur_controllers': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/imml/git/research_2025/apple-harvest-eva/harvest_hardware/Universal_Robots_ROS2_Driver/ur_controllers -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers
+[0.022s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.193s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.202s] -- Found angles: 1.15.0 (/opt/ros/humble/share/angles/cmake)
+[0.204s] -- Found controller_interface: 2.51.0 (/opt/ros/humble/share/controller_interface/cmake)
+[0.239s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.242s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.251s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.263s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.278s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.507s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.509s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.530s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.540s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.564s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.575s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.590s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.655s] -- Found joint_trajectory_controller: 2.47.0 (/opt/ros/humble/share/joint_trajectory_controller/cmake)
+[0.740s] -- Found std_srvs: 4.9.0 (/opt/ros/humble/share/std_srvs/cmake)
+[0.753s] -- Found ur_dashboard_msgs: 2.2.15 (/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake)
+[0.781s] -- Found ur_msgs: 2.2.0 (/opt/ros/humble/share/ur_msgs/cmake)
+[0.926s] -- Configuring done
+[1.014s] -- Generating done
+[1.026s] -- Build files have been written to: /home/imml/git/research_2025/apple-harvest-eva/build/ur_controllers
+[1.118s] Invoked command in '/home/imml/git/research_2025/apple-harvest-eva/build/ur_controllers' returned '0': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/imml/git/research_2025/apple-harvest-eva/harvest_hardware/Universal_Robots_ROS2_Driver/ur_controllers -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers
+[1.121s] Invoking command in '/home/imml/git/research_2025/apple-harvest-eva/build/ur_controllers': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/imml/git/research_2025/apple-harvest-eva/build/ur_controllers -- -j16 -l16
+[1.192s] [ 20%] Built target gpio_controller_parameters
+[1.192s] [ 60%] Built target speed_scaling_state_broadcaster_parameters
+[1.192s] [ 60%] Built target scaled_joint_trajectory_controller_parameters
+[1.211s] [35m[1mConsolidate compiler generated dependencies of target ur_controllers[0m
+[1.266s] [100%] Built target ur_controllers
+[1.282s] Invoked command in '/home/imml/git/research_2025/apple-harvest-eva/build/ur_controllers' returned '0': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/imml/git/research_2025/apple-harvest-eva/build/ur_controllers -- -j16 -l16
+[1.284s] Invoking command in '/home/imml/git/research_2025/apple-harvest-eva/build/ur_controllers': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/imml/git/research_2025/apple-harvest-eva/build/ur_controllers
+[1.293s] -- Install configuration: ""
+[1.294s] -- Execute custom install script
+[1.294s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/include/ur_controllers/gpio_controller_parameters.hpp
+[1.294s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/include/ur_controllers/scaled_joint_trajectory_controller_parameters.hpp
+[1.294s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/include/ur_controllers/speed_scaling_state_broadcaster_parameters.hpp
+[1.295s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/include/ur_controllers/gpio_controller_parameters.hpp
+[1.295s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/include/ur_controllers/scaled_joint_trajectory_controller_parameters.hpp
+[1.295s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/include/ur_controllers/speed_scaling_state_broadcaster_parameters.hpp
+[1.295s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/include/ur_controllers/gpio_controller_parameters.hpp
+[1.295s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/include/ur_controllers/scaled_joint_trajectory_controller_parameters.hpp
+[1.295s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/include/ur_controllers/speed_scaling_state_broadcaster_parameters.hpp
+[1.296s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ur_controllers//controller_plugins.xml
+[1.296s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/lib/libur_controllers.so
+[1.296s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/include/ur_controllers/gpio_controller.hpp
+[1.296s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/include/ur_controllers/scaled_joint_trajectory_controller.hpp
+[1.296s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/include/ur_controllers/speed_scaling_state_broadcaster.hpp
+[1.297s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ur_controllers/controller_plugins.xml
+[1.297s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ur_controllers/environment/library_path.sh
+[1.297s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ur_controllers/environment/library_path.dsv
+[1.297s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ament_index/resource_index/package_run_dependencies/ur_controllers
+[1.298s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ament_index/resource_index/parent_prefix_path/ur_controllers
+[1.298s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ur_controllers/environment/ament_prefix_path.sh
+[1.298s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ur_controllers/environment/ament_prefix_path.dsv
+[1.298s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ur_controllers/environment/path.sh
+[1.299s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ur_controllers/environment/path.dsv
+[1.299s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ur_controllers/local_setup.bash
+[1.299s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ur_controllers/local_setup.sh
+[1.299s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ur_controllers/local_setup.zsh
+[1.299s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ur_controllers/local_setup.dsv
+[1.299s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ur_controllers/package.dsv
+[1.312s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ament_index/resource_index/packages/ur_controllers
+[1.312s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ament_index/resource_index/controller_interface__pluginlib__plugin/ur_controllers
+[1.313s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ur_controllers/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.313s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ur_controllers/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.313s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ur_controllers/cmake/ament_cmake_export_libraries-extras.cmake
+[1.313s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ur_controllers/cmake/ur_controllersConfig.cmake
+[1.313s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ur_controllers/cmake/ur_controllersConfig-version.cmake
+[1.313s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/share/ur_controllers/package.xml
+[1.317s] Invoked command in '/home/imml/git/research_2025/apple-harvest-eva/build/ur_controllers' returned '0': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/imml/git/research_2025/apple-harvest-eva/build/ur_controllers

@@ -1,0 +1,80 @@
+[0.030s] Invoking command in '/home/imml/git/research_2025/apple-harvest-eva/build/harvest': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/imml/git/research_2025/apple-harvest-eva/harvest -DCMAKE_INSTALL_PREFIX=/home/imml/git/research_2025/apple-harvest-eva/install/harvest
+[0.043s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.185s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.193s] -- Found rclpy: 3.3.16 (/opt/ros/humble/share/rclpy/cmake)
+[0.193s] -- Found moveit_servo: 2.5.9 (/opt/ros/humble/share/moveit_servo/cmake)
+[0.225s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.228s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.234s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.244s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.259s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.427s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.429s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.576s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.705s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[0.744s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem 
+[0.782s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[0.830s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.032s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono 
+[1.078s] -- Found moveit: 2.5.9 (/opt/ros/humble/share/moveit/cmake)
+[1.078s] -- Found harvest_interfaces: 0.0.0 (/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/share/harvest_interfaces/cmake)
+[1.100s] -- Found moveit_ros_planning_interface: 2.5.9 (/opt/ros/humble/share/moveit_ros_planning_interface/cmake)
+[1.106s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem program_options system thread 
+[1.122s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options 
+[1.145s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread 
+[1.296s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.433s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.434s] -- Added test 'lint_cmake' to check CMake code style
+[1.435s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.440s] -- Added test 'xmllint' to check XML markup files
+[1.442s] -- Configuring done
+[1.453s] -- Generating done
+[1.457s] -- Build files have been written to: /home/imml/git/research_2025/apple-harvest-eva/build/harvest
+[1.478s] Invoked command in '/home/imml/git/research_2025/apple-harvest-eva/build/harvest' returned '0': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/imml/git/research_2025/apple-harvest-eva/harvest -DCMAKE_INSTALL_PREFIX=/home/imml/git/research_2025/apple-harvest-eva/install/harvest
+[1.481s] Invoking command in '/home/imml/git/research_2025/apple-harvest-eva/build/harvest': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/imml/git/research_2025/apple-harvest-eva/build/harvest -- -j16 -l16
+[1.575s] Built target ament_cmake_python_symlink_harvest
+[1.887s] running egg_info
+[1.888s] writing harvest.egg-info/PKG-INFO
+[1.888s] writing dependency_links to harvest.egg-info/dependency_links.txt
+[1.888s] writing top-level names to harvest.egg-info/top_level.txt
+[1.892s] reading manifest file 'harvest.egg-info/SOURCES.txt'
+[1.893s] writing manifest file 'harvest.egg-info/SOURCES.txt'
+[1.953s] Built target ament_cmake_python_build_harvest_egg
+[1.969s] Invoked command in '/home/imml/git/research_2025/apple-harvest-eva/build/harvest' returned '0': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/imml/git/research_2025/apple-harvest-eva/build/harvest -- -j16 -l16
+[1.972s] Invoking command in '/home/imml/git/research_2025/apple-harvest-eva/build/harvest': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/imml/git/research_2025/apple-harvest-eva/build/harvest
+[1.981s] -- Install configuration: ""
+[1.982s] -- Execute custom install script
+[1.982s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/harvest/environment/pythonpath.sh
+[1.982s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/harvest/environment/pythonpath.dsv
+[1.982s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/local/lib/python3.10/dist-packages/harvest-0.0.0-py3.10.egg-info/PKG-INFO
+[1.983s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/local/lib/python3.10/dist-packages/harvest-0.0.0-py3.10.egg-info/SOURCES.txt
+[1.983s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/local/lib/python3.10/dist-packages/harvest-0.0.0-py3.10.egg-info/dependency_links.txt
+[1.983s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/local/lib/python3.10/dist-packages/harvest-0.0.0-py3.10.egg-info/top_level.txt
+[1.983s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/local/lib/python3.10/dist-packages/harvest/__init__.py
+[1.984s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/lib/harvest/start_harvest.py
+[1.984s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/lib/harvest/record.py
+[1.984s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/lib/harvest/orchard_templating.py
+[1.984s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/lib/harvest/move_ur5_to_coordinate_eva.py
+[1.984s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/lib/harvest/apple_prediction_test.py
+[1.984s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/lib/harvest/visual_servo_test.py
+[1.985s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/harvest//launch/launch_gripper.launch.py
+[1.985s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/harvest//launch/launch_lab_demo.py
+[1.985s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/harvest//launch/launch_vision.launch.py
+[1.985s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/harvest//launch/launch_vision_templating.launch.py
+[1.985s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/ament_index/resource_index/package_run_dependencies/harvest
+[1.986s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/ament_index/resource_index/parent_prefix_path/harvest
+[1.986s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/harvest/environment/ament_prefix_path.sh
+[1.986s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/harvest/environment/ament_prefix_path.dsv
+[1.986s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/harvest/environment/path.sh
+[1.987s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/harvest/environment/path.dsv
+[1.987s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/harvest/local_setup.bash
+[1.987s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/harvest/local_setup.sh
+[1.987s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/harvest/local_setup.zsh
+[1.987s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/harvest/local_setup.dsv
+[1.987s] -- Symlinking: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/harvest/package.dsv
+[2.003s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/ament_index/resource_index/packages/harvest
+[2.003s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/harvest/cmake/harvestConfig.cmake
+[2.003s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/harvest/cmake/harvestConfig-version.cmake
+[2.004s] -- Up-to-date symlink: /home/imml/git/research_2025/apple-harvest-eva/install/harvest/share/harvest/package.xml
+[2.054s] Listing '/home/imml/git/research_2025/apple-harvest-eva/install/harvest/local/lib/python3.10/dist-packages/harvest'...
+[2.070s] Invoked command in '/home/imml/git/research_2025/apple-harvest-eva/build/harvest' returned '0': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/imml/git/research_2025/apple-harvest-eva/build/harvest

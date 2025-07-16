@@ -1,0 +1,36 @@
+[0.640s] Invoking command in '/home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware': PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/build
+[0.895s] running develop
+[1.092s] Removing /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages/ur5e-custom-hardware.egg-link (link to .)
+[1.139s] Invoked command in '/home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware' returned '0': PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/build
+[1.142s] Invoking command in '/home/imml/git/research_2025/apple-harvest-eva/harvest_hardware/ur5e_custom_hardware': PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ur5e_custom_hardware build --build-base /home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/build install --record /home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/install.log --single-version-externally-managed install_data --force
+[1.426s] running egg_info
+[1.427s] writing ../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/PKG-INFO
+[1.427s] writing dependency_links to ../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/dependency_links.txt
+[1.427s] writing entry points to ../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/entry_points.txt
+[1.427s] writing requirements to ../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/requires.txt
+[1.428s] writing top-level names to ../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/top_level.txt
+[1.429s] reading manifest file '../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/SOURCES.txt'
+[1.430s] writing manifest file '../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/SOURCES.txt'
+[1.430s] running build
+[1.430s] running build_py
+[1.431s] running install
+[1.431s] running install_lib
+[1.432s] creating /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages/ur5e_custom_hardware
+[1.432s] copying /home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/build/lib/ur5e_custom_hardware/gripper_palm_camera.py -> /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages/ur5e_custom_hardware
+[1.433s] copying /home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/build/lib/ur5e_custom_hardware/__init__.py -> /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages/ur5e_custom_hardware
+[1.433s] byte-compiling /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages/ur5e_custom_hardware/gripper_palm_camera.py to gripper_palm_camera.cpython-310.pyc
+[1.434s] byte-compiling /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages/ur5e_custom_hardware/__init__.py to __init__.cpython-310.pyc
+[1.434s] running install_data
+[1.434s] copying resource/ur5e_custom_hardware -> /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/share/ament_index/resource_index/packages
+[1.434s] copying package.xml -> /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/share/ur5e_custom_hardware
+[1.434s] copying urdf/gripper.urdf.xacro -> /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/share/ur5e_custom_hardware/urdf
+[1.435s] copying urdf/ur_gripper.urdf.xacro -> /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/share/ur5e_custom_hardware/urdf
+[1.435s] copying meshes/03_mk3_full_assembly.STL -> /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/share/ur5e_custom_hardware/meshes
+[1.496s] copying meshes/03_mk3_full_assembly_coarse.STL -> /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/share/ur5e_custom_hardware/meshes
+[1.516s] copying meshes/03_mk3_full_assembly_(simplified_for_RVIZ).STL -> /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/share/ur5e_custom_hardware/meshes
+[1.524s] running install_egg_info
+[1.527s] Copying ../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info to /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages/ur5e_custom_hardware-0.0.0-py3.10.egg-info
+[1.528s] running install_scripts
+[1.553s] Installing gripper_palm_camera script to /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/ur5e_custom_hardware
+[1.553s] writing list of installed files to '/home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/install.log'
+[1.598s] Invoked command in '/home/imml/git/research_2025/apple-harvest-eva/harvest_hardware/ur5e_custom_hardware' returned '0': PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ur5e_custom_hardware build --build-base /home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/build install --record /home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/install.log --single-version-externally-managed install_data --force

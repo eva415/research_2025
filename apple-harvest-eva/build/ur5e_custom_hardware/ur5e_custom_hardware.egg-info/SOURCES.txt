@@ -1,6 +1,13 @@
 package.xml
 setup.cfg
 setup.py
+../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/PKG-INFO
+../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/SOURCES.txt
+../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/dependency_links.txt
+../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/entry_points.txt
+../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/requires.txt
+../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/top_level.txt
+../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/zip-safe
 meshes/03_mk3_full_assembly.STL
 meshes/03_mk3_full_assembly_(simplified_for_RVIZ).STL
 meshes/03_mk3_full_assembly_coarse.STL

@@ -1,0 +1,19 @@
+running egg_info
+writing ../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/PKG-INFO
+writing dependency_links to ../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/dependency_links.txt
+writing entry points to ../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/entry_points.txt
+writing requirements to ../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/requires.txt
+writing top-level names to ../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/top_level.txt
+reading manifest file '../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/SOURCES.txt'
+writing manifest file '../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages/ur5e_custom_hardware-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/ur5e_custom_hardware/ur5e_custom_hardware.egg-info to /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/python3.10/site-packages/ur5e_custom_hardware-0.0.0-py3.10.egg-info
+running install_scripts
+Installing gripper_palm_camera script to /home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware/lib/ur5e_custom_hardware
+writing list of installed files to '/home/imml/git/research_2025/apple-harvest-eva/build/ur5e_custom_hardware/install.log'

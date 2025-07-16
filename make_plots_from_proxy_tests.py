@@ -11,6 +11,9 @@ import numpy as np
 from rosbag2_py import SequentialReader, StorageOptions, ConverterOptions
 from rclpy.serialization import deserialize_message
 from rosidl_runtime_py.utilities import get_message
+import os
+from PIL import Image
+
 
 # message types
 from geometry_msgs.msg import TransformStamped
@@ -37,7 +40,6 @@ def read_ros2_bag(bag_path):
         msg = deserialize_message(data, msg_type)
         yield topic, msg, ts
 
-
 def plot_for_bag(bag_file):
     # per-bag accumulators
     tool_ts, tool_xyz = [], []
@@ -50,7 +52,7 @@ def plot_for_bag(bag_file):
         if topic == '/tool_pose':
             trans = msg.transform.translation
             tool_ts.append(t)
-            tool_xyz.append((trans.x, trans.y, trans.z))
+            tool_xyz.append((-trans.x, trans.z, -trans.y))  # Note: remapped axes
         elif topic == '/flex_sensor_data':
             flex_ts.append(t)
             flex_vals.append(msg.data)
@@ -60,43 +62,60 @@ def plot_for_bag(bag_file):
 
     # convert to arrays
     tool_ts = np.array(tool_ts)
-    tool_xyz = np.vstack(tool_xyz) if tool_xyz else np.empty((0,3))
+    tool_xyz = np.vstack(tool_xyz) if tool_xyz else np.empty((0, 3))
     flex_ts = np.array(flex_ts)
-    flex_vals = np.vstack(flex_vals) if flex_vals else np.empty((0,0))
+    flex_vals = np.vstack(flex_vals) if flex_vals else np.empty((0, 0))
     tof_ts = np.array(tof_ts)
     tof_vals = np.array(tof_vals)
 
-    # create figure
-    fig, axes = plt.subplots(3, 1, sharex=True, figsize=(10, 8))
-    fig.suptitle(f"Occlusion level 50%: {Path(bag_file).stem}")
+    # create figure with 5 vertical subplots and taller size
+    fig, axes = plt.subplots(5, 1, sharex=True, figsize=(10, 12))
+    fig.suptitle(f"{Path(bag_file).stem}")
 
-
-    # /tool_pose
+    # /tool_pose - X
     if tool_ts.size:
-        axes[0].plot(tool_ts, tool_xyz[:,0], label='X')
-        axes[0].plot(tool_ts, tool_xyz[:,1], label='Y')
-        axes[0].plot(tool_ts, tool_xyz[:,2], label='Z')
-    axes[0].set_ylabel('Tool position (m)')
-    axes[0].set_title('/tool_pose')
+        axes[0].plot(tool_ts, tool_xyz[:, 0], label='X', color='tab:red')
+    axes[0].set_ylabel('X (m)')
+    axes[0].set_title('/tool_pose X')
     axes[0].legend()
+
+    # /tool_pose - Y
+    if tool_ts.size:
+        axes[1].plot(tool_ts, tool_xyz[:, 1], label='Y', color='tab:green')
+    axes[1].set_ylabel('Y (m)')
+    axes[1].set_title('/tool_pose Y')
+    axes[1].legend()
+
+    # /tool_pose - Z
+    if tool_ts.size:
+        axes[2].plot(tool_ts, tool_xyz[:, 2], label='Z', color='tab:blue')
+    axes[2].set_ylabel('Z (m)')
+    axes[2].set_title('/tool_pose Z')
+    axes[2].legend()
 
     # /flex_sensor_data
     if flex_ts.size and flex_vals.size:
         for i in range(flex_vals.shape[1]):
-            axes[1].plot(flex_ts, flex_vals[:,i], label=f'sensor[{i}]')
-    axes[1].set_ylabel('Flex data')
-    axes[1].set_title('/flex_sensor_data')
-    axes[1].legend(ncol=2, fontsize='small')
+            axes[3].plot(flex_ts, flex_vals[:, i], label=f'sensor[{i}]')
+    axes[3].set_ylabel('Flex')
+    axes[3].set_title('/flex_sensor_data')
+    axes[3].legend(ncol=2, fontsize='small')
 
     # /tof_sensor_data
     if tof_ts.size:
-        axes[2].plot(tof_ts, tof_vals, '-o')
-    axes[2].set_ylabel('ToF range')
-    axes[2].set_xlabel('Time (s)')
-    axes[2].set_title('/tof_sensor_data')
+        axes[4].plot(tof_ts, tof_vals, '-o')
+    axes[4].set_ylabel('ToF')
+    axes[4].set_xlabel('Time (s)')
+    axes[4].set_title('/tof_sensor_data')
 
+    # Save figure
     plt.tight_layout(rect=[0, 0, 1, 0.96])
-    plt.show()
+    downloads = Path.home() / "Downloads"
+    downloads.mkdir(parents=True, exist_ok=True)
+    filename = downloads / f"{Path(bag_file).stem}_plot.png"
+    plt.savefig(filename)
+    plt.close(fig)
+    print(f"Saved plot to: {filename}")
 
 
 def main():
@@ -130,6 +149,18 @@ def main():
     for bag in bag_files:
         print("->", bag)
         plot_for_bag(bag)
+    
+    # Combine all PNGs into one PDF in Downloads
+    downloads = Path.home() / "Downloads"
+    png_files = sorted(downloads.glob("*_plot.png"))
+    if png_files:
+        images = [Image.open(p).convert("RGB") for p in png_files]
+        pdf_path = downloads / "all_plots_combined.pdf"
+        images[0].save(pdf_path, save_all=True, append_images=images[1:])
+        print(f"\n✅ Saved combined PDF to: {pdf_path}")
+    else:
+        print("⚠️ No PNG plots found to combine.")
+
 
 
 if __name__ == '__main__':

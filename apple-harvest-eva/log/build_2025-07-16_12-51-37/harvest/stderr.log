@@ -1,0 +1,8 @@
+[31mCMake Error at ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:204 (message):
+  ament_cmake_symlink_install_programs() can't find
+  '/home/imml/git/research_2025/apple-harvest-eva/harvest/scripts/move_ur5_to_coordniate_eva.py'
+Call Stack (most recent call first):
+  ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:326 (ament_cmake_symlink_install_programs)
+  cmake_install.cmake:46 (include)
+
+[0m

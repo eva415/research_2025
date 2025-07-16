@@ -1,0 +1,83 @@
+[0.884s] Invoking command in '/home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages:/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/build
+[1.255s] running develop
+[1.546s] Removing /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages/harvest-vision.egg-link (link to .)
+[1.616s] Invoked command in '/home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision' returned '0': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages:/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/build
+[1.618s] Invoking command in '/home/imml/git/research_2025/apple-harvest-eva/harvest_vision': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages:/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/harvest_vision build --build-base /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/build install --record /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/install.log --single-version-externally-managed install_data --force
+[1.937s] running egg_info
+[1.939s] writing ../build/harvest_vision/harvest_vision.egg-info/PKG-INFO
+[1.940s] writing dependency_links to ../build/harvest_vision/harvest_vision.egg-info/dependency_links.txt
+[1.940s] writing entry points to ../build/harvest_vision/harvest_vision.egg-info/entry_points.txt
+[1.940s] writing requirements to ../build/harvest_vision/harvest_vision.egg-info/requires.txt
+[1.940s] writing top-level names to ../build/harvest_vision/harvest_vision.egg-info/top_level.txt
+[1.943s] reading manifest file '../build/harvest_vision/harvest_vision.egg-info/SOURCES.txt'
+[1.945s] writing manifest file '../build/harvest_vision/harvest_vision.egg-info/SOURCES.txt'
+[1.945s] running build
+[1.945s] running build_py
+[1.945s] creating /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/build
+[1.945s] creating /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/build/lib
+[1.945s] creating /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/build/lib/harvest_vision
+[1.945s] copying harvest_vision/apple_prediction.py -> /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/build/lib/harvest_vision
+[1.945s] copying harvest_vision/apple_prediction_presaved_images.py -> /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/build/lib/harvest_vision
+[1.946s] copying harvest_vision/voxelize_scan.py -> /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/build/lib/harvest_vision
+[1.946s] copying harvest_vision/__init__.py -> /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/build/lib/harvest_vision
+[1.946s] copying harvest_vision/sphere_ransac.py -> /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/build/lib/harvest_vision
+[1.946s] running install
+[1.946s] running install_lib
+[1.948s] creating /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages/harvest_vision
+[1.948s] copying /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/build/lib/harvest_vision/apple_prediction.py -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages/harvest_vision
+[1.948s] copying /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/build/lib/harvest_vision/apple_prediction_presaved_images.py -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages/harvest_vision
+[1.948s] copying /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/build/lib/harvest_vision/voxelize_scan.py -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages/harvest_vision
+[1.948s] copying /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/build/lib/harvest_vision/__init__.py -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages/harvest_vision
+[1.948s] copying /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/build/lib/harvest_vision/sphere_ransac.py -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages/harvest_vision
+[1.949s] byte-compiling /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages/harvest_vision/apple_prediction.py to apple_prediction.cpython-310.pyc
+[1.953s] byte-compiling /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages/harvest_vision/apple_prediction_presaved_images.py to apple_prediction_presaved_images.cpython-310.pyc
+[1.955s] byte-compiling /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages/harvest_vision/voxelize_scan.py to voxelize_scan.cpython-310.pyc
+[1.956s] byte-compiling /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages/harvest_vision/__init__.py to __init__.cpython-310.pyc
+[1.957s] byte-compiling /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages/harvest_vision/sphere_ransac.py to sphere_ransac.cpython-310.pyc
+[1.957s] running install_data
+[1.957s] copying resource/harvest_vision -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/ament_index/resource_index/packages
+[1.958s] copying package.xml -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision
+[1.958s] copying yolo_networks/best-merged-apples-thlo-merged-wsu-v8s.pt -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/yolo_networks
+[2.010s] copying yolo_networks/best-merged-apples-thlo-merged-wsu-v8m.pt -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/yolo_networks
+[2.117s] copying yolo_networks/best-merged-apples-thlo-merged-wsu-v9c.pt -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/yolo_networks
+[2.221s] copying yolo_networks/best-merged-apples-thlo-merged-wsu-v8n.pt -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/yolo_networks
+[2.231s] copying yolo_networks/best_segmentation.pt -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/yolo_networks
+[2.245s] copying yolo_networks/best-merged-apples-thlo-merged-wsu-v8l.pt -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/yolo_networks
+[2.402s] copying data/prosser_a/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_a
+[2.404s] copying data/prosser_a/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_a
+[2.419s] copying data/prosser_a/color_raw.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_a
+[2.427s] copying data/prosser_b/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_b
+[2.428s] copying data/prosser_b/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_b
+[2.445s] copying data/prosser_b/color_raw.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_b
+[2.453s] copying data/prosser_c/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_c
+[2.455s] copying data/prosser_c/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_c
+[2.472s] copying data/prosser_c/color_raw.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_c
+[2.480s] copying data/prosser_d/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_d
+[2.482s] copying data/prosser_d/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_d
+[2.518s] copying data/prosser_d/color_raw.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_d
+[2.529s] copying data/prosser_e/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_e
+[2.531s] copying data/prosser_e/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_e
+[2.558s] copying data/prosser_e/color_raw.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_e
+[2.569s] copying data/prosser_f/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_f
+[2.571s] copying data/prosser_f/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_f
+[2.590s] copying data/prosser_f/color_raw.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_f
+[2.598s] copying data/prosser_g/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_g
+[2.599s] copying data/prosser_g/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_g
+[2.616s] copying data/prosser_g/color_raw.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_g
+[2.623s] copying data/prosser_h/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_h
+[2.625s] copying data/prosser_h/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_h
+[2.643s] copying data/prosser_h/color_raw.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_h
+[2.651s] copying data/prosser_i/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_i
+[2.652s] copying data/prosser_i/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_i
+[2.668s] copying data/prosser_i/color_raw.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_i
+[2.677s] copying data/prosser_j/depth_to_color.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_j
+[2.678s] copying data/prosser_j/pointcloud.ply -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_j
+[2.693s] copying data/prosser_j/color_raw.png -> /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/share/harvest_vision/data/prosser_j
+[2.701s] running install_egg_info
+[2.702s] Copying ../build/harvest_vision/harvest_vision.egg-info to /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages/harvest_vision-0.0.1-py3.10.egg-info
+[2.703s] running install_scripts
+[2.724s] Installing apple_prediction script to /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/harvest_vision
+[2.724s] Installing apple_prediction_presaved_images script to /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/harvest_vision
+[2.724s] Installing voxelize_scan script to /home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/harvest_vision
+[2.724s] writing list of installed files to '/home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/install.log'
+[2.762s] Invoked command in '/home/imml/git/research_2025/apple-harvest-eva/harvest_vision' returned '0': AMENT_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision/lib/python3.10/site-packages:/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/harvest_vision build --build-base /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/build install --record /home/imml/git/research_2025/apple-harvest-eva/build/harvest_vision/install.log --single-version-externally-managed install_data --force
