@@ -3,19 +3,23 @@ Flex_Sensor_Example_Multiple_Calibrated.ino
 Supports 4 flex sensors with per-sensor resistance calibration and smoothing
 ******************************************************************************/
 
-const int FLEX_PINS[4] = {A0, A5, A10, A15}; // Analog pins for 4 flex sensors
+const int FLEX_PINS[4] = {A2, A3, A0, A1}; // Analog pins for 4 flex sensors
 
 const float VCC = 4.98;            // Measured voltage of Arduino 5V line
 const float R_DIV = 100000.0;      // Measured resistance of the fixed resistor (100kΩ)
 
 const float BEND_RESISTANCE = 60000.0;  // Estimated resistance when flexed to 90 degrees
 const int BIAS_SAMPLES = 50;       // Number of samples for calibration
-const int SMOOTH_SAMPLES = 10;     // Number of samples for smoothing
+const int SMOOTH_SAMPLES = 1;     // Number of samples for smoothing
 
 float straightResistance[4];       // Stores baseline resistance per sensor
 
 #include "Adafruit_VL53L0X.h"
 Adafruit_VL53L0X lox = Adafruit_VL53L0X();
+
+unsigned long loopCounter = 0;
+unsigned long lastRatePrint = 0;
+
 
 void setup() 
 {
@@ -50,20 +54,24 @@ void setup()
     Serial.println("Failed to boot VL53L0X");
     while (1);
   }
+  else {
+    Serial.println("VL53L0X sensor initialized.");
+    lox.startRangeContinuous(10);
+    lox.setMeasurementTimingBudgetMicroSeconds(5000);
+  }
 }
 
 void loop() 
 {
   // ToF readings
-  VL53L0X_RangingMeasurementData_t measure;
-  lox.rangingTest(&measure, false);
-
-  if (measure.RangeStatus != 4 && measure.RangeMilliMeter != 8191) {
-    Serial.print("ToF: ");
-    Serial.print(measure.RangeMilliMeter);
-    Serial.println(" mm");
-  } else {
-    Serial.println("ToF: None");
+  if (lox.isRangeComplete()) {
+  uint16_t distance = lox.readRangeResult();
+  // Optionally check range validity
+  if (distance > 0 && distance < 2000) {
+     Serial.print("ToF: ");
+     Serial.print(distance);
+     Serial.println(" mm");
+    }
   }
 
   // Flex sensor readings
@@ -73,7 +81,7 @@ void loop()
 
     for (int j = 0; j < SMOOTH_SAMPLES; j++) {
       sum += analogRead(FLEX_PINS[i]);
-      delay(5);
+//      delay(1);
     }
 
     float avgADC = sum / SMOOTH_SAMPLES;
@@ -92,6 +100,17 @@ void loop()
     Serial.println(" degrees");
   }
 
-  Serial.println();
-  delay(100);
+
+//  // Count and report sampling rate every 1 second
+//  loopCounter++;
+//  unsigned long currentMillis = millis();
+//  if (currentMillis - lastRatePrint >= 1000) {
+//    Serial.print("Sampling rate: ");
+//    Serial.print(loopCounter);
+//    Serial.println(" Hz");
+//    loopCounter = 0;
+//    lastRatePrint = currentMillis;
+//  }
+
+  delayMicroseconds(200);
 }
