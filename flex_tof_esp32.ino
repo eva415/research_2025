@@ -9,10 +9,10 @@
 #include "Adafruit_VL53L0X.h"
 
 // ==== Flex Sensor Config ====
-const int FLEX_PINS[4] = {34, 35, 32, 33};
+const int FLEX_PINS[4] = {32, 33, 34, 35};
 const float VCC = 3.30;
 const float R_DIV = 100000.0;
-const float BEND_RESISTANCE = 60000.0;
+const float BEND_RESISTANCE = 130000.0;
 const int BIAS_SAMPLES = 50;
 const int SMOOTH_SAMPLES = 1;
 
