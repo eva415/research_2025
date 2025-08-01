@@ -1,0 +1,57 @@
+[0.100s] Invoking command in '/home/imml/git/research_2025/apple-harvest-eva/build/realsense2_camera': CMAKE_PREFIX_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/realsense2_camera_msgs:/home/imml/git/research_2025/apple-harvest-eva/install/ur:/home/imml/git/research_2025/apple-harvest-eva/install/ur_calibration:/home/imml/git/research_2025/apple-harvest-eva/install/ur_robot_driver:/home/imml/git/research_2025/apple-harvest-eva/install/ur_moveit_config:/home/imml/git/research_2025/apple-harvest-eva/install/ur_bringup:/home/imml/git/research_2025/apple-harvest-eva/install/ur_description:/home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers:/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs:/home/imml/git/research_2025/apple-harvest-eva/install/realsense2_description:/home/imml/git/research_2025/apple-harvest-eva/install/realsense2_camera:/home/imml/git/research_2025/apple-harvest-eva/install/harvest_control:/home/imml/git/research_2025/apple-harvest-eva/install/harvest:/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces:/home/imml/git/research_2025/apple-harvest-eva/install/ur5e_custom_hardware:/home/imml/git/research_2025/apple-harvest-eva/install/harvest_vision:/opt/ros/humble LD_LIBRARY_PATH=/home/imml/git/research_2025/apple-harvest-eva/install/realsense2_camera_msgs/lib:/home/imml/git/research_2025/apple-harvest-eva/install/ur_robot_driver/lib:/home/imml/git/research_2025/apple-harvest-eva/install/ur_controllers/lib:/home/imml/git/research_2025/apple-harvest-eva/install/ur_dashboard_msgs/lib:/home/imml/git/research_2025/apple-harvest-eva/install/realsense2_camera/lib:/home/imml/git/research_2025/apple-harvest-eva/install/harvest_interfaces/lib:/usr/local/cuda-12.9/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/imml/git/research_2025/apple-harvest-eva/build/realsense2_camera -- -j16 -l16
+[0.283s] -- Create Release Build.
+[0.283s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.082s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.119s] -- Found builtin_interfaces: 1.2.2 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[1.202s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.203s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.224s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.260s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.304s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.348s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[1.467s] -- Found image_transport: 3.1.12 (/opt/ros/humble/share/image_transport/cmake)
+[1.549s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.553s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.827s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.923s] -- Found rclcpp_components: 16.0.14 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.946s] -- Found realsense2_camera_msgs: 4.55.1 (/home/imml/git/research_2025/apple-harvest-eva/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake)
+[1.963s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[1.978s] -- Found tf2_ros: 0.25.15 (/opt/ros/humble/share/tf2_ros/cmake)
+[2.027s] -- Found diagnostic_updater: 4.0.6 (/opt/ros/humble/share/diagnostic_updater/cmake)
+[2.045s] -- Build for ROS2 Humble
+[2.052s] -- Found ament_cmake_gtest: 1.3.12 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[2.052s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[2.056s] -- Found ament_cmake_pytest: 1.3.12 (/opt/ros/humble/share/ament_cmake_pytest/cmake)
+[11.263s] -- rs_device_info:
+[11.263s] -- No device detected. Is it plugged in?
+[11.263s] 
+[11.362s] -- Configuring done
+[11.392s] -- Generating done
+[11.399s] -- Build files have been written to: /home/imml/git/research_2025/apple-harvest-eva/build/realsense2_camera
+[11.427s] [35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[11.427s] [35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[11.427s] [35m[1mConsolidate compiler generated dependencies of target realsense2_camera_node[0m
+[11.438s] [35m[1mConsolidate compiler generated dependencies of target realsense2_camera[0m
+[11.440s] [ 18%] Built target gtest
+[11.440s] [ 18%] Built target gtest_main
+[11.442s] [ 22%] [32mBuilding CXX object CMakeFiles/realsense2_camera_node.dir/rclcpp_components/node_main_realsense2_camera_node.cpp.o[0m
+[11.450s] [35m[1mConsolidate compiler generated dependencies of target gtest_template[0m
+[11.463s] [ 27%] [32m[1mLinking CXX executable gtest_template[0m
+[11.493s] [ 36%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/realsense_node_factory.cpp.o[0m
+[11.493s] [ 36%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/base_realsense_node.cpp.o[0m
+[11.493s] [ 40%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/rs_node_setup.cpp.o[0m
+[11.493s] [ 45%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/parameters.cpp.o[0m
+[11.496s] [ 50%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/ros_sensor.cpp.o[0m
+[11.497s] [ 54%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/ros_utils.cpp.o[0m
+[11.497s] [ 59%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/dynamic_params.cpp.o[0m
+[11.499s] [ 68%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/profile_manager.cpp.o[0m
+[11.499s] [ 68%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/named_filter.cpp.o[0m
+[11.499s] [ 72%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/image_publisher.cpp.o[0m
+[11.500s] [ 77%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/sensor_params.cpp.o[0m
+[11.501s] [ 81%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/tfs.cpp.o[0m
+[11.503s] [ 86%] [32mBuilding CXX object CMakeFiles/realsense2_camera.dir/src/ros_param_backend.cpp.o[0m
+[11.598s] [ 90%] Built target gtest_template
+[16.609s] [ 95%] [32m[1mLinking CXX executable realsense2_camera_node[0m
+[16.828s] [ 95%] Built target realsense2_camera_node
+[26.235s] [100%] [32m[1mLinking CXX shared library librealsense2_camera.so[0m
+[26.550s] [100%] Built target realsense2_camera

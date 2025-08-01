@@ -902,6 +902,7 @@ CMakeFiles/calibration_correction.dir/src/calibration_correction.cpp.o: \
  /opt/ros/humble/include/ur_client_library/primary/robot_message/version_message.h \
  /opt/ros/humble/include/ur_client_library/primary/robot_message/error_code_message.h \
  /opt/ros/humble/include/ur_client_library/primary/robot_state/robot_mode_data.h \
+ /opt/ros/humble/include/ur_client_library/primary/robot_state/configuration_data.h \
  /home/imml/git/research_2025/apple-harvest-eva/install/ur_robot_driver/include/ur_robot_driver/urcl_log_handler.hpp \
  /opt/ros/humble/include/ament_index_cpp/ament_index_cpp/get_package_share_directory.hpp \
  /opt/ros/humble/include/ament_index_cpp/ament_index_cpp/visibility_control.h \

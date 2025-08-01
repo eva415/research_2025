@@ -731,6 +731,10 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/hardware_interface.cpp.o: \
  /opt/ros/humble/include/ur_client_library/control/trajectory_point_interface.h \
  /opt/ros/humble/include/ur_client_library/control/motion_primitives.h \
  /opt/ros/humble/include/ur_client_library/control/script_command_interface.h \
+ /opt/ros/humble/include/ur_client_library/control/script_reader.h \
+ /usr/include/c++/11/filesystem /usr/include/c++/11/bits/fs_fwd.h \
+ /usr/include/c++/11/bits/fs_path.h /usr/include/c++/11/bits/fs_dir.h \
+ /usr/include/c++/11/bits/fs_ops.h \
  /opt/ros/humble/include/ur_client_library/control/script_sender.h \
  /opt/ros/humble/include/ur_client_library/primary/primary_client.h \
  /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
@@ -744,6 +748,7 @@ CMakeFiles/ur_robot_driver_plugin.dir/src/hardware_interface.cpp.o: \
  /opt/ros/humble/include/ur_client_library/primary/robot_state/kinematics_info.h \
  /opt/ros/humble/include/ur_client_library/primary/robot_state.h \
  /opt/ros/humble/include/ur_client_library/primary/robot_state/robot_mode_data.h \
+ /opt/ros/humble/include/ur_client_library/primary/robot_state/configuration_data.h \
  /opt/ros/humble/include/ur_client_library/primary/primary_consumer.h \
  /opt/ros/humble/include/ur_client_library/primary/primary_parser.h \
  /home/imml/git/research_2025/apple-harvest-eva/harvest_hardware/Universal_Robots_ROS2_Driver/ur_robot_driver/include/ur_robot_driver/dashboard_client_ros.hpp \
