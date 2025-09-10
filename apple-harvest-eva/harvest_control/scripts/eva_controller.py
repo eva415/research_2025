@@ -23,10 +23,12 @@ from rclpy.callback_groups import MutuallyExclusiveCallbackGroup, ReentrantCallb
 from rcl_interfaces.msg import Parameter, ParameterValue, ParameterType
 from rcl_interfaces.srv import SetParameters
 from std_srvs.srv import Trigger
-from std_msgs.msg import Float32MultiArray, Int32
+from std_msgs.msg import Float32MultiArray, Int32, Float32
 from geometry_msgs.msg import TwistStamped  # to publish to the UR5
 from controller_manager_msgs.srv import SwitchController
 import numpy as np
+from eva_vacuum_test import PumpIO # my vacuum control file
+import time
 
 class FlexToFListener(Node):
     def __init__(self, calibrate=False):
@@ -37,13 +39,12 @@ class FlexToFListener(Node):
         # State machine: start in approach
         self.state = 'approach'
         self.position_threshold = 0.5
-        self.tof_servo_threshold = 95
-        self.tof_threshold = 45
-        self.tof_override = 60
+        self.tof_servo_threshold = 40
+        self.tof_threshold = 39
 
         # Scale & timing
-        self.velocity_scale_factor_xy = 1.0
-        self.velocity_scale_factor_z = 5.0
+        self.velocity_scale_factor_xy = 0.4
+        self.velocity_scale_factor_z = 3.5
         self.control_period = 0.01  # 100 Hz
 
         # Sensor placeholders
@@ -53,8 +54,10 @@ class FlexToFListener(Node):
         # Publishers & Subscribers
         self.apple_pub = self.create_publisher(Float32MultiArray, '/position_apple', 10)
         self.gripper_pub = self.create_publisher(TwistStamped, '/servo_node/delta_twist_cmds', 10)
+        self.pressure_pub = self.create_publisher(Float32, '/suction_pressure', 10)
         self.create_subscription(Float32MultiArray, '/flex_sensor_data', self.flex_callback, 10, callback_group=self.cbgroup)
         self.create_subscription(Int32, '/tof_sensor_data', self.tof_callback, 10, callback_group=self.cbgroup)
+        self.create_subscription(Float32, '/vacuum_pressure', self.pressure_callback, 10, callback_group=self.cbgroup)
 
         # Fixed-rate control loop
         self.prev_time = self.get_clock().now().nanoseconds * 1e-9
@@ -72,6 +75,13 @@ class FlexToFListener(Node):
         self._enable_servo_mode(frame="tool0")
         self.get_logger().info('FlexToFListener (smoothed) started.')
 
+        # Initialize Pump
+        self.pump = PumpIO(self)
+        self.pump.disable_energy_saving()
+        self.pump.vacuum_off_and_blowoff()
+
+
+
     def flex_callback(self, msg):
         vals = np.array(msg.data) / 4.0
         self.latest_flex = vals.reshape((4, 1))
@@ -79,11 +89,16 @@ class FlexToFListener(Node):
     def tof_callback(self, msg):
         self.tof_distance = msg.data
 
+    def pressure_callback(self, msg):
+        self.latest_pressure = msg.data  # store suction pressure
+
+
     def control_loop(self):
+        print(f"STATE: {self.state}, tof: {self.tof_distance}")
         now = self.get_clock().now().nanoseconds * 1e-9
         dt = now - self.prev_time
         self.prev_time = now
-
+        
         if self.latest_flex is None or self.tof_distance is None:
             return
 
@@ -96,20 +111,75 @@ class FlexToFListener(Node):
 
         # --- State transitions ---
         if self.state == 'servo':
-            # if centered and within servo range
-            if ex < self.position_threshold and ey < self.position_threshold and self.tof_distance < self.tof_servo_threshold:
+            # Switch to 'approach' if centered OR below servo threshold
+            if (ex < self.position_threshold and ey < self.position_threshold) or self.tof_distance <= self.tof_servo_threshold:
                 self.state = 'approach'
         elif self.state == 'approach':
-            # drifted off-center -> servo
-            if ex > self.position_threshold or ey > self.position_threshold:
-                self.state = 'servo'
-            # close enough to pick
-            elif self.tof_distance <= self.tof_threshold:
+            if self.tof_distance <= self.tof_threshold:
                 self.state = 'pick'
-                self.get_logger().info('Transitioned to pick; shutting down')
-                rclpy.shutdown()
-                return
-        # 'pick' holds zeros
+                self.pick_start_time = now
+                self.latest_pressure = None
+                self.get_logger().info(f'Picking: turning on vacuum (tof = {self.tof_distance})')
+                self.pump.vacuum_on()
+
+        elif self.state == 'pick':
+            elapsed = now - self.pick_start_time
+            if self.latest_pressure is not None and self.latest_pressure <= -60:
+                self.get_logger().info(f'Vacuum succeeded (pressure={self.latest_pressure}), executing retreat')
+                self._execute_pick_motion()
+                self.state = 'release'
+            elif elapsed > 10.0:
+                self.get_logger().warn(f'Pick failed: timeout with pressure={self.latest_pressure}')
+                self.pump.vacuum_off_and_blowoff()
+                self.state = 'servo'
+        # elif self.state == 'approach':
+        #     # Only go back to servo if above threshold and off-center
+        #     if self.tof_distance > self.tof_servo_threshold and (ex > self.position_threshold or ey > self.position_threshold):
+        #         self.state = 'servo'
+        #     # Close enough to pick
+        #     elif self.tof_distance <= self.tof_threshold:
+        #         self.state = 'pick' # TODO: edit the pick sequence so that it sucks the vacuum until a vacuum pressure of -60 or lower is attained -- if this pressure isn't reached in 10 seconds, declare it a failed pick and give up
+        #         self.get_logger().info(f'Picking: turning on vacuum (tof = {self.tof_distance})')
+        #         # Wait a short time for the vacuum to build
+        #         self.pump.vacuum_on()
+        #         time.sleep(5.0)  # seconds
+        #         # Publish twist
+        #         self.get_logger().info('moving backward to pick...')
+        #         for i in range(15):
+        #             cmd = TwistStamped()
+        #             cmd.header.stamp = self.get_clock().now().to_msg()
+        #             cmd.header.frame_id = 'tool0'
+        #             cmd.twist.linear.x = 0.0
+        #             cmd.twist.linear.y = 0.0
+        #             cmd.twist.linear.z = -0.5
+        #             cmd.twist.angular.x = cmd.twist.angular.y = 0.0
+        #             cmd.twist.angular.z = -4.0
+        #             self.gripper_pub.publish(cmd)
+        #             time.sleep(0.2)  # seconds
+        #         self.get_logger().info('Releasing: turning off vacuum, turning on blowoff')
+        #         self.pump.vacuum_off_and_blowoff()
+        #         # Publish twist
+        #         cmd = TwistStamped()
+        #         cmd.header.stamp = self.get_clock().now().to_msg()
+        #         cmd.header.frame_id = 'tool0'
+        #         cmd.twist.linear.x = 0.0
+        #         cmd.twist.linear.y = 0.0
+        #         cmd.twist.linear.z = 0.0
+        #         cmd.twist.angular.x = cmd.twist.angular.y = cmd.twist.angular.z = 0.0
+        #         self.gripper_pub.publish(cmd)
+        #         self.get_logger().info('Done with pick')
+        #         for i in range(15):
+        #             cmd = TwistStamped()
+        #             cmd.header.stamp = self.get_clock().now().to_msg()
+        #             cmd.header.frame_id = 'tool0'
+        #             cmd.twist.linear.x = 0.0
+        #             cmd.twist.linear.y = 0.0
+        #             cmd.twist.linear.z = 0.0
+        #             cmd.twist.angular.x = cmd.twist.angular.y = 0.0
+        #             cmd.twist.angular.z = 4.0
+        #             self.gripper_pub.publish(cmd)
+        #             time.sleep(0.2)  # seconds
+        #         return
 
         # --- Command selection ---
         if self.state == 'servo':
