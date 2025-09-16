@@ -35,10 +35,11 @@ class PumpIO:
         req.pin = pin
         req.state = 1.0 if state else 0.0
         future = self.cli_set.call_async(req)
-        rclpy.spin_until_future_complete(self.node, future)
-        if not future.result().success:
-            self.node.get_logger().warn(f"Failed to set DO{pin} to {state}")
-        return future.result().success
+        # rclpy.spin_until_future_complete(self.node, future)
+        # if not future.result().success:
+        #     self.node.get_logger().warn(f"Failed to set DO{pin} to {state}")
+        # return future.result().success
+        return
 
     def read_vacuum(self):
         """Return vacuum level in -kPa based on last received voltage (1–5V sensor)"""
@@ -61,6 +62,10 @@ class PumpIO:
         self.set_do(self.DO_VACUUM, False)
         self.set_do(self.DO_BLOWOFF, True)
         self.node.get_clock().sleep_for(rclpy.duration.Duration(seconds=0.2))
+        self.set_do(self.DO_BLOWOFF, False)
+
+    def vacuum_off(self):
+        self.set_do(self.DO_VACUUM, False)
         self.set_do(self.DO_BLOWOFF, False)
 
     def disable_energy_saving(self):

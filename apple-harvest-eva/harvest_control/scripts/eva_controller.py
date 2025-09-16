@@ -39,8 +39,8 @@ class FlexToFListener(Node):
         # State machine: start in approach
         self.state = 'approach'
         self.position_threshold = 0.5
-        self.tof_servo_threshold = 40
-        self.tof_threshold = 39
+        self.tof_servo_threshold = 46
+        self.tof_threshold = 37
 
         # Scale & timing
         self.velocity_scale_factor_xy = 0.4
@@ -69,17 +69,16 @@ class FlexToFListener(Node):
 
         # Command smoothing state
         self.prev_cmd_x = self.prev_cmd_y = self.prev_cmd_z = 0.0
+        
+        # Initialize Pump
+        self.pump = PumpIO(self)
+        self.pump.disable_energy_saving()
+        self.pump.vacuum_off()
 
         # Initialize MoveIt-Servo
         self._setup_servo_clients()
         self._enable_servo_mode(frame="tool0")
         self.get_logger().info('FlexToFListener (smoothed) started.')
-
-        # Initialize Pump
-        self.pump = PumpIO(self)
-        self.pump.disable_energy_saving()
-        self.pump.vacuum_off_and_blowoff()
-
 
 
     def flex_callback(self, msg):
@@ -115,7 +114,10 @@ class FlexToFListener(Node):
             if (ex < self.position_threshold and ey < self.position_threshold) or self.tof_distance <= self.tof_servo_threshold:
                 self.state = 'approach'
         elif self.state == 'approach':
-            if self.tof_distance <= self.tof_threshold:
+            # Only go back to servo if above threshold and off-center
+            if self.tof_distance > self.tof_servo_threshold and (ex > self.position_threshold or ey > self.position_threshold):
+                self.state = 'servo'
+            elif self.tof_distance <= self.tof_threshold:
                 self.state = 'pick'
                 self.pick_start_time = now
                 self.latest_pressure = None
@@ -124,62 +126,48 @@ class FlexToFListener(Node):
 
         elif self.state == 'pick':
             elapsed = now - self.pick_start_time
-            if self.latest_pressure is not None and self.latest_pressure <= -60:
-                self.get_logger().info(f'Vacuum succeeded (pressure={self.latest_pressure})')
-                self.pump.vacuum_off_and_blowoff()
+            pressure = self.latest_pressure if self.latest_pressure is not None else float('inf')
+            print(f"[DEBUG] pick elapsed={elapsed:.2f}, pressure={pressure}")
+            # Success
+            if pressure <= -50:
+                self.get_logger().info(f'Vacuum succeeded (pressure={pressure})')
                 self.state = 'release'
+                self.release_start_time = now
+            # Timeout
             elif elapsed > 10.0:
-                self.get_logger().warn(f'Pick failed: timeout with pressure={self.latest_pressure}')
-                self.pump.vacuum_off_and_blowoff()
-                self.state = 'release'
-        # elif self.state == 'approach':
-        #     # Only go back to servo if above threshold and off-center
-        #     if self.tof_distance > self.tof_servo_threshold and (ex > self.position_threshold or ey > self.position_threshold):
-        #         self.state = 'servo'
-        #     # Close enough to pick
-        #     elif self.tof_distance <= self.tof_threshold:
-        #         self.state = 'pick' # TODO: edit the pick sequence so that it sucks the vacuum until a vacuum pressure of -60 or lower is attained -- if this pressure isn't reached in 10 seconds, declare it a failed pick and give up
-        #         self.get_logger().info(f'Picking: turning on vacuum (tof = {self.tof_distance})')
-        #         # Wait a short time for the vacuum to build
-        #         self.pump.vacuum_on()
-        #         time.sleep(5.0)  # seconds
-        #         # Publish twist
-        #         self.get_logger().info('moving backward to pick...')
-        #         for i in range(15):
-        #             cmd = TwistStamped()
-        #             cmd.header.stamp = self.get_clock().now().to_msg()
-        #             cmd.header.frame_id = 'tool0'
-        #             cmd.twist.linear.x = 0.0
-        #             cmd.twist.linear.y = 0.0
-        #             cmd.twist.linear.z = -0.5
-        #             cmd.twist.angular.x = cmd.twist.angular.y = 0.0
-        #             cmd.twist.angular.z = -4.0
-        #             self.gripper_pub.publish(cmd)
-        #             time.sleep(0.2)  # seconds
-        #         self.get_logger().info('Releasing: turning off vacuum, turning on blowoff')
-        #         self.pump.vacuum_off_and_blowoff()
-        #         # Publish twist
-        #         cmd = TwistStamped()
-        #         cmd.header.stamp = self.get_clock().now().to_msg()
-        #         cmd.header.frame_id = 'tool0'
-        #         cmd.twist.linear.x = 0.0
-        #         cmd.twist.linear.y = 0.0
-        #         cmd.twist.linear.z = 0.0
-        #         cmd.twist.angular.x = cmd.twist.angular.y = cmd.twist.angular.z = 0.0
-        #         self.gripper_pub.publish(cmd)
-        #         self.get_logger().info('Done with pick')
-        #         for i in range(15):
-        #             cmd = TwistStamped()
-        #             cmd.header.stamp = self.get_clock().now().to_msg()
-        #             cmd.header.frame_id = 'tool0'
-        #             cmd.twist.linear.x = 0.0
-        #             cmd.twist.linear.y = 0.0
-        #             cmd.twist.linear.z = 0.0
-        #             cmd.twist.angular.x = cmd.twist.angular.y = 0.0
-        #             cmd.twist.angular.z = 4.0
-        #             self.gripper_pub.publish(cmd)
-        #             time.sleep(0.2)  # seconds
-        #         return
+                self.get_logger().warn(f'Pick failed: timeout (pressure={pressure})')
+                self.pump.vacuum_off()
+                self.state = 'failed'  # use a failure state instead of immediate shutdown
+
+        
+        elif self.state == 'release':
+            elapsed_release = now - self.release_start_time
+            print(f"RELEASE: {elapsed_release}")
+            if elapsed_release < 6.0:
+                cmd = TwistStamped()
+                cmd.header.stamp = self.get_clock().now().to_msg()
+                cmd.header.frame_id = 'tool0'
+                cmd.twist.linear.x = 0.0
+                cmd.twist.linear.y = 0.0
+                cmd.twist.linear.z = -2.0
+                cmd.twist.angular.x = cmd.twist.angular.y = 0.0
+                cmd.twist.angular.z = -4.0
+                self.gripper_pub.publish(cmd)
+                self.get_logger().info(f"retreating...")
+            elif elapsed_release > 4.0 and elapsed_release < 8.0:
+                self.get_logger().info(f"releasing apple now...")
+                cmd = TwistStamped()
+                cmd.header.stamp = self.get_clock().now().to_msg()
+                cmd.header.frame_id = 'tool0'
+                cmd.twist.linear.x = 0.0
+                cmd.twist.linear.y = 0.0
+                cmd.twist.linear.z = 0.0
+                cmd.twist.angular.x = cmd.twist.angular.y = 0.0
+                cmd.twist.angular.z = 4.0
+                self.gripper_pub.publish(cmd)
+                self.pump.vacuum_off()
+                self.destroy_node()
+                rclpy.shutdown()
 
         # --- Command selection ---
         if self.state == 'servo':
@@ -311,9 +299,16 @@ def main():
     exe.add_node(node)
     try:
         exe.spin()
+    except KeyboardInterrupt:
+        node.get_logger().info("KeyboardInterrupt: shutting down...")
     finally:
+        # Ensure vacuum is turned off safely
+        if hasattr(node, "pump"):
+            node.get_logger().info("Turning off vacuum before exit...")
+            node.pump.vacuum_off()
         node.destroy_node()
         rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()
