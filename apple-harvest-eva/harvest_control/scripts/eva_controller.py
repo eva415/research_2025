@@ -39,17 +39,18 @@ class FlexToFListener(Node):
         # State machine: start in approach
         self.state = 'approach'
         self.position_threshold = 0.5
-        self.tof_servo_threshold = 46
-        self.tof_threshold = 37
+        self.tof_servo_threshold = 50
+        self.tof_threshold = 46
 
         # Scale & timing
-        self.velocity_scale_factor_xy = 0.4
-        self.velocity_scale_factor_z = 3.5
+        self.velocity_scale_factor_xy = 1.0
+        self.velocity_scale_factor_z = 4.0
         self.control_period = 0.01  # 100 Hz
 
         # Sensor placeholders
         self.latest_flex = None
         self.tof_distance = None
+        self.latest_pressure = None
 
         # Publishers & Subscribers
         self.apple_pub = self.create_publisher(Float32MultiArray, '/position_apple', 10)
@@ -93,7 +94,7 @@ class FlexToFListener(Node):
 
 
     def control_loop(self):
-        print(f"STATE: {self.state}, tof: {self.tof_distance}")
+        print(f"STATE: {self.state}, tof: {self.tof_distance}, pressure: {self.latest_pressure}")
         now = self.get_clock().now().nanoseconds * 1e-9
         dt = now - self.prev_time
         self.prev_time = now
@@ -143,39 +144,31 @@ class FlexToFListener(Node):
         elif self.state == 'release':
             elapsed_release = now - self.release_start_time
             print(f"RELEASE: {elapsed_release}")
-            if elapsed_release < 6.0:
-                cmd = TwistStamped()
-                cmd.header.stamp = self.get_clock().now().to_msg()
-                cmd.header.frame_id = 'tool0'
-                cmd.twist.linear.x = 0.0
-                cmd.twist.linear.y = 0.0
-                cmd.twist.linear.z = -2.0
-                cmd.twist.angular.x = cmd.twist.angular.y = 0.0
-                cmd.twist.angular.z = -4.0
-                self.gripper_pub.publish(cmd)
+            if elapsed_release < 4.0:
                 self.get_logger().info(f"retreating...")
             elif elapsed_release > 4.0 and elapsed_release < 8.0:
                 self.get_logger().info(f"releasing apple now...")
-                cmd = TwistStamped()
-                cmd.header.stamp = self.get_clock().now().to_msg()
-                cmd.header.frame_id = 'tool0'
-                cmd.twist.linear.x = 0.0
-                cmd.twist.linear.y = 0.0
-                cmd.twist.linear.z = 0.0
-                cmd.twist.angular.x = cmd.twist.angular.y = 0.0
-                cmd.twist.angular.z = 4.0
-                self.gripper_pub.publish(cmd)
                 self.pump.vacuum_off()
-                self.destroy_node()
-                rclpy.shutdown()
+            elif elapsed_release >= 8.0:
+                print('done')
+                self.state = 'done'
 
+        cmd_wz = 0.0   # default: no rotation
         # --- Command selection ---
         if self.state == 'servo':
             cmd_vx, cmd_vy, cmd_vz = -vx, -vy, 0.0
         elif self.state == 'approach':
             cmd_vx, cmd_vy = 0.0, 0.0
-            cmd_vz = 0.05 * self.velocity_scale_factor_z
-        else:
+            cmd_vz = 0.1 * self.velocity_scale_factor_z
+        elif self.state == 'release':
+            elapsed_release = now - self.release_start_time
+            if elapsed_release < 4.0:
+                cmd_vx, cmd_vy, cmd_vz = 0.0, 0.0, -2.0
+                cmd_wz = -4.0
+            elif elapsed_release < 8.0:
+                cmd_vx, cmd_vy, cmd_vz = 0.0, 0.0, 0.0
+                cmd_wz = 4.0
+        else: # pick state or done state
             cmd_vx = cmd_vy = cmd_vz = 0.0
 
         # --- Acceleration limit + smoothing ---
@@ -199,7 +192,8 @@ class FlexToFListener(Node):
         cmd.twist.linear.x = out_x
         cmd.twist.linear.y = out_y
         cmd.twist.linear.z = out_z
-        cmd.twist.angular.x = cmd.twist.angular.y = cmd.twist.angular.z = 0.0
+        cmd.twist.angular.x = cmd.twist.angular.y = 0.0
+        cmd.twist.angular.z = cmd_wz
         self.gripper_pub.publish(cmd)
 
         # Debug apple pos

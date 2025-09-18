@@ -35,12 +35,12 @@ class ApplePredictionRS(Node):
         self.marker_pub = self.create_publisher(MarkerArray, "apple_markers", 10)
 
         ### PARAMETERS
-        self.declare_parameter("prediction_model_path", "NA")
+        self.declare_parameter("prediction_model_path", "/home/imml/git/research_2025/ultralytics/yolov8n.pt")
         self.declare_parameter("prediction_yolo_conf", 0.85)
         self.declare_parameter("prediction_radius_min", 0.03)
         self.declare_parameter("prediction_radius_max", 0.06)
         self.declare_parameter("prediction_distance_max", 1.0)
-        self.declare_parameter("scan_data_path", "NOTGIVEN")
+        self.declare_parameter("scan_data_path", "/home/imml/git/research_2025/apple-harvest-eva/scan_data")
         self.confidence_thresh = self.get_parameter("prediction_yolo_conf").get_parameter_value().double_value
         self.lower_rad_bound = self.get_parameter("prediction_radius_min").get_parameter_value().double_value
         self.upper_rad_bound = self.get_parameter("prediction_radius_max").get_parameter_value().double_value
@@ -119,7 +119,7 @@ class ApplePredictionRS(Node):
         transformed_poses = PoseArray()
         for i in apple_poses:
             origin = PoseStamped()
-            origin.header.frame_id = "camera_color_optical_frame"
+            origin.header.frame_id = "gripper_palm_camera_optical_link"
             origin.pose.position.x = i[0]
             origin.pose.position.y = i[1]
             origin.pose.position.z = i[2]
